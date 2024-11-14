@@ -9,7 +9,9 @@
 - git pull //puller ændringerne som ligger i repositoriet ned, og opdaterer dine filer med ændringerne.
 
 
-> opgave beskrivelse
+##############################################################
+
+
 # Functionalities
 
 ### Users can:
