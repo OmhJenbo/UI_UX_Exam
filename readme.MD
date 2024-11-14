@@ -1,21 +1,28 @@
 # Hurtige git kommandoer:
 
 > - git checkout 'branch_name' 
+
 Skifter branch til den angivne branch.
 
 > - git add . 
+
 Tilføjer alle filer til din git cache og gør det muligt at commite dem.
 
 > - git commit -m "commit besked" 
+
 Gør dine filer klar til push og tilføjer en besked, som fortæller hvad dit commit indeholder
 
 >- git push 
+
 Pusher dit commit op på den branch du står i.
 
->- git fetch 
-Kontrollere om der er sket nogen ændringer i den branch du står i (altså om din fil er up to date med repositoriet), hvis din fil ikke er, så gør den klar til et pull
+>- git fetch  
+
+Kontrollere om der er sket nogen ændringer i den branch du står i (altså om din fil er up 
+to date med repositoriet), hvis din fil ikke er, så gør den klar til et pull
 
 >- git pull 
+
 Puller ændringerne som ligger i repositoriet ned, og opdaterer dine filer med ændringerne.
 
 
