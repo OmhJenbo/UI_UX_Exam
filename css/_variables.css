@@ -1,0 +1,57 @@
+/* Import of fonts from google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Raleway&display=swap');
+/* Font classes
+    .raleway-<uniquifier> {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    }
+    .poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    }
+
+    .poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    }
+*/
+:root {
+    /* Fonts */
+    --fontHeaders: "Poppins", sans-serif;
+    --fontBody: "Raleway", sans-serif;
+
+    --fontBody: 0.875rem;
+    --fontXsmallHeader: 0.7rem;
+    --fontSmallHeader: 1rem;
+    --fontMediumHeader: 1.5rem;
+    --fontLargeHeader: 2.5rem;
+
+    /* Colors */
+    --primaryColor: #2A2929;
+    --secondaryColor: #323DD2;
+    --tertiaryColor: #738DFF;
+    --quaternaryColor: #959595;
+    --backgroundColor: #F6F5EE;
+
+    /* Margins */
+    --marginSmall: 0.5rem;
+    --marginMedium: 1rem;
+    --marginLarge: 1.5rem;
+    --marginXlarge: 7rem;
+
+    /* Paddings */
+    --paddingSmall: 0.5rem;
+    --paddingMedium: 1rem;
+    --paddingLarge: 1.5rem; 
+    --paddingXlarge: 3rem;
+
+    /* Image sizes???? */
+    --imgXsmall: 150px;
+    --imgSmall: 250px;
+    --imgMedium: 300px;
+    --imgLarge: 350px;
+}
