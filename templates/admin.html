@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <img src="../assets/img/logo.svg" alt="E-borrow logo" />
+        <button id="loginButton">Login</button>
+      </nav>
+    </header>
+
+    <main>
+      <header>
+        <h1 id="loginHeader">Add a new book here!</h1>
+      </header>
+      <section id="addBookForm">
+        <form>
+          <label for="bookTitle">E-mail</label>
+          <input
+            type="text"
+            id="bookTitle"
+            name="bookTitle"
+            placeholder="Book Title"
+            required
+          >
+          <label for="addAuthor">Author</label>
+          <input
+            type="text"
+            id="addAuthor"
+            name="addAuthor"
+            placeholder="Author"
+            required
+          >
+          <label for="addPublisher">Publisher</label>
+          <input
+            type="text"
+            id="addPublisher"
+            name="addPublisher"
+            placeholder="Publisher"
+            required
+          >
+
+          <label for="addPublishingYear">Publishing Year</label>
+          <input
+            type="number"
+            id="addPublishingYear"
+            name="addPublishingYear"
+            placeholder="Publishing Year"
+            required
+          >
+          <button type="submit">Add New Book</button> <!-- maybe name it finish? --> 
+        </form>
+      </section>
+      <section id="search">
+        <h2 id="searchHeader">Search for books!</h2>
+          <label for="searchBook">Search for a book</label>
+          <input
+            type="text"
+            id="searchBook"
+            name="searchBook"
+            placeholder="Search for a book"
+            required
+          >
+          <button type="submit">Search</button>
+
+
+      </section>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>
