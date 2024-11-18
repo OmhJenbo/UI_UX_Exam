@@ -1,8 +1,8 @@
 const baseUrl = "http://localhost:8080";
 
 document.addEventListener("DOMContentLoaded", () => {
-    const bookId = 1251;
-    fetchBooks(`${baseUrl}/books/${bookId}`);
+    const numberOfBooks = 12;
+    fetchBooks(`${baseUrl}/books?n=${numberOfBooks}`);
 });
 
 function fetchBooks(url) {
@@ -13,22 +13,27 @@ function fetchBooks(url) {
             }
             return response.json();
         })
-        .then(book => {
+        .then(books => {
             const bookList = document.getElementById("bookList");
             bookList.innerHTML = "";
 
-            const bookCard = document.createElement("div");
-            bookCard.classList.add("bookCard");
+            books.forEach(book => {
+                const bookCard = document.createElement("div");
+                bookCard.classList.add("bookCard");
 
-            bookCard.innerHTML = `
-                <img src="${book.cover}" alt="${book.title}">
-                <h2>${book.title}</h2>
-                <p><strong>Author:</strong> ${book.author}</p>
-                <p><strong>Publisher:</strong> ${book.publishing_company}</p>
-                <p><strong>Year:</strong> ${book.publishing_year}</p>
-            `;
+                const coverImage = book.cover ? book.cover : "https://dummyimage.com/150x200/cccccc/000000&text=No+Cover";
 
-            bookList.append(bookCard);
+                bookCard.innerHTML = `
+                    <img src="${coverImage}" alt="${book.title}">
+                    <h2>${book.title}</h2>
+                    <p><strong>Author:</strong> ${book.author}</p>
+                    <p><strong>Publisher:</strong> ${book.publishing_company}</p>
+                    <p><strong>Year:</strong> ${book.publishing_year}</p>
+                    <button>Loan this book</button
+                `;
+
+                bookList.append(bookCard);
+            });
         })
         .catch(error => {
             console.error("Error fetching book data:", error);
