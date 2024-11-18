@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <img src="../assets/img/logo.svg" alt="E-borrow logo" />
+        <button id="signupButton">Signup</button>
+      </nav>
+    </header>
+
+    <main>
+      <header>
+        <h1 id="signupHeader">Signup for E-borrow here!</h1>
+      </header>
+      <section id="signupForm">
+        <img
+          src="../assets/img/image_2.png"
+          alt="Decorating image for the signup page"
+          id="signupPageImage"
+        />
+        <form action="submit">
+          <label for="signupName">Name</label>
+          <input
+            type="text"
+            id="signupName"
+            name="name"
+            placeholder="Name"
+            required
+          />
+          <label for="signupLastName">Last Name</label>
+          <input
+            type="text"
+            id="signupLastName"
+            name="lastname"
+            placeholder="Last Name"
+            required
+          />
+          <label for="signupEmail">E-mail</label>
+          <input
+            type="email"
+            id="signupEmail"
+            name="email"
+            placeholder="Email@email.com"
+            required
+          />
+          <label for="signupPassword">Password</label>
+          <input
+            type="password"
+            id="signupPassword"
+            name="password"
+            placeholder="Password"
+            required
+          />
+          <label for="signupRepeatPassword">Repeat Password</label>
+          <input
+            type="password"
+            id="signupRepeatPassword"
+            name="repeatPassword"
+            placeholder="Repeat Password"
+            required
+          />
+          <button type="submit">Signup</button>
+        </form>
+      </section>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>
