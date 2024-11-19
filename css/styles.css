@@ -5,76 +5,85 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     /* background-color: var(--backgroundColor); */
-    font-family: var(--fontBody);
+    font-family: var(--fontFamilyBody);
+
     img {
         width: 100%;
     }
-    #bookList {
+    main {
+    section#bookList {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: var(--alignCenter);
         padding: var(--paddingLarge);
         gap: 30px;
 
         .bookCard {
             background-color: var(--white);
-            border: 1px solid var(--primaryColor);
-            border-radius: 0.5rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            width: 250px;
+            border: var(--border);
+            border-radius: var(--borderRadius);
+            transition: var(--transition);
+            width: var(--cardWidth);
             position: relative;
             padding: var(--paddingMedium);
-
-
             display: flex;
             flex-direction: column;
 
             &:hover {
-                transform: translateY(-0.5rem);
-                box-shadow: 0 0.45rem 0.9rem var(--primaryColor);
+                transform: var(--transform);
+                box-shadow: var(--boxShadow);
             }
 
             h2 {
                 padding: var(--normalPadding);
                 color: var(--secondaryColor);
-                font-size: var(--fontMediumHeader);
+                font-size: var(--fontSmallerMediumHeader);
+                font-family: var(--fontFamilyHeaders);
+                font-weight: var(--fontWeightBold);
             }
 
             h3 {
                 padding: var(--normalPadding);
                 color: var(--tertiaryColor);
-                font-size: var(--fontMediumHeader);
-                font-weight: 100;
+                font-size: var(--fontSmallHeader);
+                font-weight: var(--fontWeightSemiBold);
+                font-family: var(--fontFamilyHeaders);
             }
 
             p {
-                font-size: var(--fontBody);
+                font-size: var(--fontFamilyBody);
                 line-height: 1.5;
                 color: var(--quaternaryColor);
-            }
 
-            p:first-of-type {
-                margin-top: var(--marginMedium);
+                &:first-of-type {
+                    margin-top: var(--marginMedium);
+                }
+
+                &:last-of-type {
+                    margin-bottom: var(--marginSmall);
+                }
             }
 
             button {
                 background-color: var(--secondaryColor);
                 color: var(--backgroundColor);
                 border: none;
-                border-radius: 8px;
-                padding: 12px 24px;
+                border-radius: var(--borderRadius);
+                padding: var(--paddingSmallerMedium) var(--paddingBiggerMedium);
                 font-size: 16px;
-                font-weight: bold;
-                text-align: center;
+                font-weight: var(--fontWeightBold);
+                text-align: var(--alignCenter);
                 cursor: pointer;
                 margin-top: auto;
-            }
 
-            button:hover {
-                background-color: var(--secondaryColor);
+                &:hover {
+                    background-color: var(--secondaryColor);
+                }
             }
         }
     }
+}
 }
