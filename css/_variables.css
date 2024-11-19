@@ -27,6 +27,7 @@
     --fontBody: 0.875rem;
     --fontXsmallHeader: 0.7rem;
     --fontSmallHeader: 1rem;
+    --fontSmallerMediumHeader: 1.25rem;
     --fontMediumHeader: 1.5rem;
     --fontLargeHeader: 2.5rem;
 
@@ -45,7 +46,9 @@
 
     /* Paddings */
     --paddingSmall: 0.5rem;
+    --paddingSmallerMedium: 0.75rem;
     --paddingMedium: 1rem;
+    --paddingBiggerMedium: 1.25rem;
     --paddingLarge: 1.5rem; 
     --paddingXlarge: 3rem;
 
@@ -55,6 +58,28 @@
     --imgMedium: 300px;
     --imgLarge: 350px;
 
+    /* Aligns */
+    --alignLeft: left;
+    --alignCenter: center;
+    --alignRight: right;
+
     /* Border radius */
-    --border: 0.5rem;
+    --borderRadius: 0.5rem;
+
+    /* Standard border */
+    --border: 1px solid #2A2929;
+
+    /* Font weights */
+    --fontWeightSemiBold: 600;
+    --fontWeightBold: 700;
+
+    /* Hover */
+    --transition: transform 0.3s ease, box-shadow 0.3s ease;
+    --transform: translateY(-0.5rem);
+
+    /* Widths */
+    --cardWidth: 15.625rem;
+
+    /* Box shadows */
+    --boxShadow: 0 0.45rem 0.9rem #2A2929;
 }
