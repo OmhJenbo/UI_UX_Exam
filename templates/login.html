@@ -4,43 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
+    <!-- <link rel="stylesheet" href="../css/_login.css"> -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="js/login.js" type="module"></script>
   </head>
 
   <body>
-    <header>
+    <!-- <header>
       <nav>
         <img src="../assets/img/logo.svg" alt="E-borrow logo" >
         <button id="loginButton">Login</button>
       </nav>
-    </header>
-    
+    </header> -->
     <main>
+      <img src="../assets/img/image_2.png" alt="Decorating image for the login page" id="loginPageImage"/>
+      <section id="formSection">
         <header>
-            <h1 id="loginHeader">Login Here!</h1>
+          <h1 id="loginHeader">Login here!</h1>
         </header>
-        <section id="loginForm">
-          <img
-            src="../assets/img/image_2.png"
-            alt="Decorating image for the login page"
-            id="loginPageImage"
-          >
-        <form>
-          <label for="loginEmail">E-mail</label>
-          <input
-            type="email"
-            id="loginEmail"
-            name="email"
-            placeholder="example@email.com"
-            required
-          >
-          <label for="loginPassword">Password</label>
-          <input
-            type="password"
-            id="loginPassword"
-            name="password"
-            placeholder="Password"
-            required
-          >
+        <form id="formLogin">
+          <div>
+            <label for="loginEmail">E-mail</label>
+            <input type="email" id="loginEmail" name="email" placeholder="example@email.com" required/>
+          </div>
+          <div>
+            <label for="loginPassword">Password</label>
+            <input type="password" 
+              id="loginPassword" 
+              name="password" 
+              placeholder="Password"
+              required/>
+          </div>
+          <!-- minlength="8"
+              pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{9,}" 
+              title="Password must be at least 8 characters and have at least one lowercase and uppercase letter, one number, and one special character." -->
           <button type="submit">Login</button>
         </form>
       </section>
