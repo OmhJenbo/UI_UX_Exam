@@ -7,7 +7,75 @@
 }
 body {
     background-color: var(--backgroundColor);
+    font-family: var(--fontBody);
     img {
         width: 100%;
+    }
+    #bookList {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: var(--paddingLarge);
+        gap: 30px;
+
+        .bookCard {
+            background-color: var(--white);
+            border: 1px solid var(--primaryColor);
+            border-radius: 0.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 250px;
+            position: relative;
+            padding: var(--paddingMedium);
+
+
+            display: flex;
+            flex-direction: column;
+
+            &:hover {
+                transform: translateY(-0.5rem);
+                box-shadow: 0 0.45rem 0.9rem var(--primaryColor);
+            }
+
+            h2 {
+                padding: var(--normalPadding);
+                color: var(--secondaryColor);
+                font-size: var(--fontMediumHeader);
+            }
+
+            h3 {
+                padding: var(--normalPadding);
+                color: var(--tertiaryColor);
+                font-size: var(--fontMediumHeader);
+                font-weight: 100;
+            }
+
+            p {
+                font-size: var(--fontBody);
+                line-height: 1.5;
+                color: var(--quaternaryColor);
+            }
+
+            p:first-of-type {
+                margin-top: var(--marginMedium);
+            }
+
+            button {
+                background-color: var(--secondaryColor);
+                color: var(--backgroundColor);
+                border: none;
+                border-radius: 8px;
+                padding: 12px 24px;
+                font-size: 16px;
+                font-weight: bold;
+                text-align: center;
+                cursor: pointer;
+
+                margin-top: auto;
+            }
+
+            button:hover {
+                background-color: var(--secondaryColor);
+            }
+        }
     }
 }

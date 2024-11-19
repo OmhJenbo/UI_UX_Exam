@@ -18,17 +18,14 @@ function fetchBooks(url) {
             bookList.innerHTML = "";
 
             books.forEach(book => {
-                const bookCard = document.createElement("div");
+                const bookCard = document.createElement("div.bookCard");
                 bookCard.classList.add("bookCard");
 
-                const coverImage = book.cover ? book.cover : "https://dummyimage.com/150x200/cccccc/000000&text=No+Cover";
-
                 bookCard.innerHTML = `
-                    <img src="${coverImage}" alt="${book.title}">
                     <h2>${book.title}</h2>
-                    <p><strong>Author:</strong> ${book.author}</p>
-                    <p><strong>Publisher:</strong> ${book.publishing_company}</p>
-                    <p><strong>Year:</strong> ${book.publishing_year}</p>
+                    <h3>${book.author}</h3>
+                    <p>${book.publishing_company}</p>
+                    <p>${book.publishing_year}</p>
                     <button>Loan this book</button
                 `;
 
