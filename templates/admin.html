@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/_admin.css" />
     <link rel="stylesheet" href="../css/styles.css" />
     <script src="../js/admin.js" type="module"></script>
+    <script src="../js/search.js" defer></script>
     <title>Admin</title>
   </head>
 
@@ -84,6 +85,13 @@
         </div>
         <button type="submit">Search</button>
       </section>
+
+      <form id="searchForm">
+        <label for="searchInput">Search for a E-book:</label>
+        <input type="text" id="searchInput" name="search" placeholder="Type to search..." />
+        <button type="submit">Search</button>
+    </form>
+    <div id="searchResults"></div>
     </main>
 
     <footer></footer>
