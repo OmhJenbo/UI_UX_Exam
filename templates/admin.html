@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/_admin.css">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/_admin.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
     <script src="../js/admin.js" type="module"></script>
     <title>Admin</title>
   </head>
@@ -21,70 +21,68 @@
 
     <main>
       <section id="formSection">
-      <header>
-        <h1 id="loginHeader">Add a new book here!</h1>
-      </header>
-      <section id="addBookForm">
-        <form>
-          <div>
-          <label for="bookTitle">E-mail</label>
-          <input
-            type="text"
-            id="bookTitle"
-            name="bookTitle"
-            placeholder="Book Title"
-            required
-          >
-        </div>
-        <div>
-          <label for="addAuthor">Author</label>
-          <input
-            type="text"
-            id="addAuthor"
-            name="addAuthor"
-            placeholder="Author"
-            required
-          >
-        </div>
-        <div>
-          <label for="addPublisher">Publisher</label>
-          <input
-            type="text"
-            id="addPublisher"
-            name="addPublisher"
-            placeholder="Publisher"
-            required
-          >
-        </div>
-        <div>
-          <label for="addPublishingYear">Publishing Year</label>
-          <input
-            type="number"
-            id="addPublishingYear"
-            name="addPublishingYear"
-            placeholder="Publishing Year"
-            required
-          >
-        </div>
-          <button type="submit">Add Book</button> 
-        </form>
+        <header>
+          <h1 id="loginHeader">Add a new book here!</h1>
+        </header>
+        <section id="addBookForm">
+          <form>
+            <div>
+              <label for="bookTitle">E-mail</label>
+              <input
+                type="text"
+                id="bookTitle"
+                name="bookTitle"
+                placeholder="Kvinden i buret"
+                required
+              />
+            </div>
+            <div>
+              <label for="addAuthor">Author</label>
+              <input
+                type="text"
+                id="addAuthor"
+                name="addAuthor"
+                placeholder="Jussi Adler-Olsen"
+                required
+              />
+            </div>
+            <div>
+              <label for="addPublisher">Publisher</label>
+              <input
+                type="text"
+                id="addPublisher"
+                name="addPublisher"
+                placeholder="Politiken"
+                required
+              />
+            </div>
+            <div>
+              <label for="addPublishingYear">Publishing Year</label>
+              <input
+                type="number"
+                id="addPublishingYear"
+                name="addPublishingYear"
+                placeholder="2007"
+                required
+              />
+            </div>
+            <button type="submit">Add Book</button>
+          </form>
+        </section>
       </section>
-    </section>
       <section id="search">
         <h2 id="searchHeader">Search for books!</h2>
         <div>
-          <label for="searchBook">Search for a book</label>
+          <!-- <label for="searchBook">Search for a book</label> -->
           <input
             type="text"
             id="searchBook"
             name="searchBook"
             placeholder="Search for a book"
             required
-          >
+          />
         </div>
-          <button type="submit">Search</button>
-
-
+        <button type="submit">Search</button>
       </section>
     </main>
 
