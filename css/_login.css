@@ -2,24 +2,25 @@ body {
     margin: var(--marginMedium);
     background-color: var(--primaryColor);
     main {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr;
         img {
             display: none;
         }
         #formSection {
-            justify-items: center;
-            align-items: center;
+            width: 100%;
+            max-width: 350px;
+            justify-self: center;
+            align-content: center;
             h1 {
                 font-family: var(--fontFamilyHeaders);
                 font-weight: 700;
                 font-size: var(--fontMediumHeader);
                 color: var(--backgroundColor);
                 padding-bottom: var(--paddingXlarge);
+                text-align: center;
             }
             #formLogin {
-                width: 100%;
-                max-width: 350px;
                 div {
                     display: flex;
                     flex-direction: column;
@@ -44,9 +45,11 @@ body {
                     font-family: var(--fontFamilyHeaders);
                     font-weight: 700;
                     font-size: var(--fontSmallHeader);
+                    border: 0;
                     border-radius: var(--border);
                     padding: var(--paddingMedium);
                     width: 100%;
+                    cursor: pointer;
                 }
                 
             }
@@ -57,12 +60,17 @@ body {
     body {
         margin: 0;
         main {
-            flex-direction: row;
+            grid-template-columns: 1fr 1fr;
             img {
                 display: block;
                 height: 100vh;
-                width: 50%; 
+                width: 100%; 
                 object-fit: cover;
+                justify-self: start;
+            }
+            #formSection {
+                padding: var(--paddingMedium);
+                max-width: 450px;
             }
         }
     }
@@ -70,11 +78,21 @@ body {
 }
 
 @media (min-width: 768px) {
-
-}
-@media (min-width: 1024px) {
-
-}
-@media (min-width: 1201px) {
-
+    body {
+        main {
+            img {
+                display: block;
+                height: 100vh;
+                width: 100%; 
+                object-fit: cover;
+                justify-self: start;
+            }
+            #formSection {
+                padding: var(--paddingMedium);
+                h1 {
+                    font-size: var(--fontLargeHeader);
+                }
+            }
+        }
+    }
 }

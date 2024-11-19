@@ -1,5 +1,6 @@
 import { baseUrl } from "../scripts.js";
 
+
 const handleAPIError = (response) => {
     if (response.ok) {
         return response.json();
