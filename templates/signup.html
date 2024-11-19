@@ -3,28 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/_signup.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="js/signup.js" type="module"></script>
     <title>Signup</title>
   </head>
-
   <body>
     <header>
+      <!--
       <nav>
-        <img src="../assets/img/logo.svg" alt="E-borrow logo" >
+        <img src="../assets/img/logo.svg" alt="E-borrow logo" />
         <button id="signupButton">Signup</button>
       </nav>
+      -->
     </header>
 
     <main>
-      <header>
-        <h1 id="signupHeader">Signup for E-borrow here!</h1>
-      </header>
-      <section id="signupForm">
-        <img
-          src="../assets/img/image_2.png"
-          alt="Decorating image for the signup page"
-          id="signupPageImage"
-        >
-        <form action="submit">
+      <img
+        src="../assets/img/image_2.png"
+        alt="Decorating image for the signup page"
+        id="signupPageImage"
+      >
+      <section id="formSection">
+        <header>
+          <h1 id="signupHeader">Signup here!</h1>
+        </header>
+        <form id="formSignup">
+          <div>
           <label for="signupName">Name</label>
           <input
             type="text"
@@ -33,6 +38,8 @@
             placeholder="Name"
             required
           >
+        </div>
+        <div>
           <label for="signupLastName">Last Name</label>
           <input
             type="text"
@@ -41,6 +48,8 @@
             placeholder="Last Name"
             required
           >
+        </div>
+        <div>
           <label for="signupEmail">E-mail</label>
           <input
             type="email"
@@ -49,6 +58,8 @@
             placeholder="Email@email.com"
             required
           >
+        </div>
+        <div>
           <label for="signupPassword">Password</label>
           <input
             type="password"
@@ -57,6 +68,8 @@
             placeholder="Password"
             required
           >
+        </div>
+        <div>
           <label for="signupRepeatPassword">Repeat Password</label>
           <input
             type="password"
@@ -65,6 +78,7 @@
             placeholder="Repeat Password"
             required
           >
+        </div>
           <button type="submit">Signup</button>
         </form>
       </section>
