@@ -1,0 +1,107 @@
+body {
+    margin: var(--marginMedium);
+    background-color: var(--primaryColor);
+    main {
+        img {
+            display: none;
+        }
+        #formSection {
+            width: 100%;
+            max-width: 350px;
+            justify-self: center;
+            align-content: center;
+            h1 {
+                font-family: var(--fontFamilyHeaders);
+                font-weight: 700;
+                font-size: var(--fontMediumHeader);
+                color: var(--backgroundColor);
+                padding-bottom: var(--paddingXlarge);
+                text-align: center;
+            }
+            #addBookForm {
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    padding-bottom: var(--paddingMedium);
+                    label {
+                        font-family: var(--fontFamilyBody);
+                        color: var(--backgroundColor);
+                        padding-bottom: var(--paddingSmall);
+                    }
+                    input {
+                        border: 2px solid var(--secondaryColor);
+                        border-radius: var(--border);
+                        background-color: var(--primaryColor);
+                        padding: var(--paddingSmall);
+                        font-family: var(--fontFamilyBody);
+                        color: var(--quaternaryColor);
+                    }
+                }
+                button {
+                    background-color: var(--tertiaryColor);
+                    color: var(--backgroundColor);
+                    font-family: var(--fontFamilyHeaders);
+                    font-weight: 700;
+                    font-size: var(--fontSmallHeader);
+                    border: 0;
+                    border-radius: var(--border);
+                    padding: var(--paddingSmall);
+                    width: 100%;
+                    cursor: pointer;
+                }
+                
+            }
+        }
+        #search{
+            #searchHeader {
+                font-family: var(--fontFamilyHeaders);
+                font-weight: 700;
+                font-size: var(--fontMediumHeader);
+                color: var(--backgroundColor);
+                text-align: center;
+                padding-top: var(--paddingXlarge);
+            }
+        }
+    }
+    
+}
+@media (min-width: 600px) {
+    body {
+        margin: 0;
+        main {
+            grid-template-columns: 1fr 1fr;
+            img {
+                display: block;
+                height: 100vh;
+                width: 100%; 
+                object-fit: cover;
+                justify-self: start;
+            }
+            #formSection {
+                padding: var(--paddingMedium);
+                max-width: 450px;
+            }
+        }
+    }
+    
+}
+
+@media (min-width: 768px) {
+    body {
+        main {
+            img {
+                display: block;
+                height: 100vh;
+                width: 100%; 
+                object-fit: cover;
+                justify-self: start;
+            }
+            #formSection {
+                padding: var(--paddingMedium);
+                h1 {
+                    font-size: var(--fontLargeHeader);
+                }
+            }
+        }
+    }
+}
