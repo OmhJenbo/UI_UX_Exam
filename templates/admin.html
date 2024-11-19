@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/_admin.css" />
     <link rel="stylesheet" href="../css/styles.css" />
-    <script src="../js/admin.js" type="module"></script>
+    <script src="../js/search.js" type="module" defer></script>
     <title>Admin</title>
   </head>
 
@@ -59,10 +59,11 @@
             <div>
               <label for="addPublishingYear">Publishing Year</label>
               <input
-                type="number"
+                type="text"
                 id="addPublishingYear"
                 name="addPublishingYear"
                 placeholder="2007"
+                pattern="^(19|20)\d{2}$"
                 required
               />
             </div>
@@ -72,17 +73,19 @@
       </section>
       <section id="search">
         <h2 id="searchHeader">Search for books!</h2>
-        <div>
-          <!-- <label for="searchBook">Search for a book</label> -->
+        <form id="searchForm">
+          <div>
+          <label for="searchInput">Search for a E-book:</label>
           <input
             type="text"
-            id="searchBook"
-            name="searchBook"
-            placeholder="Search for a book"
-            required
-          />
+            id="searchInput"
+            name="search"
+            placeholder="Type to search..."
+          >
         </div>
-        <button type="submit">Search</button>
+          <button type="submit">Search</button>
+        </form>
+        <div id="searchResults"></div>
       </section>
     </main>
 
