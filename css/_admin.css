@@ -2,8 +2,6 @@ body {
     margin: var(--marginMedium);
     background-color: var(--primaryColor);
     main {
-        display: grid;
-        grid-template-columns: 1fr;
         img {
             display: none;
         }
@@ -20,7 +18,7 @@ body {
                 padding-bottom: var(--paddingXlarge);
                 text-align: center;
             }
-            #formLogin {
+            #addBookForm {
                 div {
                     display: flex;
                     flex-direction: column;
@@ -54,7 +52,18 @@ body {
                 
             }
         }
+        #search{
+            #searchHeader {
+                font-family: var(--fontFamilyHeaders);
+                font-weight: 700;
+                font-size: var(--fontMediumHeader);
+                color: var(--backgroundColor);
+                text-align: center;
+                padding-top: var(--paddingXlarge);
+            }
+        }
     }
+    
 }
 @media (min-width: 600px) {
     body {
