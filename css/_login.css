@@ -1,0 +1,80 @@
+body {
+    margin: var(--marginMedium);
+    background-color: var(--primaryColor);
+    main {
+        display: flex;
+        flex-direction: column;
+        img {
+            display: none;
+        }
+        #formSection {
+            justify-items: center;
+            align-items: center;
+            h1 {
+                font-family: var(--fontFamilyHeaders);
+                font-weight: 700;
+                font-size: var(--fontMediumHeader);
+                color: var(--backgroundColor);
+                padding-bottom: var(--paddingXlarge);
+            }
+            #formLogin {
+                width: 100%;
+                max-width: 350px;
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    padding-bottom: var(--paddingMedium);
+                    label {
+                        font-family: var(--fontFamilyBody);
+                        color: var(--backgroundColor);
+                        padding-bottom: var(--paddingSmall);
+                    }
+                    input {
+                        border: 2px solid var(--secondaryColor);
+                        border-radius: var(--border);
+                        background-color: var(--primaryColor);
+                        padding: var(--paddingMedium);
+                        font-family: var(--fontFamilyBody);
+                        color: var(--quaternaryColor);
+                    }
+                }
+                button {
+                    background-color: var(--tertiaryColor);
+                    color: var(--backgroundColor);
+                    font-family: var(--fontFamilyHeaders);
+                    font-weight: 700;
+                    font-size: var(--fontSmallHeader);
+                    border-radius: var(--border);
+                    padding: var(--paddingMedium);
+                    width: 100%;
+                }
+                
+            }
+        }
+    }
+}
+@media (min-width: 600px) {
+    body {
+        margin: 0;
+        main {
+            flex-direction: row;
+            img {
+                display: block;
+                height: 100vh;
+                width: 50%; 
+                object-fit: cover;
+            }
+        }
+    }
+    
+}
+
+@media (min-width: 768px) {
+
+}
+@media (min-width: 1024px) {
+
+}
+@media (min-width: 1201px) {
+
+}

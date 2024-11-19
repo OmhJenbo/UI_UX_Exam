@@ -21,8 +21,8 @@
 */
 :root {
     /* Fonts */
-    --fontHeaders: "Poppins", sans-serif;
-    --fontBody: "Raleway", sans-serif;
+    --fontFamilyHeaders: "Poppins", sans-serif;
+    --fontFamilyBody: "Raleway", sans-serif;
 
     --fontBody: 0.875rem;
     --fontXsmallHeader: 0.7rem;
@@ -54,4 +54,7 @@
     --imgSmall: 250px;
     --imgMedium: 300px;
     --imgLarge: 350px;
+
+    /* Border radius */
+    --border: 0.5rem;
 }
