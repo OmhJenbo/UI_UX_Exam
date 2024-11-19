@@ -27,6 +27,7 @@ body {
             font-family: var(--fontFamilyBody);
             color: var(--primaryColor);
             padding-bottom: var(--paddingSmall);
+            font-size: var(--fontBody);
           }
           input {
             border: 2px solid var(--secondaryColor);
@@ -53,7 +54,7 @@ body {
     }
     #search {
       width: 100%;
-      max-width: 450px;
+      max-width: 650px;
       justify-self: center;
       div {
         display: flex;
@@ -63,6 +64,7 @@ body {
           font-family: var(--fontFamilyBody);
           color: var(--primaryColor);
           padding-bottom: var(--paddingSmall);
+          font-size: var(--fontBody);
         }
         input {
           border: 2px solid var(--secondaryColor);
