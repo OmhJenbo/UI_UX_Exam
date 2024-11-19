@@ -20,7 +20,7 @@ body {
                 padding-bottom: var(--paddingXlarge);
                 text-align: center;
             }
-            #formLogin {
+            #formSignup {
                 div {
                     display: flex;
                     flex-direction: column;
