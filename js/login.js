@@ -1,4 +1,4 @@
-import { baseUrl } from "../scripts.js";
+import { baseUrl } from "./scripts.js";
 
 
 const handleAPIError = (response) => {
@@ -40,7 +40,8 @@ document.querySelector("#formLogin").addEventListener("submit", (e) =>{
     .then(data => {
         //check for "user_id" in the response
         if (Object.keys(data).includes("user_id")) {
-            console.log(data)
+            sessionStorage.setItem("")
+
         } else {
             throw new Error(data.error);
         }
