@@ -32,7 +32,7 @@ body {
                     }
                     input {
                         border: 2px solid var(--secondaryColor);
-                        border-radius: var(--border);
+                        border-radius: var(--borderRadius);
                         background-color: var(--primaryColor);
                         padding: var(--paddingSmall);
                         font-family: var(--fontFamilyBody);
@@ -46,7 +46,7 @@ body {
                     font-weight: 700;
                     font-size: var(--fontSmallHeader);
                     border: 0;
-                    border-radius: var(--border);
+                    border-radius: var(--borderRadius);
                     padding: var(--paddingSmall);
                     width: 100%;
                     cursor: pointer;
