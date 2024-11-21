@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/_signup.css">
     <link rel="stylesheet" href="../css/styles.css">
-    <script src="js/signup.js" type="module"></script>
+    <script src="../js/signup.js" type="module"></script>
     <title>Signup</title>
   </head>
   <body>
@@ -35,7 +35,7 @@
             type="text"
             id="signupName"
             name="name"
-            placeholder="Name"
+            placeholder="Jens"
             required
           >
         </div>
@@ -45,7 +45,7 @@
             type="text"
             id="signupLastName"
             name="lastname"
-            placeholder="Last Name"
+            placeholder="Jensen"
             required
           >
         </div>
@@ -55,9 +55,38 @@
             type="email"
             id="signupEmail"
             name="email"
-            placeholder="Email@email.com"
+            placeholder="email@email.com"
             required
           >
+        </div>
+        <div>
+          <label for="signupAdress">Adress</label>
+          <input 
+            id="signupAdress" 
+            type="text"
+            name="adress"
+            placeholder="Jensens vej 43"
+            required
+          >
+        </div>
+        <div>
+          <label for="signupTel">Phone number</label>
+          <input
+            id="signupTel"
+            type="tel"
+            name="phone"
+            placeholder="40404040"
+            required
+            >
+        </div>
+        <div>
+          <label for="signupDOB">Date of birth</label>
+          <input
+            id="signupDOB"
+            type="date"
+            name="date of birth"
+            required
+            >
         </div>
         <div>
           <label for="signupPassword">Password</label>
@@ -65,9 +94,10 @@
             type="password"
             id="signupPassword"
             name="password"
-            placeholder="Password"
-            required
-          >
+            minlength="8"
+            pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{9,}" 
+            title="Password must be at least 8 characters and have at least one lowercase and uppercase letter, one number, and one special character."
+            required>
         </div>
         <div>
           <label for="signupRepeatPassword">Repeat Password</label>
@@ -75,9 +105,10 @@
             type="password"
             id="signupRepeatPassword"
             name="repeatPassword"
-            placeholder="Repeat Password"
-            required
-          >
+            minlength="8"
+            pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{9,}" 
+            title="Password must be at least 8 characters and have at least one lowercase and uppercase letter, one number, and one special character."
+            required>
         </div>
           <button type="submit">Signup</button>
         </form>
@@ -86,4 +117,11 @@
 
     <footer></footer>
   </body>
+  <dialog id="passwordError">
+    <header>
+        <h2>Heads up!</h2>
+        <div class="close">&times;</div>
+    </header>
+    <p>Passwords must match</p>
+</dialog>
 </html>
