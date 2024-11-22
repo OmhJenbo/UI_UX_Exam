@@ -1,15 +1,18 @@
 body {
   margin: var(--marginMedium);
   background-color: var(--backgroundColor);
+
   main {
     img {
       display: none;
     }
+
     #formSection {
       width: 100%;
       max-width: 350px;
       justify-self: center;
       align-content: center;
+
       h1 {
         font-family: var(--fontFamilyHeaders);
         font-weight: 700;
@@ -18,18 +21,51 @@ body {
         padding-bottom: var(--paddingXlarge);
         text-align: center;
       }
-      #addBookForm {
+
+      .mini-nav {
+        display: flex;
+        gap: var(--paddingSmall);
+        justify-content: center;
+        padding-bottom: var(--paddingMedium);
+
+        button {
+          background-color: var(--tertiaryColor);
+          color: var(--backgroundColor);
+          font-family: var(--fontFamilyHeaders);
+          font-weight: 700;
+          font-size: var(--fontBody);
+          border: 0;
+          border-radius: var(--borderRadius);
+          padding: var(--paddingSmall);
+          cursor: pointer;
+        }
+
+        button.active {
+          background-color: var(--secondaryColor);
+        }
+      }
+
+      .form-container {
+        display: none;
+
+        &.active {
+          display: block;
+        }
+
         div {
           display: flex;
           flex-direction: column;
           padding-bottom: var(--paddingMedium);
+
           label {
             font-family: var(--fontFamilyBody);
             color: var(--primaryColor);
             padding-bottom: var(--paddingSmall);
             font-size: var(--fontBody);
           }
-          input {
+
+          input,
+          textarea {
             border: 2px solid var(--secondaryColor);
             border-radius: var(--borderRadius);
             background-color: var(--backgroundColor);
@@ -38,6 +74,7 @@ body {
             color: var(--quaternaryColor);
           }
         }
+
         button {
           background-color: var(--tertiaryColor);
           color: var(--backgroundColor);
@@ -52,20 +89,24 @@ body {
         }
       }
     }
+
     #search {
       width: 100%;
       max-width: 650px;
       justify-self: center;
+
       div {
         display: flex;
         flex-direction: column;
         padding-bottom: var(--paddingMedium);
+
         label {
           font-family: var(--fontFamilyBody);
           color: var(--primaryColor);
           padding-bottom: var(--paddingSmall);
           font-size: var(--fontBody);
         }
+
         input {
           border: 2px solid var(--secondaryColor);
           border-radius: var(--borderRadius);
@@ -74,8 +115,8 @@ body {
           font-family: var(--fontFamilyBody);
           color: var(--quaternaryColor);
         }
-        
       }
+
       button {
         background-color: var(--tertiaryColor);
         color: var(--backgroundColor);
@@ -88,6 +129,7 @@ body {
         width: 100%;
         cursor: pointer;
       }
+
       #searchHeader {
         font-family: var(--fontFamilyHeaders);
         font-weight: 700;
@@ -100,11 +142,14 @@ body {
     }
   }
 }
+
 @media (min-width: 600px) {
   body {
     margin: 0;
+
     main {
       grid-template-columns: 1fr 1fr;
+
       img {
         display: block;
         height: 100vh;
@@ -112,9 +157,14 @@ body {
         object-fit: cover;
         justify-self: start;
       }
+
       #formSection {
         padding: var(--paddingMedium);
         max-width: 450px;
+
+        .mini-nav {
+          gap: var(--paddingMedium);
+        }
       }
     }
   }
@@ -130,8 +180,10 @@ body {
         object-fit: cover;
         justify-self: start;
       }
+
       #formSection {
         padding: var(--paddingMedium);
+
         h1 {
           font-size: var(--fontLargeHeader);
         }
