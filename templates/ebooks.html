@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/_ebooks.css">
+    <script src="../js/ebooks.js" defer></script>
+    <title>E-books</title>
+</head>
+
+<body>
+    <!-- <header>
+        <nav>
+            <img src="assets/img/logo.svg" alt="E-Borrows logo" />
+            <button id="signupButton">Sign Up</button>
+            <button id="loginButton">Login</button>
+        </nav>
+    </header> -->
+    <main>
+        <div id="header">
+            <picture>
+                <source srcset="../assets/img/mobile_ebook.jpg" media="(max-width: 410px)">
+                <source srcset="../assets/img/tablet_ebook.jpg" media="(max-width: 768px)">
+                <source srcset="../assets/img/desktop_ebook.jpg" media="(min-width: 768px)">
+                <img src="image-desktop.jpg" alt="Description">
+            </picture>
+            <header>
+                <h1>E-BOOKS</h1>
+                <h2>Browse through our selection of E-books here</h2>
+            </header>
+        </div>
+        <section id="search">
+            <h2 id="searchHeader">Search for books!</h2>
+            <div>
+                <!-- <label for="searchBook">Search for a book</label> -->
+                <input type="text" id="searchBook" name="searchBook" placeholder="Search for a book" required />
+            </div>
+            <button type="submit">Search</button>
+        </section>
+        <section id="bookList">
+        </section>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
