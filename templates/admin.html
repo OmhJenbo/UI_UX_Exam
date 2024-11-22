@@ -25,10 +25,10 @@
         <header>
           <h1 id="loginHeader">Add a new book here!</h1>
         </header>
-        <section id="addBookForm">
-          <form>
+        <section id="addBookSection">
+          <form id="addBookForm">
             <div>
-              <label for="bookTitle">E-mail</label>
+              <label for="bookTitle">Book Title</label>
               <input
                 type="text"
                 id="bookTitle"
@@ -38,22 +38,22 @@
               />
             </div>
             <div>
-              <label for="addAuthor">Author</label>
+              <label for="addAuthor">Author ID</label>
               <input
-                type="text"
+                type="number"
                 id="addAuthor"
                 name="addAuthor"
-                placeholder="Jussi Adler-Olsen"
+                placeholder="50"
                 required
               />
             </div>
             <div>
-              <label for="addPublisher">Publisher</label>
+              <label for="addPublisher">Publisher ID</label>
               <input
-                type="text"
+                type="number"
                 id="addPublisher"
                 name="addPublisher"
-                placeholder="Politiken"
+                placeholder="165"
                 required
               />
             </div>
@@ -69,6 +69,7 @@
             </div>
             <button type="submit">Add Book</button>
           </form>
+          
         </section>
       </section>
       <section id="search">
