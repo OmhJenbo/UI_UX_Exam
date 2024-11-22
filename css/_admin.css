@@ -180,10 +180,8 @@ body {
         object-fit: cover;
         justify-self: start;
       }
-
       #formSection {
         padding: var(--paddingMedium);
-
         h1 {
           font-size: var(--fontLargeHeader);
         }
