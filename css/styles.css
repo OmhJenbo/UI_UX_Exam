@@ -1,89 +1,89 @@
 @import "_variables.css";
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    /* background-color: var(--backgroundColor); */
-    font-family: var(--fontFamilyBody);
+  /* background-color: var(--backgroundColor); */
+  font-family: var(--fontFamilyBody);
 
-    img {
-        width: 100%;
-    }
-    main {
+  img {
+    width: 100%;
+  }
+  main {
     section#bookList {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: var(--alignCenter);
+      padding: var(--paddingLarge);
+      gap: 30px;
+
+      .bookCard {
+        background-color: var(--white);
+        border: var(--border);
+        border-radius: var(--borderRadius);
+        transition: var(--transition);
+        width: var(--cardWidth);
+        position: relative;
+        padding: var(--paddingMedium);
         display: flex;
-        flex-wrap: wrap;
-        justify-content: var(--alignCenter);
-        padding: var(--paddingLarge);
-        gap: 30px;
+        flex-direction: column;
 
-        .bookCard {
-            background-color: var(--white);
-            border: var(--border);
-            border-radius: var(--borderRadius);
-            transition: var(--transition);
-            width: var(--cardWidth);
-            position: relative;
-            padding: var(--paddingMedium);
-            display: flex;
-            flex-direction: column;
-
-            &:hover {
-                transform: var(--transform);
-                box-shadow: var(--boxShadow);
-            }
-
-            h2 {
-                padding: var(--normalPadding);
-                color: var(--secondaryColor);
-                font-size: var(--fontSmallerMediumHeader);
-                font-family: var(--fontFamilyHeaders);
-                font-weight: var(--fontWeightBold);
-            }
-
-            h3 {
-                padding: var(--normalPadding);
-                color: var(--tertiaryColor);
-                font-size: var(--fontSmallHeader);
-                font-weight: var(--fontWeightSemiBold);
-                font-family: var(--fontFamilyHeaders);
-            }
-
-            p {
-                font-size: var(--fontFamilyBody);
-                line-height: 1.5;
-                color: var(--quaternaryColor);
-
-                &:first-of-type {
-                    margin-top: var(--marginMedium);
-                }
-
-                &:last-of-type {
-                    margin-bottom: var(--marginSmall);
-                }
-            }
-
-            button {
-                background-color: var(--secondaryColor);
-                color: var(--backgroundColor);
-                border: none;
-                border-radius: var(--borderRadius);
-                padding: var(--paddingSmallerMedium) var(--paddingBiggerMedium);
-                font-size: 16px;
-                font-weight: var(--fontWeightBold);
-                text-align: var(--alignCenter);
-                cursor: pointer;
-                margin-top: auto;
-
-                &:hover {
-                    background-color: var(--secondaryColor);
-                }
-            }
+        &:hover {
+          transform: var(--transform);
+          box-shadow: var(--boxShadow);
         }
+
+        h2 {
+          padding: var(--normalPadding);
+          color: var(--secondaryColor);
+          font-size: var(--fontSmallerMediumHeader);
+          font-family: var(--fontFamilyHeaders);
+          font-weight: var(--fontWeightBold);
+        }
+
+        h3 {
+          padding: var(--normalPadding);
+          color: var(--tertiaryColor);
+          font-size: var(--fontSmallHeader);
+          font-weight: var(--fontWeightSemiBold);
+          font-family: var(--fontFamilyHeaders);
+        }
+
+        p {
+          font-size: var(--fontFamilyBody);
+          line-height: 1.5;
+          color: var(--quaternaryColor);
+
+          &:first-of-type {
+            margin-top: var(--marginMedium);
+          }
+
+          &:last-of-type {
+            margin-bottom: var(--marginSmall);
+          }
+        }
+
+        button {
+          background-color: var(--secondaryColor);
+          color: var(--backgroundColor);
+          border: none;
+          border-radius: var(--borderRadius);
+          padding: var(--paddingSmallerMedium) var(--paddingBiggerMedium);
+          font-size: 16px;
+          font-weight: var(--fontWeightBold);
+          text-align: var(--alignCenter);
+          cursor: pointer;
+          margin-top: auto;
+
+          &:hover {
+            background-color: var(--secondaryColor);
+          }
+        }
+      }
     }
-}
+  }
 }
