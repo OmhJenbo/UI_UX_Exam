@@ -1,0 +1,163 @@
+/* General styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--backgroundColor);
+  padding: var(--paddingMedium);
+  box-shadow: var(--boxShadow);
+  position: relative;
+  z-index: 10;
+
+  img {
+    width: auto;
+    height: 40px;
+  }
+
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: var(--burgerMenuWidth);
+    height: var(--burgerMenuHeight);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 15;
+    position: relative;
+
+    div {
+      width: 100%;
+      height: var(--burgerMenuDivHeight);
+      background: var(--tertiaryColor);
+      border-radius: var(--borderRadius);
+      transition: var(--transition);
+      position: relative;
+    }
+
+    /* Transformations for the "X" effect when active */
+    &.active {
+      div:nth-child(1) {
+        transform: rotate(45deg);
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform-origin: center;
+      }
+
+      div:nth-child(2) {
+        opacity: 0;
+      }
+
+      div:nth-child(3) {
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform-origin: center;
+      }
+    }
+  }
+
+  #navlinks {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--backgroundColor);
+    flex-direction: column;
+    gap: var(--marginSmall);
+    padding: var(--paddingMedium);
+    box-shadow: var(--boxShadow);
+    z-index: 10;
+
+    &.active {
+      display: flex;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      flex-direction: column;
+      align-items: center;
+      width: 100%; /* Ensure consistent alignment */
+    }
+
+    li {
+      width: 100%; /* Ensure list items span the full width for alignment */
+      text-align: center; /* Center align the content */
+
+      a {
+        display: block; /* Make the anchor fill the space of the list item */
+        text-decoration: none;
+        font-size: var(--fontBody);
+        font-family: var(--fontFamilyHeaders);
+        font-weight: var(--fontWeightSemiBold);
+        color: var(--tertiaryColor);
+        padding: var(--paddingSmall);
+        border-radius: var(--borderRadius);
+        transition: var(--transition);
+        width: 100%; /* Ensure anchors fill the available width */
+        text-align: center; /* Center align the text inside the anchor */
+
+        &:hover {
+          background-color: var(--tertiaryColor);
+          color: var(--backgroundColor);
+        }
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      display: flex;
+      position: static;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      background: none;
+      box-shadow: none;
+      padding: 0;
+      gap: var(--gapSmall); /* Add gap between nav items */
+
+      ul {
+        display: flex; /* Ensure the list items are in a row */
+        flex-direction: row; /* Horizontal layout for list items */
+        justify-content: flex-end; /* Align items to the end */
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        gap: var(--gapSmall); /* Consistent gap between list items */
+      }
+
+      li {
+        width: auto; /* Adjust width dynamically based on content */
+
+        &:nth-child(3) a,
+        &:nth-child(4) a {
+          background-color: var(--tertiaryColor);
+          color: var(--backgroundColor);
+          padding: var(--paddingSmall) var(--paddingMedium);
+          text-decoration: none;
+          border-radius: var(--borderRadius);
+          font-size: var(--fontSmallHeader);
+          font-family: var(--fontFamilyHeaders);
+          font-weight: var(--fontWeightSemiBold);
+          display: inline-block; /* Ensures proper button-like styling */
+          text-align: center;
+          width: auto; /* Adjust dynamically */
+
+          &:hover {
+            background-color: var(--darkBlue); /* Darker blue hover for buttons */
+          }
+        }
+      }
+
+      .buttons {
+        flex-direction: row;
+        margin: 0;
+        gap: var(--marginSmall); /* Space between buttons */
+      }
+    }
+  }
+}
