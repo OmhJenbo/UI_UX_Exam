@@ -1,4 +1,3 @@
-/* General styles */
 nav {
   display: flex;
   justify-content: space-between;
@@ -81,15 +80,15 @@ nav {
       margin: 0;
       flex-direction: column;
       align-items: center;
-      width: 100%; /* Ensure consistent alignment */
+      width: 100%;
     }
 
     li {
-      width: 100%; /* Ensure list items span the full width for alignment */
-      text-align: center; /* Center align the content */
+      width: 100%; 
+      text-align: center;
 
       a {
-        display: block; /* Make the anchor fill the space of the list item */
+        display: block;
         text-decoration: none;
         font-size: var(--fontBody);
         font-family: var(--fontFamilyHeaders);
@@ -98,8 +97,8 @@ nav {
         padding: var(--paddingSmall);
         border-radius: var(--borderRadius);
         transition: var(--transition);
-        width: 100%; /* Ensure anchors fill the available width */
-        text-align: center; /* Center align the text inside the anchor */
+        width: 100%; 
+        text-align: center; 
 
         &:hover {
           background-color: var(--tertiaryColor);
@@ -107,8 +106,14 @@ nav {
         }
       }
     }
+  }
 
-    @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1024px) {
+    .burger-menu {
+      display: none;
+    }
+
+    #navlinks {
       display: flex;
       position: static;
       flex-direction: row;
@@ -117,20 +122,20 @@ nav {
       background: none;
       box-shadow: none;
       padding: 0;
-      gap: var(--gapSmall); /* Add gap between nav items */
+      gap: var(--smallGap); 
 
       ul {
-        display: flex; /* Ensure the list items are in a row */
-        flex-direction: row; /* Horizontal layout for list items */
-        justify-content: flex-end; /* Align items to the end */
+        display: flex; 
+        flex-direction: row; 
+        justify-content: flex-end; 
         padding: 0;
         margin: 0;
         list-style: none;
-        gap: var(--gapSmall); /* Consistent gap between list items */
+        gap: var(--smallGap);
       }
 
       li {
-        width: auto; /* Adjust width dynamically based on content */
+        width: auto;
 
         &:nth-child(3) a,
         &:nth-child(4) a {
@@ -142,20 +147,14 @@ nav {
           font-size: var(--fontSmallHeader);
           font-family: var(--fontFamilyHeaders);
           font-weight: var(--fontWeightSemiBold);
-          display: inline-block; /* Ensures proper button-like styling */
+          display: inline-block;
           text-align: center;
-          width: auto; /* Adjust dynamically */
+          width: auto;
 
           &:hover {
-            background-color: var(--darkBlue); /* Darker blue hover for buttons */
+            background-color: var(--secondaryColor);
           }
         }
-      }
-
-      .buttons {
-        flex-direction: row;
-        margin: 0;
-        gap: var(--marginSmall); /* Space between buttons */
       }
     }
   }
