@@ -30,6 +30,7 @@
     --fontSmallerMediumHeader: 1.25rem;
     --fontMediumHeader: 1.5rem;
     --fontLargeHeader: 2.5rem;
+    --fontXlargeHeader: 5rem;
 
     /* Colors */
     --primaryColor: #2A2929;
@@ -42,6 +43,7 @@
     --marginSmall: 0.5rem;
     --marginMedium: 1rem;
     --marginLarge: 1.5rem;
+    --marginLarger: 4rem;
     --marginXlarge: 7rem;
 
     /* Paddings */
@@ -78,8 +80,19 @@
     --transform: translateY(-0.5rem);
 
     /* Widths */
+    --widthLarge: 7rem;
     --cardWidth: 15.625rem;
+    --burgerMenuWidth: 30px;
+
+    /* Heights */
+    --burgerMenuDivHeight: 3px;
+    --burgerMenuHeight: 25px;
 
     /* Box shadows */
     --boxShadow: 0 0.45rem 0.9rem #2A2929;
+
+    /* Gap */
+    --smallGap: 0.5rem;
+    --mediumGap: 1rem;
+    --largeGap: 30px;
 }

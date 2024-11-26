@@ -34,12 +34,12 @@ function fetchBooks(url) {
 
         // Add the HTML content for the book card
         bookCard.innerHTML = `
-          <h2>${book.title}</h2> <!-- Display the book's title -->
-          <h3>${book.author}</h3> <!-- Display the author's name -->
-          <p>${book.publishing_company}</p> <!-- Display the publishing company -->
-          <p>${book.publishing_year}</p> <!-- Display the year of publication -->
-          <button>Loan this book</button> <!-- Add a button for loaning the book -->
-        `;
+                    <h2>${book.title}</h2> <!-- Display the book's title -->
+                    <h3>${book.author}</h3> <!-- Display the author's name -->
+                    <p>${book.publishing_company}</p> <!-- Display the publishing company -->
+                    <p>${book.publishing_year}</p> <!-- Display the year of publication -->
+                    <button class="loanBook">Loan this book</button> <!-- Add a button for loaning the book -->
+                `;
 
         // Append the book card to the fragment; this happens in memory, not in the DOM
         fragment.appendChild(bookCard);

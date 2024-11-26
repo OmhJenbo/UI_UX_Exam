@@ -4,21 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-Borrow</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/ebook.svg">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/_landingpage.css">
+    <link rel="stylesheet" href="css/__navigation.css">
+    <link rel="stylesheet" href="css/__footer.css">
     <script src="js/scripts.js" type="module"></script>
   </head>
   <body>
     <header>
       <nav>
         <img src="assets/img/logo.svg" alt="E-Borrows logo" />
-        <button id="signupButton">Sign Up</button>
-        <button id="loginButton">Login</button>
-      </nav>
-      <img src="assets/img/image_6.png" alt="A person reading a book" />
-      <h1 id="logo"><img src="assets/img/ebook.svg" alt="" />E-Borrow</h1>
+        <button class="burger-menu" aria-label="Toggle navigation">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+        <div id="navlinks">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">E-books</a></li>
+                <li><a href="#">Signup</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+      <div class="container">
+      
+    
+      <img class="backgroundImage" src="assets/img/image_6.png" alt="A person reading a book"/>
+        <div class="image_overlay"></div>
+        <div class="text_overlay">
+          <img src="assets/img/logo.svg" alt="E-Borrows logo" />
+          <!-- <img src="assets/img/ebook.svg" alt=""/>
+          <h1 id="logo">E-Borrow</h1> -->
+        </div>
+      </div>
     </header>
     <main>
-      <section id="indexWhoAreWe">
+      <section class="indexWhoAreWe">
         <p>
           At E-Borrow, we believe that stories are meant to be shared, not
           shelved. That&#39;s why we&#39;ve created a vibrant online community
@@ -26,59 +50,100 @@
           no waiting lists—just instant access to the stories you crave.
         </p>
       </section>
-      <section>
+      <section class="list_section">
         <img src="assets/img/image_4.png" alt="decorative image of an e-book" />
-        <section>
-          <h2>Why choose us?</h2>
-          <ul>
-            <li>
-              Unlimited Choices: From timeless classics to the latest releases,
-              find something for every mood.
-            </li>
-            <li>
-              Flexible Borrowing: Borrow books at your pace—no late fees, no
-              stress.
-            </li>
-            <li>
-              Community Vibes: Join a growing network of readers sharing
-              recommendations and reviews.
-            </li>
-            <li>
-              Eco-Friendly Reading: No paper, no waste—just pure storytelling.
-            </li>
-          </ul>
-
-          <h3>How it works</h3>
-          <ol>
-            <li>Browse our extensive digital library for your next read.</li>
-            <li>Borrow your favorite e-books with one click.</li>
-            <li>Enjoy seamless reading on any device.</li>
-          </ol>
-          <p>
-            Join thousands of book lovers who&#39;ve already discovered the joy
-            of sharing stories.
-          </p>
-          <p>
-            Sign up today and get your first borrow free! Let&#39;s turn the
-            page to a new way of reading—together.
-          </p>
-        </section>
+        <div>
+          <section class="list">
+            <h2>Why choose us?</h2>
+            <ul>
+              <li>
+                Unlimited Choices: From timeless classics to the latest releases,
+                find something for every mood.
+              </li>
+              <li>
+                Flexible Borrowing: Borrow books at your pace—no late fees, no
+                stress.
+              </li>
+              <li>
+                Community Vibes: Join a growing network of readers sharing
+                recommendations and reviews.
+              </li>
+              <li>
+                Eco-Friendly Reading: No paper, no waste—just pure storytelling.
+              </li>
+            </ul>
+          </section>
+          <section class="list">
+            <h2>How it works</h2>
+            <ol>
+              <li>Browse our extensive digital library for your next read.</li>
+              <li>Borrow your favorite e-books with one click.</li>
+              <li>Enjoy seamless reading on any device.</li>
+            </ol>
+            <p>
+              Join thousands of book lovers who&#39;ve already discovered the joy
+              of sharing stories.
+            </p>
+            <p>
+              Sign up today and get your first borrow free! Let&#39;s turn the
+              page to a new way of reading—together.
+            </p>
+            <button>Sign up today!</button>
+          </section>
+        </div>
       </section>
-      <section>
-        <h4>Explore your new favourites with E-Borrow!</h4>
-        <p>
-          Whether you&#39;re diving into a fantasy epic, exploring the depths of
-          non-fiction, or indulging in a quick weekend read, E-Borrow makes it
-          simple. Borrow the books you love, explore new favorites, and return
-          them when you&#39;re ready for your next adventure—all with just a few
-          clicks.
-        </p>
-
+      <section class="exploreFavourites">
+        <div>
+          <h3>Explore your new favourites with E-Borrow!</h3>
+          <p>
+            Whether you&#39;re diving into a fantasy epic, exploring the depths of
+            non-fiction, or indulging in a quick weekend read, E-Borrow makes it
+            simple. Borrow the books you love, explore new favorites, and return
+            them when you&#39;re ready for your next adventure—all with just a few
+            clicks.
+          </p>
+        </div>
         <img src="assets/img/image_1.png" alt="" />
       </section>
-        <section id="bookList">
-        </section>
+      <section class="browseBooks">
+        <header>
+          <h3>Browse through some of the books</h3>
+        </header>
+          <section id="bookList">
+          </section>
+      </section>
     </main>
-    <footer></footer>
+    <footer>
+
+      <section class="socials">
+        <img src="assets/img/logo.svg" alt="E-Borrows logo"/>
+        <div>
+          <img src="assets/img/instagram.svg" alt="instagram">
+          <img src="assets/img/facebook.svg" alt="facebook">
+          <img src="assets/img/linkedin.svg" alt="linkedin">
+        </div>
+      </section>
+
+      <section class="contact">
+        <header>
+          <h5>Contact</h5>
+        </header>
+        <a href="mailto:eborrow@mail.com">eborrow@mail.com</a>
+        <a href="tel:+4530303030">+4530303030</a>
+        <p>Jensens Vej 43, København K</p>
+      </section>
+
+      <section class="content">
+        <header>
+          <h5>Content</h5>
+        </header>
+        <p>Texts generated by <a href="https://chatgpt.com/" title="ChatGPT" target="_blank">ChatGPT</a></p>
+        <p>Images generated by <a href="https://figma.com/" title="Figma" target="_blank">Figma</a></p>
+        <p>Books loaded from <a href="https://github.com/arturomorarioja/py_library_api_v2.git" title="Py library v2" target="_blank">Py library v2</a></p>
+      </section>
+
+      <p class="copyright">&copy; 2024 - This is a school project</p>
+
+    </footer>
   </body>
 </html>
