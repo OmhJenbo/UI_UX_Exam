@@ -25,17 +25,16 @@ body {
         background-color: var(--white);
         border: var(--border);
         border-radius: var(--borderRadius);
-        transition: var(--transition);
         width: var(--cardWidth);
         position: relative;
         padding: var(--paddingMedium);
         display: flex;
         flex-direction: column;
 
-        /* &:hover {
+        &:hover {
           transform: var(--transform);
           box-shadow: var(--boxShadow);
-        } */
+        }
 
         h2 {
           padding: var(--normalPadding);

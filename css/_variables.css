@@ -80,7 +80,13 @@
     --transform: translateY(-0.5rem);
 
     /* Widths */
+    --widthLarge: 7rem;
     --cardWidth: 15.625rem;
+    --burgerMenuWidth: 30px;
+
+    /* Heights */
+    --burgerMenuDivHeight: 3px;
+    --burgerMenuHeight: 25px;
 
     /* Box shadows */
     --boxShadow: 0 0.45rem 0.9rem #2A2929;

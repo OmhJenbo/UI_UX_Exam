@@ -43,3 +43,16 @@ function fetchBooks(url) {
             console.error("Error fetching book data:", error); // Log the error in the console
         });
 }
+
+// Burger menu
+document.addEventListener("DOMContentLoaded", () => {
+    const burgerMenu = document.querySelector(".burger-menu");
+    const navLinks = document.querySelector("#navlinks");
+
+    burgerMenu.addEventListener("click", () => {
+        burgerMenu.classList.toggle("active");
+        navLinks.classList.toggle("active");
+    });
+});
+
+
