@@ -34,12 +34,40 @@ function fetchBooks(url) {
                     <h3>${book.author}</h3> <!-- Display the author's name -->
                     <p>${book.publishing_company}</p> <!-- Display the publishing company -->
                     <p>${book.publishing_year}</p> <!-- Display the year of publication -->
-                    <button>Loan this book</button> <!-- Add a button for loaning the book -->
+                    <button class="loanBook">Loan this book</button> <!-- Add a button for loaning the book -->
                 `;
 
         // Then we append so the bookList gets all the books
         bookList.append(bookCard);
       });
+
+      //Returns the logged used email
+      const loggedUser = () => {
+        return sessionStorage.getItem("userEmail");
+      }
+    
+      document.querySelector(".loanBook").addEventListener("click", (e) => {
+        e.preventDefault();
+          
+        // If the user is logged in, message will be shown that the book is loaned
+        // or else the user will be redirected to the login page
+        if (loggedUser()) {
+
+          // const params = new URLSearchParams();
+          // params.append("user_id", userID);
+          // params.append("book_id", bookID);
+
+          // fetch(`${baseUrl}/users/${userID}/books/${bookID}`, {
+          //   method: "POST",
+          //   body: params
+          // })
+            console.log("book is loaned")
+          } else {
+            console.log("user not logged in")
+            window.location.href = "../templates/login.html";
+        }
+      });
+
     })
     .catch((error) => {
       // Handle any errors during the fetch
