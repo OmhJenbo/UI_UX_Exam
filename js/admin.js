@@ -20,7 +20,7 @@ export const handleFetchCatchError = (error) => {
   document.querySelector("main").append(errorSection);
 };
 
-document.querySelector("#addBookForm").addEventListener("submit", (e) => {
+document.querySelector("#form-add-book").addEventListener("submit", (e) => {
   e.preventDefault();
 
   const formData = new FormData();
@@ -30,7 +30,6 @@ document.querySelector("#addBookForm").addEventListener("submit", (e) => {
   formData.append("publishing_year", e.target.addPublishingYear.value.trim());
 
   fetch(`${baseUrl}/admin/books`, {
-    // Remove misplaced parenthesis
     method: "POST",
     body: formData,
   })
@@ -48,5 +47,62 @@ document.querySelector("#addBookForm").addEventListener("submit", (e) => {
     .catch((error) => {
       console.error("Error adding book:", error);
       alert(`Error adding book: ${error.message}`);
+    });
+});
+
+// add an author
+document.querySelector("#form-add-author").addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const formData = new FormData();
+  formData.append("first_name", e.target.authorName.value.trim());
+  formData.append("last_name", e.target.authorLastName.value.trim());
+
+  fetch(`${baseUrl}/admin/authors`, {
+    method: "POST",
+    body: formData,
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      console.log("Author added successfully:", data);
+      alert("Author added successfully!");
+      e.target.reset();
+    })
+    .catch((error) => {
+      console.error("Error adding author:", error);
+      alert(`Error adding author: ${error.message}`);
+    });
+});
+
+// add a publisher
+document.querySelector("#form-add-publisher").addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const formData = new FormData();
+  formData.append("name", e.target.publisherName.value.trim());
+
+  fetch(`${baseUrl}/admin/publishers`, {
+    method: "POST",
+    body: formData,
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      console.log("Publisher added successfully:", data);
+      alert("Publisher added successfully!");
+      e.target.reset();
+    })
+    .catch((error) => {
+      console.error("Error adding publisher:", error);
+      alert(`Error adding publisher: ${error.message}`);
     });
 });
