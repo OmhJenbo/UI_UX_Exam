@@ -41,34 +41,63 @@ function fetchBookById(book_Id) {
 }
 
 function displayBook(book) {
-    const resultsDiv = document.getElementById("searchResult");
-    resultsDiv.innerHTML = ""; // Clear previous results
-  
-    // Create a paragraph for the book details
-    const bookDetails = document.createElement("p");
-    bookDetails.className = "result";
-    bookDetails.textContent = `${book.title} by ${book.author}. Published by ${book.publishing_company} in ${book.publishing_year}.`;
-  
-    resultsDiv.appendChild(bookDetails);
-  
-    // Create a section for the loan history
-    if (book.loans && book.loans.length > 0) {
-      const loanHistoryHeader = document.createElement("h3");
-      loanHistoryHeader.textContent = "Loan History:";
-      resultsDiv.appendChild(loanHistoryHeader);
-  
-      const loanList = document.createElement("ul"); // Use an unordered list for better formatting
-      book.loans.forEach((loan) => {
-        const loanItem = document.createElement("li");
-        loanItem.textContent = `User ID: ${loan.user_id}, Loan Date: ${loan.loan_date}`;
-        loanList.appendChild(loanItem);
-      });
-  
-      resultsDiv.appendChild(loanList);
-    } else {
-      const noLoans = document.createElement("p");
-      noLoans.textContent = "No loan history available.";
-      resultsDiv.appendChild(noLoans);
-    }
+  const resultsDiv = document.getElementById("searchResult");
+  resultsDiv.innerHTML = ""; // Clear previous results
+
+  // Create a parent container for book cover and details
+  const bookInfoContainer = document.createElement("div");
+  bookInfoContainer.classList.add("book-info");
+
+  // Create the book cover container
+  const bookCoverContainer = document.createElement("div");
+  bookCoverContainer.classList.add("cover-container");
+  const bookCover = document.createElement("img");
+  bookCover.src = book.cover; // Assign the image URL
+  bookCover.alt = `${book.title} cover`; // Add an alt attribute for accessibility
+  bookCoverContainer.appendChild(bookCover);
+  bookInfoContainer.appendChild(bookCoverContainer);
+
+  // Create a container div for book details and loan history
+  const bookDetailsContainer = document.createElement("div");
+  bookDetailsContainer.classList.add("book-details");
+
+  // Add book details paragraphs to the container
+  const bookTitle = document.createElement("p");
+  bookTitle.textContent = `Title: ${book.title}`;
+  bookDetailsContainer.appendChild(bookTitle);
+
+  const bookAuthor = document.createElement("p");
+  bookAuthor.textContent = `Author: ${book.author}`;
+  bookDetailsContainer.appendChild(bookAuthor);
+
+  const bookPublisher = document.createElement("p");
+  bookPublisher.textContent = `Published by: ${book.publishing_company}`;
+  bookDetailsContainer.appendChild(bookPublisher);
+
+  const bookYear = document.createElement("p");
+  bookYear.textContent = `Year: ${book.publishing_year}`;
+  bookDetailsContainer.appendChild(bookYear);
+
+  // Add loan history to the book details container
+  if (book.loans && book.loans.length > 0) {
+    const loanHistoryHeader = document.createElement("h3");
+    loanHistoryHeader.textContent = "Loan History:";
+    bookDetailsContainer.appendChild(loanHistoryHeader);
+    
+    const loanList = document.createElement("ul");
+    book.loans.forEach((loan) => {
+      const loanItem = document.createElement("li");
+      loanItem.textContent = `User ID: ${loan.user_id}, Loan Date: ${loan.loan_date}`;
+      loanList.appendChild(loanItem);
+    });
+    bookDetailsContainer.appendChild(loanList);
+  } else {
+    const noLoans = document.createElement("p");
+    noLoans.textContent = "No loan history available.";
+    bookDetailsContainer.appendChild(noLoans);
   }
-  
+  // Append the book details container to the book info container
+  bookInfoContainer.appendChild(bookDetailsContainer);
+  // Append the book info container to the main results div
+  resultsDiv.appendChild(bookInfoContainer);
+}
