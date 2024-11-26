@@ -1,143 +1,105 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="../assets/img/ebook.svg">
-    <link rel="stylesheet" href="../css/_admin.css" />
-    <link rel="stylesheet" href="../css/styles.css" />
-    <script src="../js/admin.js" type="module"></script>
-    <script src="../js/search.js" defer></script>
-    <script src="../js/admin_nav.js"></script>
-    <title>Admin</title>
-  </head>
 
-  <main>
-    <section id="formSection">
-      <section>
-        <nav class="mini-nav">
-          <button id="nav-add-book" class="active">Add a Book</button>
-          <button id="nav-add-author">Add an Author</button>
-          <button id="nav-add-publisher">Add a Publisher</button>
-        </nav>
-      </section>
-      <header>
-        <h1 id="loginHeader">Manage Library</h1>
-      </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="../assets/img/ebook.svg">
+  <link rel="stylesheet" href="../css/_admin.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <script src="../js/admin.js" type="module"></script>
+  <script src="../js/search.js" defer></script>
+  <script src="../js/admin_nav.js"></script>
+  <title>Admin</title>
+</head>
 
-      <!-- Add Book Form -->
-      <section id="form-add-book" class="form-container active">
-        <h2>Add a Book</h2>
-        <form>
-          <div>
-            <label for="bookTitle">Book title</label>
-            <input
-              type="text"
-              id="bookTitle"
-              name="bookTitle"
-              placeholder="Kvinden i buret"
-              required
-            />
-          </div>
-          <div>
-            <label for="addAuthor">Author</label>
-            <input
-              type="text"
-              id="addAuthor"
-              name="addAuthor"
-              placeholder="Jussi Adler-Olsen"
-              required
-            />
-          </div>
-          <div>
-            <label for="addPublisher">Publisher</label>
-            <input
-              type="text"
-              id="addPublisher"
-              name="addPublisher"
-              placeholder="Politiken"
-              required
-            />
-          </div>
-          <div>
-            <label for="addPublishingYear">Publishing Year</label>
-            <input
-              type="text"
-              id="addPublishingYear"
-              name="addPublishingYear"
-              placeholder="2007"
-              pattern="^(19|20)\d{2}$"
-              required
-            />
-          </div>
-          <button type="submit">Add Book</button>
-        </form>
-      </section>
-
-      <!-- Add Author Form -->
-      <section id="form-add-author" class="form-container">
-        <h2>Add an Author</h2>
-        <form>
-          <div>
-            <label for="authorName">Name</label>
-            <input
-              type="text"
-              id="authorName"
-              name="authorName"
-              placeholder="Author's Name"
-              required
-            />
-          </div>
-          <div>
-            <label for="authorLastName">Last Name</label>
-            <input
-              type="text"
-              id="authorLastName"
-              name="authorLastName"
-              placeholder="Author's Last Name"
-              required
-            />
-          </div>
-          <button type="submit">Add Author</button>
-        </form>
-      </section>
-
-      <!-- Add Publisher Form -->
-      <section id="form-add-publisher" class="form-container">
-        <h2>Add a Publisher</h2>
-        <form>
-          <div>
-            <label for="publisherName">Publisher Name</label>
-            <input
-              type="text"
-              id="publisherName"
-              name="publisherName"
-              placeholder="Publisher's Name"
-              required
-            />
-          </div>
-          <button type="submit">Add Publisher</button>
-        </form>
-      </section>
+<main>
+  <section id="formSection">
+    <section>
+      <nav class="mini-nav">
+        <button id="nav-add-book" class="active">Add a Book</button>
+        <button id="nav-add-author">Add an Author</button>
+        <button id="nav-add-publisher">Add a Publisher</button>
+      </nav>
     </section>
+    <header>
+      <h1 id="loginHeader">Manage Library</h1>
+    </header>
 
-    <section id="search">
-      <h2 id="searchHeader">Search for books!</h2>
-      <form id="searchForm">
+    <!-- Add Book Form -->
+    <section id="form-add-book" class="form-container active">
+      <h2>Add a Book</h2>
+      <form>
         <div>
-          <label for="searchInput">Search for an E-book:</label>
-          <input
-            type="text"
-            id="searchInput"
-            name="search"
-            placeholder="Type to search..."
-          />
+          <label for="bookTitle">Book title</label>
+          <input type="text" id="bookTitle" name="bookTitle" placeholder="Kvinden i buret" required />
         </div>
-        <button type="submit">Search</button>
+        <div>
+          <label for="addAuthor">Author</label>
+          <input type="text" id="addAuthor" name="addAuthor" placeholder="Jussi Adler-Olsen" required />
+        </div>
+        <div>
+          <label for="addPublisher">Publisher</label>
+          <input type="text" id="addPublisher" name="addPublisher" placeholder="Politiken" required />
+        </div>
+        <div>
+          <label for="addPublishingYear">Publishing Year</label>
+          <input type="text" id="addPublishingYear" name="addPublishingYear" placeholder="2007"
+            pattern="^(19|20)\\d{2}$" required />
+        </div>
+        <button type="submit">Add Book</button>
       </form>
-      <div id="searchResults"></div>
     </section>
-  </main>
 
-  <footer></footer>
+    <!-- Add Author Form -->
+    <section id="form-add-author" class="form-container">
+      <h2>Add an Author</h2>
+      <form>
+        <div>
+          <label for="authorName">Name</label>
+          <input type="text" id="authorName" name="authorName" placeholder="Author's Name" required />
+        </div>
+        <div>
+          <label for="authorLastName">Last Name</label>
+          <input type="text" id="authorLastName" name="authorLastName" placeholder="Author's Last Name" required />
+        </div>
+        <button type="submit">Add Author</button>
+      </form>
+    </section>
+
+    <!-- Add Publisher Form -->
+    <section id="form-add-publisher" class="form-container">
+      <h2>Add a Publisher</h2>
+      <form>
+        <div>
+          <label for="publisherName">Publisher Name</label>
+          <input type="text" id="publisherName" name="publisherName" placeholder="Publisher's Name" required />
+        </div>
+        <button type="submit">Add Publisher</button>
+      </form>
+    </section>
+  </section>
+
+  <section id="search">
+    <h2 id="searchHeader">Search for books!</h2>
+    <form id="searchForm">
+      <div>
+        <label for="searchInput">Search for an E-book:</label>
+        <input type="text" id="searchInput" name="search" placeholder="Type to search..." />
+      </div>
+      <button type="submit">Search</button>
+    </form>
+    <div id="searchResults"></div>
+  </section>
+
+  <form id="searchForm">
+    <label for="searchInput">Search for a E-book:</label>
+    <input type="text" id="searchInput" name="search" placeholder="Type to search..." />
+    <button type="submit">Search</button>
+  </form>
+  <div id="searchResults"></div>
+</main>
+
+<footer></footer>
 </body>
+
 </html>

@@ -1,43 +1,50 @@
 body {
+  .space {
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+  }
   #header {
     position: relative;
     picture {
       position: relative;
       top: 0;
     }
-    h1 {
-      top: 60%;
-      margin-left: auto;
-      margin-right: auto;
-      padding: var(--paddingSmall);
-      background-color: var(--backgroundColor);
-      color: var(--secondaryColor);
-      font-weight: var(--fontWeightBold);
-      font-family: var(--fontFamilyHeaders);
-      font-size: var(--fontLargeHeader);
-      width: 80%;
+    #titles {
       position: absolute;
-      margin-left: auto;
-      margin-right: auto;
-      left: 0;
-      right: 0;
-      text-align: center;
-    }
-    h2 {
-      top: 80%;
-      margin-left: auto;
-      margin-right: auto;
-      color: var(--backgroundColor);
-      /* font-weight: var(--fontWeightBold); */
-      font-family: var(--fontFamilyHeaders);
-      font-size: var(--fontSmallerMediumHeader);
-      width: 80%;
-      position: absolute;
-      margin-left: auto;
-      margin-right: auto;
-      left: 0;
-      right: 0;
-      text-align: center;
+      top: 70%;
+      h1 {
+        top: 65%;
+        margin-left: auto;
+        margin-right: auto;
+        /* padding: var(--paddingSmall); */
+        color: var(--secondaryColor);
+        font-weight: var(--fontWeightBold);
+        font-family: var(--fontFamilyHeaders);
+        font-size: var(--fontLargeHeader);
+        width: 80%;
+        /* position: absolute; */
+        margin-left: auto;
+        margin-right: auto;
+        /* left: 0;
+      right: 0; */
+        text-align: center;
+      }
+      h2 {
+        top: 78%;
+        margin-left: auto;
+        margin-right: auto;
+        color: var(--backgroundColor);
+        /* font-weight: var(--fontWeightBold); */
+        font-family: var(--fontFamilyHeaders);
+        font-size: var(--fontSmallerMediumHeader);
+        width: 80%;
+        /* position: absolute; */
+        margin-left: auto;
+        margin-right: auto;
+        /* left: 0;
+      right: 0; */
+        text-align: center;
+      }
     }
   }
 
@@ -47,10 +54,11 @@ body {
     justify-self: center;
     margin-left: auto;
     margin-right: auto;
-    div {
+    form {
       display: flex;
       flex-direction: column;
       padding-bottom: var(--paddingMedium);
+      position: relative;
       label {
         font-family: var(--fontFamilyBody);
         color: var(--primaryColor);
@@ -65,24 +73,28 @@ body {
         font-family: var(--fontFamilyBody);
         color: var(--quaternaryColor);
       }
-    }
-    button {
-      background-color: var(--tertiaryColor);
-      color: var(--backgroundColor);
-      font-family: var(--fontFamilyHeaders);
-      font-weight: 700;
-      font-size: var(--fontSmallHeader);
-      border: 0;
-      border-radius: var(--borderRadius);
-      padding: var(--paddingSmall);
-      width: 100%;
-      cursor: pointer;
+      button {
+        position: absolute;
+        width: 15%;
+        height: 75%;
+        top: -3%;
+        right: 0;
+        background-color: var(--tertiaryColor);
+        color: var(--backgroundColor);
+        font-family: var(--fontFamilyHeaders);
+        font-weight: 700;
+        font-size: var(--fontSmallHeader);
+        border: 0;
+        border-radius: var(--borderRadius);
+        padding: var(--paddingSmall);
+        cursor: pointer;
+      }
     }
     #searchHeader {
       font-family: var(--fontFamilyHeaders);
       font-weight: 700;
       font-size: var(--fontMediumHeader);
-      color: var(--primaryColor);
+      color: transparent;
       text-align: center;
       padding-top: var(--paddingXlarge);
       padding-bottom: var(--paddingMedium);
@@ -93,34 +105,36 @@ body {
 @media (min-width: 410px) {
   body {
     #header {
-      h1 {
-        top: 40%;
-        margin-left: var(--marginMedium);
-        padding: var(--paddingSmall) var(--paddingMedium);
-        background-color: var(--backgroundColor);
-        color: var(--secondaryColor);
-        font-weight: var(--fontWeightBold);
-        font-family: var(--fontFamilyHeaders);
-        font-size: var(--fontLargeHeader);
-        text-align: start;
-        width: fit-content;
+      position: relative;
+      picture {
+        position: relative;
+        top: 0;
       }
-      h2 {
-        top: 70%;
-        margin-left: var(--marginMedium);
-        color: var(--backgroundColor);
-        /* font-weight: var(--fontWeightBold); */
-        font-family: var(--fontFamilyHeaders);
-        font-size: var(--fontSmallerMediumHeader);
-        width: 80%;
-        text-align: start;
-      }
-      @media (min-width: 580px) {
+      #titles {
+        top: 50%;
+        @media (min-width: 550px) {
+          top: 60%;
+        }
         h1 {
-          top: 52%;
+          /* top: 40%; */
+          margin-left: var(--marginMedium);
+          /* padding: var(--paddingSmall) var(--paddingMedium); */
+          color: var(--secondaryColor);
+          font-weight: var(--fontWeightBold);
+          font-family: var(--fontFamilyHeaders);
+          font-size: var(--fontLargeHeader);
+          text-align: start;
+          width: fit-content;
         }
         h2 {
-          top: 75%;
+          /* top: 70%; */
+          margin-left: var(--marginMedium);
+          color: var(--backgroundColor);
+          /* font-weight: var(--fontWeightBold); */
+          font-family: var(--fontFamilyHeaders);
+          font-size: var(--fontSmallerMediumHeader);
+          width: 80%;
+          text-align: start;
         }
       }
     }
@@ -130,31 +144,30 @@ body {
 @media (min-width: 800px) {
   body {
     #header {
-      h1 {
-        top: 60%;
-        margin-left: var(--marginLarge);
-      }
-      h2 {
-        top: 80%;
-        width: 40%;
-        margin-left: var(--marginLarge);
-      }
-      @media (min-width: 1040px) {
+      #titles {
+        top: 65%;
         h1 {
-          top: 60%;
+          /* top: 60%; */
+          margin-left: var(--marginLarge);
         }
         h2 {
+          /* top: 80%; */
+          width: 60%;
+          margin-left: var(--marginLarge);
+        }
+        @media (min-width: 1040px) {
           top: 75%;
-          width: 30%;
+          /* background-color: hotpink; */
+          margin-left: var(--marginMedium);
+        }
+        #search {
+          width: 100%;
+          max-width: 95%;
+          justify-self: center;
+          margin-left: auto;
+          margin-right: auto;
         }
       }
-    }
-    #search {
-      width: 100%;
-      max-width: 95%;
-      justify-self: center;
-      margin-left: auto;
-      margin-right: auto;
     }
   }
 }
