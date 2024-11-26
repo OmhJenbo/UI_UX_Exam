@@ -46,6 +46,9 @@ document.querySelector("#formLogin").addEventListener("submit", (e) => {
 
             // Save the user's email in sessionStorage for later use (on the same browser session)
             sessionStorage.setItem("userEmail", email);
+            
+            // save the user's ID in sessionStorage. needed for user deletion.
+            sessionStorage.setItem("userId", data.user_id);
 
             // Redirects to a different page on succesful login depending on the role of the user
             if (email === "admin.library@mail.com") {
