@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="../css/_admin.css" />
     <link rel="stylesheet" href="../css/styles.css" />
     <script src="../js/admin.js" type="module"></script>
-    <script src="../js/search.js" defer></script>
     <script src="../js/admin_nav.js"></script>
+    <script src="../js/admin_search.js" defer></script>
     <title>Admin</title>
   </head>
 
@@ -65,7 +65,7 @@
               id="addPublishingYear"
               name="addPublishingYear"
               placeholder="2007"
-              pattern="^(19|20)\\d{2}$"
+              pattern="^(18|19|20)\d{2}$"
               required
             />
           </div>
@@ -120,11 +120,12 @@
       </section>
     </section>
 
+    <!-- Search for a book by ID -->
     <section id="search">
       <h2 id="searchHeader">Search for books!</h2>
       <form id="searchForm">
         <div>
-          <label for="searchInput">Search for an E-book:</label>
+          <label for="searchInput">Search for a book by ID:</label>
           <input
             type="text"
             id="searchInput"
@@ -134,7 +135,7 @@
         </div>
         <button type="submit">Search</button>
       </form>
-      <div id="searchResults"></div>
+      <div id="searchResult"></div>
     </section>
   </main>
 

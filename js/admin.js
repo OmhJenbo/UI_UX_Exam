@@ -5,7 +5,7 @@ const handleAPIError = (response) => {
   if (response.ok) {
     return response.json();
   }
-  throw new Error(`HTTP error! Status: ${response.status}`);
+  throw new Error(`HTTP error! Status: ${response.status}}`);
 };
 
 export const handleFetchCatchError = (error) => {
@@ -36,7 +36,7 @@ document.querySelector("#addBookForm").addEventListener("submit", (e) => {
   })
     .then((response) => {
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        throw new Error(`HTTP error! status: ${response.error}`);
       }
       return response.json();
     })
