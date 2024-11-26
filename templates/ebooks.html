@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/_ebooks.css">
     <script src="../js/ebooks.js" type="module" defer></script>
+    <script src="js/scripts.js" type="module" defer></script>
     <title>E-books</title>
 </head>
 
@@ -27,18 +28,20 @@
                 <source srcset="../assets/img/desktop_ebook.jpg" media="(min-width: 768px)">
                 <img src="image-desktop.jpg" alt="Description">
             </picture>
-            <header>
+            <header id="titles">
                 <h1>E-BOOKS</h1>
                 <h2>Browse through our selection of E-books here</h2>
             </header>
         </div>
         <section id="search">
-            <h2 id="searchHeader">Search for books!</h2>
-            <div>
+            <!-- <h2 id="searchHeader">Search for books!</h2> -->
+            <label id="searchHeader" for="searchInput">Search for books!</label>
+            <form id="searchForm">
                 <!-- <label for="searchBook">Search for a book</label> -->
-                <input type="text" id="searchBook" name="searchBook" placeholder="Search for a book" required />
-            </div>
-            <button type="submit">Search</button>
+                <input type="text" id="searchInput" name="search" placeholder="Search for a book" />
+                <button type="submit">Search</button>
+            </form>
+            <div id="searchResults"></div>
         </section>
         <section id="bookList">
         </section>
