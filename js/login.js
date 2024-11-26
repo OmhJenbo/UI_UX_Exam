@@ -1,5 +1,5 @@
 // Importing the base URL for the API from another JavaScript file
-import { baseUrl } from "../js/scripts.js";
+import { baseUrl } from "./scripts.js";
 
 // This function handles the API response and checks if the request was successful
 const handleAPIError = (response) => {
@@ -60,3 +60,9 @@ document.querySelector("#formLogin").addEventListener("submit", (e) => {
     })
     .catch(handleFetchCatchError); // If there's an error in the fetch request, handle it here
 });
+
+//Logs user out
+// const logout = () => {
+//     sessionStorage.removeItem("userEmail", email);
+//     window.location.href = "index.html";
+// }

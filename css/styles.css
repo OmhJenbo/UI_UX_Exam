@@ -32,10 +32,10 @@ body {
         display: flex;
         flex-direction: column;
 
-        &:hover {
+        /* &:hover {
           transform: var(--transform);
           box-shadow: var(--boxShadow);
-        }
+        } */
 
         h2 {
           padding: var(--normalPadding);
