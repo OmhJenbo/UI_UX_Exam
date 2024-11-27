@@ -60,9 +60,3 @@ document.querySelector("#formLogin").addEventListener("submit", (e) => {
     })
     .catch(handleFetchCatchError); // If there's an error in the fetch request, handle it here
 });
-
-//Logs user out
-// const logout = () => {
-//     sessionStorage.removeItem("userEmail", email);
-//     window.location.href = "index.html";
-// }
