@@ -1,16 +1,15 @@
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/x-icon" href="../assets/img/ebook.svg">
-  <link rel="stylesheet" href="../css/_admin.css" />
-  <link rel="stylesheet" href="../css/styles.css" />
-  <script src="../js/admin.js" type="module"></script>
-  <script src="../js/search.js" defer></script>
-  <script src="../js/admin_nav.js"></script>
-  <title>Admin</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../assets/img/ebook.svg">
+    <link rel="stylesheet" href="../css/_admin.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="../js/admin.js" type="module"></script>
+    <script src="../js/admin_nav.js"></script>
+    <script src="../js/admin_search.js" defer></script>
+    <title>Admin</title>
+  </head>
 
 <main>
   <section id="formSection">
@@ -44,7 +43,7 @@
         <div>
           <label for="addPublishingYear">Publishing Year</label>
           <input type="text" id="addPublishingYear" name="addPublishingYear" placeholder="2007"
-            pattern="^(19|20)\\d{2}$" required />
+            pattern="^(19|20)\d{2}$" required />
         </div>
         <button type="submit">Add Book</button>
       </form>
@@ -88,16 +87,8 @@
       </div>
       <button type="submit">Search</button>
     </form>
-    <div id="searchResults"></div>
+    <div id="searchResult"></div>
   </section>
-
-  <form id="searchForm">
-    <label for="searchInput">Search for a E-book:</label>
-    <input type="text" id="searchInput" name="search" placeholder="Type to search..." />
-    <button type="submit">Search</button>
-  </form>
-  <div id="searchResults"></div>
-</main>
 
 <footer></footer>
 </body>

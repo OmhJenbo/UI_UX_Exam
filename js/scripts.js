@@ -34,7 +34,7 @@ function fetchBooks(url) {
                     <h3>${book.author}</h3> <!-- Display the author's name -->
                     <p>${book.publishing_company}</p> <!-- Display the publishing company -->
                     <p>${book.publishing_year}</p> <!-- Display the year of publication -->
-                    <button>Loan this book</button> <!-- Add a button for loaning the book -->
+                    <button class="loanBook">Loan this book</button> <!-- Add a button for loaning the book -->
                 `;
 
         // Then we append so the bookList gets all the books

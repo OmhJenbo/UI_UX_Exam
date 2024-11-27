@@ -94,29 +94,34 @@ body {
       width: 100%;
       max-width: 650px;
       justify-self: center;
-
+      #searchHeader {
+        font-family: var(--fontFamilyHeaders);
+        font-weight: 700;
+        font-size: var(--fontMediumHeader);
+        color: var(--primaryColor);
+        text-align: center;
+        padding-top: var(--paddingXlarge);
+        padding-bottom: var(--paddingMedium);
+      }
       div {
         display: flex;
         flex-direction: column;
         padding-bottom: var(--paddingMedium);
-
-        label {
-          font-family: var(--fontFamilyBody);
-          color: var(--primaryColor);
-          padding-bottom: var(--paddingSmall);
-          font-size: var(--fontBody);
-        }
-
-        input {
-          border: 2px solid var(--secondaryColor);
-          border-radius: var(--borderRadius);
-          background-color: var(--backgroundColor);
-          padding: var(--paddingSmall);
-          font-family: var(--fontFamilyBody);
-          color: var(--quaternaryColor);
-        }
       }
-
+      label {
+        font-family: var(--fontFamilyBody);
+        color: var(--primaryColor);
+        padding-bottom: var(--paddingSmall);
+        font-size: var(--fontBody);
+      }
+      input {
+        border: 2px solid var(--secondaryColor);
+        border-radius: var(--borderRadius);
+        background-color: var(--backgroundColor);
+        padding: var(--paddingSmall);
+        font-family: var(--fontFamilyBody);
+        color: var(--quaternaryColor);
+      }
       button {
         background-color: var(--tertiaryColor);
         color: var(--backgroundColor);
@@ -129,15 +134,37 @@ body {
         width: 100%;
         cursor: pointer;
       }
+      #searchResults {
+        display: flex;
+        flex-direction: column; /* Ensure multiple books stack vertically */
+      }
 
-      #searchHeader {
-        font-family: var(--fontFamilyHeaders);
-        font-weight: 700;
-        font-size: var(--fontMediumHeader);
+      .book-info {
+        gap: var(--paddingMedium); /* Space between image and text */
+        padding: var(--paddingSmall);
+        border: 2px solid var(--secondaryColor);
+        border-radius: var(--borderRadius);
+        background-color: var(--backgroundColor);
+        padding-top: var(--paddingMedium);
+      }
+
+      .book-info img {
+        display: none;
+      }
+      .book-details {
+        display: flex;
+        flex-direction: column; /* Stack the p tags vertically */
+        gap: var(--paddingSmall); /* Space between each p tag */
+      }
+
+      .book-details p {
+        font-family: var(--fontFamilyBody);
         color: var(--primaryColor);
-        text-align: center;
-        padding-top: var(--paddingXlarge);
-        padding-bottom: var(--paddingMedium);
+        font-size: var(--fontBody);
+        margin: 0;
+      }
+      ul li {
+        list-style-type: none;
       }
     }
   }
@@ -161,9 +188,31 @@ body {
       #formSection {
         padding: var(--paddingMedium);
         max-width: 450px;
-
         .mini-nav {
           gap: var(--paddingMedium);
+        }
+      }
+      #search {
+        max-width: 650px;
+        #searchResults {
+          gap: var(--paddingMedium);
+        }
+        .book-info{
+        display: grid;
+        grid-template-columns: 300px 1fr; /* 300px for the image, remaining space for details */
+        gap: var(--paddingMedium); /* Space between image and text */
+        align-items: start; /* Align items to the top */
+        padding: var(--paddingSmall);
+        border: 2px solid var(--secondaryColor);
+        border-radius: var(--borderRadius);
+        background-color: var(--backgroundColor);
+        padding-top: var(--paddingMedium);
+        } .book-info img {
+        width: 300px;
+        height: 450px;
+        object-fit: cover; /* Maintain aspect ratio */
+        border-radius: var(--borderRadius);
+        display: block;
         }
       }
     }

@@ -2,56 +2,103 @@
 // Base URL for the API
 const baseUrl = "http://localhost:8080";
 
-// Wait for the HTML content to fully load before running the script
 document.addEventListener("DOMContentLoaded", () => {
-  const numberOfBooks = 8; // Define how many books to fetch
-  fetchBooks(`${baseUrl}/books?n=${numberOfBooks}`); // Call fetchBooks function with the API URL in it
+  const numberOfBooks = 8;
+  fetchBooks(`${baseUrl}/books?n=${numberOfBooks}`);
+
+  const bookList = document.getElementById("bookList");
+  if (bookList) {
+    bookList.addEventListener("click", handleLoanClick);
+  }
 });
 
-// Made a function to fetch books from the API URL
-function fetchBooks(url) {
-  fetch(url) // Send a GET request to the API
-    .then((response) => {
-      if (!response.ok) {
-        // Check if the response is not okay
-        throw new Error(`HTTP error! status: ${response.status}`); // in case it's not okay throw an error with the status code
-      }
-      return response.json(); // If everything worked fine we return the response as json
+// Handle click event for loaning a book
+function handleLoanClick(e) {
+  if (!e.target.classList.contains("loanBook")) return;
+
+  e.preventDefault();
+  const button = e.target;
+
+  if (button.textContent === "Loaned") {
+    alert("This book is already loaned.");
+    return;
+  }
+
+  const userId = sessionStorage.getItem("userId");
+  if (!userId) {
+    window.location.href = "../templates/login.html";
+    return;
+  }
+
+  const bookCard = button.closest(".bookCard");
+  const bookId = bookCard?.getAttribute("data-book-id");
+
+  if (!bookId) {
+    console.error("Book ID not found.");
+    return;
+  }
+
+  const loanUrl = `${baseUrl}/users/${userId}/books/${bookId}`;
+  fetch(loanUrl, { method: "POST" })
+    .then(handleResponse)
+    .then(() => {
+      button.textContent = "Loaned";
+      console.log(`user_id: ${userId} successfully loaned book_id: ${bookId}`);
     })
-    .then((books) => {
-      // Once the books data is available we run the following
-      const bookList = document.getElementById("bookList"); // Grab the section where the id is bookList
-      bookList.innerHTML = ""; // Remove all previous content in the bookList so its empty; first DOM manipulation
-
-      // Create a DocumentFragment to hold the book cards
-      const fragment = document.createDocumentFragment();
-
-      // Loop through each book and add it to the fragment
-      books.forEach((book) => {
-        // Create a div for the book card
-        const bookCard = document.createElement("article");
-        bookCard.classList.add("bookCard"); // Add a class to style the card
-
-        // Add the HTML content for the book card
-        bookCard.innerHTML = `
-                    <h2>${book.title}</h2> <!-- Display the book's title -->
-                    <h3>${book.author}</h3> <!-- Display the author's name -->
-                    <p>${book.publishing_company}</p> <!-- Display the publishing company -->
-                    <p>${book.publishing_year}</p> <!-- Display the year of publication -->
-                    <button class="loanBook">Loan this book</button> <!-- Add a button for loaning the book -->
-                `;
-
-        // Append the book card to the fragment; this happens in memory, not in the DOM
-        fragment.appendChild(bookCard);
-      });
-
-      // Append the entire fragment to the book list in one operation; second DOM manipulations
-      bookList.appendChild(fragment);
-    })
+    
     .catch((error) => {
-      // Handle any errors during the fetch
-      console.error("Error fetching book data:", error); // Log the error in the console
+      console.error(error.message);
+      alert(error.message || "Failed to loan the book.");
     });
+}
+
+// Fetch books and render them
+function fetchBooks(url) {
+  fetch(url)
+    .then(handleResponse)
+    .then((books) => {
+      renderBooks(books);
+    })
+    .catch((error) => console.error("Error fetching books:", error));
+}
+
+// Render books to the page
+function renderBooks(books) {
+  const bookList = document.getElementById("bookList");
+  if (!bookList) return;
+
+  bookList.innerHTML = ""; // Clear existing content
+
+  books.forEach((book) => {
+    if (!book.book_id) {
+      console.warn("Skipping book with missing ID:", book);
+      return;
+    }
+
+    const bookCard = document.createElement("div");
+    bookCard.classList.add("bookCard");
+    bookCard.setAttribute("data-book-id", book.book_id);
+
+    bookCard.innerHTML = `
+      <h2>${book.title}</h2>
+      <h3>${book.author}</h3>
+      <p>${book.publishing_company}</p>
+      <p>${book.publishing_year}</p>
+      <button class="loanBook">Loan this book</button>
+    `;
+
+    bookList.append(bookCard);
+  });
+}
+
+// Handle API response
+function handleResponse(response) {
+  if (!response.ok) {
+    return response.text().then((text) => {
+      throw new Error(text || "An error occurred.");
+    });
+  }
+  return response.json();
 }
 
 // ######################################---Search function---#######################################
