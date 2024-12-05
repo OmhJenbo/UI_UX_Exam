@@ -1,6 +1,6 @@
 @import "_variables.css";
-/* @import "__navigation.css";
-@import "__footer.css"; */
+@import "__navigation.css";
+@import "__footer.css";
 
 * {
   margin: 0;
