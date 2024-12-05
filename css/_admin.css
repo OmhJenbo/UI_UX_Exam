@@ -1,8 +1,10 @@
 body {
-  margin: var(--marginMedium);
   background-color: var(--backgroundColor);
-
+  
   main {
+    margin-left: var(--marginMedium);
+    margin-right: var(--marginMedium);
+    margin-bottom: var(--marginXlarge);
     img {
       display: none;
     }
