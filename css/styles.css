@@ -79,10 +79,10 @@ body {
           text-align: var(--alignCenter);
           cursor: pointer;
           margin-top: auto;
+        }
 
-          &:hover {
-            background-color: var(--secondaryColor);
-          }
+        .loanedButton {
+          background-color: var(--primaryColor);
         }
       }
     }
