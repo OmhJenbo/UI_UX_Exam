@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/__footer.css">
     <script src="js/scripts.js" type="module"></script>
     <script src="js/loggedin.js"></script>
+    <script src="js/logout.js" type="module"></script>
   </head>
   <body>
     <header>
@@ -25,9 +26,9 @@
             <ul>
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/templates/ebooks.html">E-books</a></li>
-                <li><a href="/templates/signup.html">Signup</a></li>
-                <li><a href="/templates/login.html">Login</a></li>
-                <li><button id="logout">Logout</button></li>
+                <li><a id="signup" class="hidden" href="/templates/signup.html">Signup</a></li>
+                <li><a id="login" class="hidden" href="/templates/login.html">Login</a></li>
+                <li><button id="logout" class="hidden">Logout</button></li>
             </ul>
         </div>
       </nav>
