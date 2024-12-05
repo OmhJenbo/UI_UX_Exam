@@ -1,5 +1,15 @@
 const baseUrl = "http://localhost:8080";
 
+// Function to check if the user is logged in as admin
+function checkLoginStatus() {
+  const userId = sessionStorage.getItem('userId'); // Retrieve user ID
+
+  if (userId != "2679") {
+    alert('You must be an admin to access this page.');
+    window.location.href = '../templates/login.html'; // Redirect to the login page
+  }
+}
+
 // Reusable function to handle API responses
 const handleAPIError = (response) => {
   if (response.ok) {
@@ -106,3 +116,6 @@ document.querySelector("#form-add-publisher").addEventListener("submit", (e) => 
       alert(`Error adding publisher: ${error.message}`);
     });
 });
+
+// Check login status when the page loads
+document.addEventListener('DOMContentLoaded', checkLoginStatus);

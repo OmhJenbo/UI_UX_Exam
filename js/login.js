@@ -1,6 +1,15 @@
 // Importing the base URL for the API from another JavaScript file
 import { baseUrl } from "./scripts.js";
 
+// Function to check if the user is logged in
+function checkLoginStatus() {
+    const userId = sessionStorage.getItem('userId'); // Retrieve user ID
+    //If the user is already in session, it will be redirected to the ebooks page instead
+    if (userId) {
+        window.location.href = '../templates/ebooks.html'; // Redirect to ebooks
+    }
+}
+
 // This function handles the API response and checks if the request was successful
 const handleAPIError = (response) => {
     if (response.ok) {
@@ -62,3 +71,6 @@ document.querySelector("#formLogin").addEventListener("submit", (e) => {
     })
     .catch(handleFetchCatchError); // If there's an error in the fetch request, handle it here
 });
+
+// Check login status when the page loads
+document.addEventListener('DOMContentLoaded', checkLoginStatus);
