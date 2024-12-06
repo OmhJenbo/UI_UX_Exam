@@ -1,4 +1,4 @@
-nav {
+#navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -7,6 +7,8 @@ nav {
   box-shadow: var(--boxShadow);
   position: relative;
   z-index: 10;
+  position: fixed;
+  width: 100vw;
 
   img {
     width: auto;
@@ -86,24 +88,35 @@ nav {
     li {
       width: 100%; 
       text-align: center;
+      margin-top: var(--marginMedium);
 
       a {
-        display: block;
         text-decoration: none;
         font-size: var(--fontBody);
         font-family: var(--fontFamilyHeaders);
         font-weight: var(--fontWeightSemiBold);
         color: var(--tertiaryColor);
         padding: var(--paddingSmall);
-        border-radius: var(--borderRadius);
         transition: var(--transition);
         width: 100%; 
         text-align: center; 
 
         &:hover {
-          background-color: var(--tertiaryColor);
-          color: var(--backgroundColor);
+          border-bottom: solid 2px var(--secondaryColor);
+          color: var(--secondaryColor);
         }
+      }
+      button {
+        background-color: var(--backgroundColor);
+        font-size: var(--fontBody);
+        font-family: var(--fontFamilyHeaders);
+        font-weight: var(--fontWeightSemiBold);
+        color: var(--tertiaryColor);
+        padding: var(--paddingSmall);
+        border: var(--backgroundColor);
+        transition: var(--transition);
+        width: 100%; 
+        text-align: center; 
       }
     }
   }
@@ -136,9 +149,11 @@ nav {
 
       li {
         width: auto;
+        margin-top: 0;
 
-        &:nth-child(3) a,
-        &:nth-child(4) a {
+        &:nth-child(4) a,
+        &:nth-child(5) a,
+        button {
           background-color: var(--tertiaryColor);
           color: var(--backgroundColor);
           padding: var(--paddingSmall) var(--paddingMedium);
@@ -155,7 +170,18 @@ nav {
             background-color: var(--secondaryColor);
           }
         }
+        #login {
+          background-color: var(--secondaryColor);
+        }
+        #signup {
+          background-color: var(--tertiaryColor);
+        }
       }
     }
   }
+}
+
+
+.hidden {
+  display: none !important;
 }

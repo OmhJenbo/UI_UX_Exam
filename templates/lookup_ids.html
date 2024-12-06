@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit profile</title>
-    <script src="../js/deleteUser.js" defer></script>
-    <script src="../js/edit_user.js" defer></script>
+    <title>Look up IDs</title>
     <link rel="icon" type="image/x-icon" href="../assets/img/ebook.svg">
-    <link rel="stylesheet" href="../css/_profile.css">
+    <link rel="stylesheet" href="../css/_lookup.css">
     <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/lookup.js"></script>
     <script src="../js/scripts.js" type="module"></script>
 </head>
 <body>
     <header>
         <nav id="navigation">
             <img src="../assets/img/logo.svg" alt="E-Borrows logo" />
-    
+            
             <button class="burger-menu" aria-label="Toggle navigation">
                 <div></div>
                 <div></div>
@@ -34,38 +33,25 @@
         </nav>
     </header>
     <main>
-        <section id="formSection">
-            <header>
-                <h1 id="profileHeader">Edit your profile</h1>
-            </header>
-            <form id="formProfile">
-                <div>
-                    <label for="profileName">Name</label>
-                    <input id="profileName" name="first_name" type="text" placeholder="Enter your new first name..">
-                </div>
-                <div>
-                    <label for="profileLastName">Last Name</label>
-                    <input id="profileLastName" name="last_name" type="text" placeholder="Enter your new last name.. ">
-                </div>
-                <div>
-                    <label for="profileEmail">E-mail</label>
-                    <input id="profileEmail" name="email" type="email" placeholder="Enter your new email..">
-                </div>
-                <div>
-                    <label for="profileAddress">Address</label>
-                    <input id="profileAddress" name="address" type="text" placeholder="Enter your new address..">
-                </div>
-                <div>
-                    <label for="profileTel">Phone number</label>
-                    <input id="profileTel" name="phone_number" type="tel" placeholder="Enter your new phone number..">
-                </div>
-                <div>
-                    <label for="profileDob">Date of birth</label>
-                    <input id="profileDob" name="birth_date" type="date" placeholder="Enter your date of birth..">
-                </div>
-                <button id="updateButton" type="submit">Update your profile</button>
-                <button id="deleteButton" type="button">Delete your profile</button>
-            </form>
+        <a class="backArrow" href="../templates/admin.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#323DD2" class="bi bi-arrow-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+            </svg>
+            <span>Go back to admin</span>
+        </a>
+        <header>
+            <h1>Look up IDs</h1>
+        </header>
+        <section>
+            <div class="column" id="books">
+                <h2>Books</h2>
+            </div>
+            <div class="column" id="authors">
+                <h2>Authors</h2>
+            </div>
+            <div class="column" id="publishers">
+                <h2>Publishers</h2>
+            </div>
         </section>
     </main>
     <footer>

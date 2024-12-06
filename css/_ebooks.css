@@ -1,4 +1,5 @@
 body {
+  background-color: var(--backgroundColor);
   .space {
     margin-bottom: 5rem;
     margin-top: 5rem;

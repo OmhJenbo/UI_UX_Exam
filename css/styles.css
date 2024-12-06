@@ -1,4 +1,6 @@
 @import "_variables.css";
+@import "__navigation.css";
+@import "__footer.css";
 
 * {
   margin: 0;
@@ -30,11 +32,6 @@ body {
         padding: var(--paddingMedium);
         display: flex;
         flex-direction: column;
-
-        &:hover {
-          transform: var(--transform);
-          box-shadow: var(--boxShadow);
-        }
 
         h2 {
           padding: var(--normalPadding);

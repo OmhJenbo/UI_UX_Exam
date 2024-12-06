@@ -1,5 +1,14 @@
 const baseUrl = "http://localhost:8080";
 
+// Function to check if the user is logged in
+function checkLoginStatus() {
+  const userId = sessionStorage.getItem('userId'); // Retrieve user ID
+  //If the user is already in session, it will be redirected to the ebooks page instead
+  if (userId) {
+      window.location.href = '../templates/ebooks.html'; // Redirect to ebooks
+  }
+}
+
 /**
  * Handles an error in a fetch request's .catch(),
  * displaying an error message on the page
@@ -84,3 +93,6 @@ document.querySelector("#formSignup").addEventListener("submit", (e) => {
 document.querySelector(".close").addEventListener("click", () => {
   document.getElementById("passwordError").close(); // Closes the dialog
 });
+
+// Check login status when the page loads
+document.addEventListener('DOMContentLoaded', checkLoginStatus);
