@@ -30,7 +30,16 @@ if (userId() == 0) {
   document.querySelector("#signup").classList.remove("hidden");
   document.querySelector("#logout").classList.add("hidden");
   document.querySelector("#settings").classList.add("hidden");
-} else {
+} 
+else if (userId() == "2679") {
+  document.querySelector("#login").classList.add("hidden");
+  document.querySelector("#signup").classList.add("hidden");
+  document.querySelector("#logout").classList.remove("hidden");
+  document.querySelector("#settings").classList.remove("hidden");
+  document.querySelector("#admin").classList.remove("hidden");
+}
+
+else {
   document.querySelector("#login").classList.add("hidden");
   document.querySelector("#signup").classList.add("hidden");
   document.querySelector("#logout").classList.remove("hidden");
