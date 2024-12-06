@@ -69,7 +69,7 @@ body {
             grid-template-columns: 1fr 1fr;
             img {
                 display: block;
-                height: 100vh;
+                max-height: 1000px;
                 width: 100%; 
                 object-fit: cover;
                 justify-self: start;
@@ -86,16 +86,7 @@ body {
 @media (min-width: 768px) {
     body {
         main {
-            margin: 0rem;
-            img {
-                display: block;
-                height: 100vh;
-                width: 100%; 
-                object-fit: cover;
-                justify-self: start;
-            }
             #formSection {
-                padding: var(--paddingMedium);
                 h1 {
                     font-size: var(--fontLargeHeader);
                 }

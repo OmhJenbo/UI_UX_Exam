@@ -62,7 +62,7 @@ document.querySelector("#formLogin").addEventListener("submit", (e) => {
             if (email === "admin.library@mail.com") {
                 window.location.href = "../templates/admin.html";
             } else {
-                window.location.href = "../index.html";
+                window.location.href = "../templates/ebooks.html";
             }
 
         } else {

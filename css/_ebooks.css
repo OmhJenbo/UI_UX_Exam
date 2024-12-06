@@ -27,7 +27,7 @@ body {
         margin-left: auto;
         margin-right: auto;
         /* left: 0;
-      right: 0; */
+        right: 0; */
         text-align: center;
       }
       h2 {
@@ -72,6 +72,9 @@ body {
         background-color: var(--backgroundColor);
         padding: var(--paddingSmall);
         font-family: var(--fontFamilyBody);
+        color: var(--primaryColor);
+      }
+      input::placeholder {
         color: var(--quaternaryColor);
       }
       button {
