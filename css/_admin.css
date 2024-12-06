@@ -102,6 +102,9 @@ body {
             background-color: var(--backgroundColor);
             padding: var(--paddingSmall);
             font-family: var(--fontFamilyBody);
+            color: var(--primaryColor);
+          }
+          input::placeholder, textarea::placeholder {
             color: var(--quaternaryColor);
           }
         }
@@ -151,8 +154,11 @@ body {
         background-color: var(--backgroundColor);
         padding: var(--paddingSmall);
         font-family: var(--fontFamilyBody);
-        color: var(--quaternaryColor);
+        color: var(--primaryColor);
       }
+      input::placeholder {
+        color: var(--quaternaryColor);
+    }
       button {
         background-color: var(--tertiaryColor);
         color: var(--backgroundColor);
