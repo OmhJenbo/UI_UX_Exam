@@ -6,6 +6,7 @@ const userId = () => {
 const logout = () => {
     sessionStorage.removeItem("userId"); // Remove user ID
     sessionStorage.removeItem("userEmail"); // Remove user email
+    sessionStorage.removeItem("loanedBooks"); // Remove loaned books, currently not getting popped
 
     window.location.href = "../templates/login.html";
 }
