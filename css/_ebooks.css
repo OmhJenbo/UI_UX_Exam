@@ -171,6 +171,7 @@ body {
       }
     }
     #search_by_author {
+      margin-left: 2rem;
       margin-top: 8rem;
       margin-bottom: 8rem;
       #ul {
@@ -188,7 +189,7 @@ body {
       }
       #authorList {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
       }
     }
   }
