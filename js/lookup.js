@@ -1,13 +1,3 @@
-// Function to check if the user is logged in as admin
-function checkLoginStatus() {
-    const userId = sessionStorage.getItem('userId'); // Retrieve user ID
-
-    if (userId != "2679") {
-        alert('You must be an admin to access this page.');
-        window.location.href = '../templates/login.html'; // Redirect to the login page
-    }
-} 
-
 document.addEventListener("DOMContentLoaded", async () => {
     const BASE_URL = "http://localhost:8080";
 

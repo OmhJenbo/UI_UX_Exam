@@ -33,38 +33,24 @@ function fetchBooks(url) {
 
 // Function to display books on the page
 function displayBooks(books) {
-  const bookList = document.getElementById("bookList"); // Find the book list container
-  if (!bookList) return; // Exit if the container doesn't exist
+  const bookList = document.getElementById("bookList"); 
+  if (!bookList) return;
 
-  bookList.innerHTML = ""; // Clear any existing books from the container
+  bookList.innerHTML = ""; // clear any existing books from the container
 
-  const loanedBooks = JSON.parse(sessionStorage.getItem("loanedBooks")) || {}; // Get loaned books from session storage
-  const fragment = new DocumentFragment(); // Use a fragment for better performance when adding multiple elements
+  const fragment = new DocumentFragment(); // create fragment so we only append once at the end
 
   books.forEach((book) => {
-    // Skip books without an ID
     if (!book.id && !book.book_id) {
-      console.warn("Skipping book with missing ID:", book);
+      console.warn("Skipping book with missing ID:", book); // Warn if the book has no valid ID
       return;
     }
 
     const bookId = book.id || book.book_id; // Use the correct ID property
-    const loanTimestamp = loanedBooks[bookId]; // Check if the book is loaned
-    const isLoaned = loanTimestamp && Date.now() - loanTimestamp < 2592000000; // Check if loan is within 30 days
 
-    const bookCard = document.createElement("div"); // Create a new div for each book
-    bookCard.classList.add("bookCard"); // Add a class for styling
-    bookCard.setAttribute("data-book-id", bookId); // Add the book's ID to the card
-
-    // Set the button text and style based on the loan status
-    const buttonText = isLoaned ? "Loaned" : "Loan this book";
-    const buttonClass = isLoaned ? "loanBook loanedButton" : "loanBook";
-
-    // Remove expired loans from session storage
-    if (!isLoaned && loanTimestamp) {
-      delete loanedBooks[bookId];
-      sessionStorage.setItem("loanedBooks", JSON.stringify(loanedBooks));
-    }
+    const bookCard = document.createElement("div"); // create a new div for each book
+    bookCard.classList.add("bookCard"); // add a class for the cards
+    bookCard.setAttribute("data-book-id", bookId); // add the book's ID to the card
 
     // Add the book details and loan button to the card
     bookCard.innerHTML = `
@@ -72,68 +58,61 @@ function displayBooks(books) {
       <h3>${book.author}</h3>
       <p>${book.publishing_company}</p>
       <p>${book.publishing_year}</p>
-      <button class="${buttonClass}">${buttonText}</button>
+      <button class="loanBook">Loan this book</button>
     `;
 
     fragment.appendChild(bookCard); // Add the card to the fragment
   });
 
-  bookList.appendChild(fragment); // Add all book cards to the page at once
+  bookList.appendChild(fragment); // Add all book cards to the page at once to improve performance
 }
 
-// Function to handle clicks on loan buttons
+// loan book
 function handleLoanClick(e) {
-    if (!e.target.classList.contains("loanBook")) return; // Only handle clicks on loan buttons
-  
-    e.preventDefault();
-    const button = e.target;
-  
-    if (button.textContent === "Loaned") {
-      alert("This book is already loaned.");
-      return;
-    }
-  
-    const userId = sessionStorage.getItem("userId");
-    if (!userId) {
-      window.location.href = "../templates/login.html"; // Redirect to login if no user ID
-      return;
-    }
-  
-    const bookCard = button.closest(".bookCard");
-    const bookId = bookCard?.getAttribute("data-book-id");
-  
-    if (!bookId) {
-      console.error("Book ID not found.");
-      return;
-    }
-  
-    const loanUrl = `${baseUrl}/users/${userId}/books/${bookId}`;
-    fetch(loanUrl, { method: "POST" }) // Send a POST request to loan the book
-      .then((response) => {
-        if (!response.ok) {
-          return response.text().then((text) => {
-            throw new Error(text || "Failed to loan the book");
-          });
-        }
-        return response.json();
-      })
-      .then(() => {
-        button.textContent = "Loaned"; // Update the button text
-        button.classList.add("loanedButton"); // Add a class for styling
-  
-        // Save the loaned book to session storage
-        const loanedBooks = JSON.parse(sessionStorage.getItem("loanedBooks")) || {};
-        loanedBooks[bookId] = Date.now(); // Save the current timestamp
-        sessionStorage.setItem("loanedBooks", JSON.stringify(loanedBooks));
-  
-        console.log(`Book with ID ${bookId} successfully loaned by user ${userId}`);
-  
-        // Display a message to the user
-        alert("The book has been successfully loaned. Please check your email for further details.");
-      })
-      .catch((error) => {
-        console.error(error.message);
-        alert(error.message || "Failed to loan the book."); // Show an error alert
-      });
+  if (!e.target.classList.contains("loanBook")) return;
+
+  e.preventDefault();
+  const button = e.target;
+
+  const userId = sessionStorage.getItem("userId"); // get userid from session to put in the fetch
+  if (!userId) {
+    window.location.href = "../templates/login.html"; // Redirect to login if no user ID
+    return;
   }
-  
+
+  const bookCard = button.closest(".bookCard");
+  const bookId = bookCard?.getAttribute("data-book-id");
+
+  if (!bookId) {
+    console.error("Book ID not found.");
+    return;
+  }
+
+  const loanUrl = `${baseUrl}/users/${userId}/books/${bookId}`;
+  fetch(loanUrl, { method: "POST" })
+    .then((response) => {
+      if (!response.ok) {
+        // make the error json
+        return response.json().then((error) => {
+          throw new Error(error.error || "Failed to loan the book");
+        });
+      }
+      return response.json();
+    })
+    .then(() => {
+      console.log(`user_id: ${userId} successfully loaned book_id: ${bookId}`); // to see which userid loaned which bookid in console
+
+      // if no error is hit you get this message in alert
+      alert("The book has been successfully loaned. Please check your email for the link to the e-book");
+    })
+    .catch((error) => {
+      console.error(error.message);
+
+      // changes teh error from postman to one that fits the user otherwise shows a generic message for other errors
+      if (error.message === "This user has still this book on loan") {
+        alert("You already have this book on loan.");
+      } else {
+        alert(error.message || "Failed to loan the book.");
+      }
+    });
+}
