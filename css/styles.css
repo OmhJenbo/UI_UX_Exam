@@ -78,10 +78,6 @@ body {
           cursor: pointer;
           margin-top: auto;
         }
-
-        .loanedButton {
-          background-color: var(--primaryColor);
-        }
       }
     }
   }
