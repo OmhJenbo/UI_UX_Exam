@@ -1,7 +1,3 @@
-window.onload = function () {
-  window.scrollTo(0, document.body.scrollHeight);
-};
-// #####################################################
 const BASE_URL = "http://localhost:8080"; // Replace with your actual API base URL
 const authorCache = {}; // Cache for authors by letter
 const bookCache = {}; // Cache for books by author ID
