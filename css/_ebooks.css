@@ -169,5 +169,26 @@ body {
         }
       }
     }
+    #search_by_author {
+      margin-top: 8rem;
+      margin-bottom: 8rem;
+      #ul {
+        display: flex;
+        place-content: center;
+
+        li {
+          list-style: none;
+
+          button {
+            padding: 0.4rem;
+            margin: 0.1rem;
+          }
+        }
+      }
+      #authorList {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      }
+    }
   }
 }
