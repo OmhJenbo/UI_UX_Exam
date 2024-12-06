@@ -33,11 +33,6 @@ body {
         display: flex;
         flex-direction: column;
 
-        &:hover {
-          transform: var(--transform);
-          box-shadow: var(--boxShadow);
-        }
-
         h2 {
           padding: var(--normalPadding);
           color: var(--secondaryColor);
