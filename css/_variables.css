@@ -24,9 +24,7 @@
     --fontFamilyHeaders: "Poppins", sans-serif;
     --fontFamilyBody: "Raleway", sans-serif;
 
-    --fontBody: 0.875rem;
-    --fontXsmallHeader: 0.7rem;
-    --fontSmallHeader: 1rem;
+    --fontBody: 1rem;
     --fontSmallerMediumHeader: 1.25rem;
     --fontMediumHeader: 1.5rem;
     --fontLargeHeader: 2.5rem;
@@ -75,6 +73,7 @@
     --border-bottom: 2px solid #000;
 
     /* Font weights */
+    --fontWeightRegular: 400;
     --fontWeightSemiBold: 600;
     --fontWeightBold: 700;
 

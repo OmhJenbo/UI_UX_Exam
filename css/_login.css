@@ -48,14 +48,8 @@ body {
                 button {
                     background-color: var(--tertiaryColor);
                     color: var(--backgroundColor);
-                    font-family: var(--fontFamilyHeaders);
-                    font-weight: 700;
-                    font-size: var(--fontSmallHeader);
-                    border: 0;
-                    border-radius: var(--borderRadius);
                     padding: var(--paddingSmall);
                     width: 100%;
-                    cursor: pointer;
                 }
                 
             }

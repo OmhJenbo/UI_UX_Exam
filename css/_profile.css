@@ -46,28 +46,16 @@ body {
                 #updateButton {
                     background-color: var(--secondaryColor);
                     color: var(--backgroundColor);
-                    font-family: var(--fontFamilyHeaders);
-                    font-weight: 700;
-                    font-size: var(--fontSmallHeader);
-                    border: 0;
-                    border-radius: var(--borderRadius);
                     padding: var(--paddingSmall);
                     width: 100%;
-                    cursor: pointer;
                     margin-bottom: var(--marginMedium);
                     margin-top: var(--marginMedium);
                 }
                 #deleteButton {
                     background-color: var(--tertiaryColor);
                     color: var(--backgroundColor);
-                    font-family: var(--fontFamilyHeaders);
-                    font-weight: 700;
-                    font-size: var(--fontSmallHeader);
-                    border: 0;
-                    border-radius: var(--borderRadius);
                     padding: var(--paddingSmall);
                     width: 100%;
-                    cursor: pointer;
                 }
             }
         }

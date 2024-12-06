@@ -37,7 +37,7 @@ body {
         margin: var(--marginMedium);
         .indexWhoAreWe p{
             font-family: var(--fontFamilyHeaders);
-            font-weight: 600;
+            font-weight: var(--fontWeightSemiBold);
             font-size: var(--fontSmallHeader);
             color: var(--secondaryColor);
             text-align: var(--alignCenter);
@@ -51,14 +51,11 @@ body {
             }
             .list {
                 margin-top: var(--marginMedium);
-                h2 {
-                    font-family: var(--fontFamilyHeaders);
-                    font-weight: 600;
-                    font-size: var(--fontMediumHeader);
-                }
                 ul, ol {
                     padding: var(--paddingMedium);
                     li {
+                        font-family: var(--fontFamilyBody);
+                        font-size: var(--fontBody);
                         margin-bottom: var(--marginMedium);
                     }
                 }
@@ -68,24 +65,15 @@ body {
                 button {
                     background-color: var(--secondaryColor);
                     color: var(--backgroundColor);
-                    font-family: var(--fontFamilyHeaders);
-                    font-weight: 700;
-                    font-size: var(--fontSmallHeader);
-                    border: 0;
-                    border-radius: var(--borderRadius);
                     padding: var(--paddingMedium);
                     width: 100%;
-                    cursor: pointer;
                     margin-bottom: var(--marginLarger);
                     margin-top: var(--marginMedium);
                 }
             }
         }
         .exploreFavourites {
-            h3 {
-                font-family: var(--fontFamilyHeaders);
-                font-weight: 600;
-                font-size: var(--fontMediumHeader);
+            h2 {
                 margin-bottom: var(--marginMedium);
             }
             img {
@@ -95,9 +83,6 @@ body {
         }
         .browseBooks {
             h3 {
-                font-family: var(--fontFamilyHeaders);
-                font-weight: 600;
-                font-size: var(--fontMediumHeader);
                 margin-bottom: var(--marginMedium);
             }
         }
@@ -139,11 +124,10 @@ body {
             }
             .browseBooks {
                 header {
-                    h3 {
+                    h2 {
                         text-align: var(--alignCenter);
                     }
                 }
-
             }
         }
     }
@@ -162,9 +146,6 @@ body {
         }
         main {
             margin: var(--marginXlarge);
-            .indexWhoAreWe p{
-                font-size: var(--fontMediumHeader);
-            }
             .list_section {
                 gap: var(--largeGap);
                 .list {
@@ -178,7 +159,6 @@ body {
                     }
                 }
             }
-            
             .exploreFavourites {
                 display: grid;
                 grid-template-columns: 1fr 1fr;

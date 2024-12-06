@@ -25,11 +25,12 @@ body {
         position: absolute;
         display: flex;
         top: 85%;
-        left: 5%;
-        h2 {
+        left: 35%;
+        h1 {
           color: var(--secondaryColor);
-          font-weight: var(--fontWeightBold);
-          font-family: var(--fontFamilyHeaders);
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
           font-size: var(--fontLargeHeader);
         }
     }
@@ -44,10 +45,10 @@ body {
       justify-self: center;
       align-content: center;
       padding: var(--paddingMedium);
-      h1 {
-        font-family: var(--fontFamilyHeaders);
+      h2 {
+        /* font-family: var(--fontFamilyHeaders);
         font-weight: 700;
-        font-size: var(--fontMediumHeader);
+        font-size: var(--fontMediumHeader); */
         color: var(--primaryColor);
         padding-bottom: var(--paddingXlarge);
         text-align: center;
@@ -62,13 +63,7 @@ body {
         button {
           background-color: var(--tertiaryColor);
           color: var(--backgroundColor);
-          font-family: var(--fontFamilyHeaders);
-          font-weight: 700;
-          font-size: var(--fontBody);
-          border: 0;
-          border-radius: var(--borderRadius);
           padding: var(--paddingSmall);
-          cursor: pointer;
         }
 
         button.active {
@@ -211,9 +206,6 @@ body {
       }
 
       .book-details p {
-        font-family: var(--fontFamilyBody);
-        color: var(--primaryColor);
-        font-size: var(--fontBody);
         margin: 0;
       }
       ul li {
@@ -228,9 +220,8 @@ body {
     margin: 0;
     .container{
       .text_overlay {
-          h2 {
-            font-size: var(--fontLargeHeader);
-          }
+        top: 85%;
+        left: 5%;
       }
     } 
     main {
@@ -255,7 +246,7 @@ body {
         #searchResults {
           gap: var(--paddingMedium);
         }
-        .book-info{
+        .book-info {
         display: grid;
         grid-template-columns: 300px 1fr; /* 300px for the image, remaining space for details */
         gap: var(--paddingMedium); /* Space between image and text */
@@ -265,7 +256,8 @@ body {
         border-radius: var(--borderRadius);
         background-color: var(--backgroundColor);
         padding-top: var(--paddingMedium);
-        } .book-info img {
+        } 
+        .book-info img {
         width: 300px;
         height: 450px;
         object-fit: cover; /* Maintain aspect ratio */
@@ -281,11 +273,7 @@ body {
   body {
     .container{
       .text_overlay {
-        top: 75%;
-        left: 5%;
-          h2 {
-            font-size: var(--fontXlargeHeader);
-          }
+        top: 80%;
       }
     } 
     main {
@@ -296,11 +284,11 @@ body {
         object-fit: cover;
         justify-self: start;
       }
-      #formSection {
+      /* #formSection {
         h1 {
           font-size: var(--fontLargeHeader);
         }
-      }
+      } */
     }
   }
 }
