@@ -14,36 +14,40 @@
     <!-- <script src="js/logout.js" type="module"></script> -->
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#bookList" class="skip-link">Skip to random books</a>
+    <a href="/templates/ebooks.html" class="skip-link">Skip to E-books</a>
+    <a href="/templates/signup.html" class="skip-link">Skip to Signup</a>
+    <a href="/templates/login.html" class="skip-link">Skip to Login</a>
     <header>
-      <nav id="navigation">
-        <img src="assets/img/logo.svg" alt="E-Borrows logo" />
-
-        <button class="burger-menu" aria-label="Toggle navigation">
-            <div></div>
-            <div></div>
-            <div></div>
-        </button>
-        <div id="navlinks">
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/templates/ebooks.html">E-books</a></li>
-                <li><a id="admin" href="/templates/admin.html" class="hidden">Admin</a></li>
-                <li><a id="settings" class="hidden" href="/templates/profile.html">Settings</a></li>
-                <li><a id="signup" class="hidden" href="/templates/signup.html">Signup</a></li>
-                <li><a id="login" class="hidden" href="/templates/login.html">Login</a></li>
-                <li><button id="logout" class="hidden">Logout</button></li>
-            </ul>
+        <nav id="navigation">
+            <img src="assets/img/logo.svg" alt="E-Borrows logo" />
+            <button class="burger-menu" aria-label="Toggle navigation">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
+            <div id="navlinks">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/templates/ebooks.html">E-books</a></li>
+                    <li><a id="admin" href="/templates/admin.html" class="hidden">Admin</a></li>
+                    <li><a id="settings" class="hidden" href="/templates/profile.html">Settings</a></li>
+                    <li><a id="signup" class="hidden" href="/templates/signup.html">Signup</a></li>
+                    <li><a id="login" class="hidden" href="/templates/login.html">Login</a></li>
+                    <li><button id="logout" class="hidden">Logout</button></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            <img class="backgroundImage" src="assets/img/image_6.png" alt="A person reading a book"/>
+            <div class="image_overlay" aria-hidden="true"></div>
+            <div class="text_overlay">
+                <img src="assets/img/logo.svg" alt="E-Borrows logo"/>
+            </div>
         </div>
-      </nav>
-      <div class="container">
-        <img class="backgroundImage" src="assets/img/image_6.png" alt="A person reading a book"/>
-        <div class="image_overlay" aria-hidden="true"></div>
-        <div class="text_overlay">
-          <img src="assets/img/logo.svg" alt="E-Borrows logo"/>
-        </div>
-      </div>
     </header>
-    <main>
+    <main id="main-content">
       <section class="indexWhoAreWe">
         <p>
           At E-Borrow, we believe that stories are meant to be shared, not
