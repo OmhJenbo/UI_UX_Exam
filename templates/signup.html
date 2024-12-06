@@ -44,27 +44,27 @@
       <form id="formSignup">
         <div>
           <label for="signupName">Name</label>
-          <input type="text" id="signupName" name="name" placeholder="Jens" required>
+          <input type="text" id="signupName" name="name" pattern="[A-Za-z]{2,50}" placeholder="Jens" required>
         </div>
         <div>
           <label for="signupLastName">Last Name</label>
-          <input type="text" id="signupLastName" name="lastname" placeholder="Jensen" required>
+          <input type="text" id="signupLastName" name="lastname" pattern="[A-Za-z]{2,50}" placeholder="Jensen" required>
         </div>
         <div>
           <label for="signupEmail">E-mail</label>
           <input type="email" id="signupEmail" name="email" placeholder="email@email.com" required>
         </div>
         <div>
-          <label for="signupAdress">Adress</label>
-          <input id="signupAdress" type="text" name="adress" placeholder="Jensens vej 43" required>
+          <label for="signupAddress">Address</label>
+          <input id="signupAddress" type="text" name="address" pattern="[A-Za-z0-9\s,.-]{5,100}" placeholder="Jensens vej 43" required>
         </div>
         <div>
           <label for="signupTel">Phone number</label>
-          <input id="signupTel" type="tel" name="phone" placeholder="40404040" required>
+          <input id="signupTel" type="tel" name="phone" pattern="\d{7,12}" placeholder="40404040" required>
         </div>
         <div>
           <label for="signupDOB">Date of birth</label>
-          <input id="signupDOB" type="date" name="date of birth" required>
+          <input id="signupDOB" type="date" name="date of birth" title="Please select a valid date" required>
         </div>
         <div>
           <label for="signupPassword">Password</label>
@@ -86,10 +86,10 @@
   </main>
 
   <footer>
-
     <section class="socials">
         <img src="../assets/img/logo.svg" alt="E-Borrows logo"/>
         <div>
+            <!-- Would be with a ahref link if the website had socials -->
             <img src="../assets/img/instagram.svg" alt="instagram">
             <img src="../assets/img/facebook.svg" alt="facebook">
             <img src="../assets/img/linkedin.svg" alt="linkedin">
@@ -100,9 +100,9 @@
         <header>
             <h5>Contact</h5>
         </header>
-        <a href="mailto:eborrow@mail.com">eborrow@mail.com</a>
-        <a href="tel:+4530303030">+4530303030</a>
-        <p>Jensens Vej 43, København K</p>
+        <a href="mailto:eborrow@mail.com" aria-label="Send an email to eborrow@mail.com">eborrow@mail.com</a>
+        <a href="tel:+4530303030" aria-label="Call E-borrow">+4530303030</a>
+        <address><p>Jensens Vej 43, København K</p></address>
     </section>
 
     <section class="content">
@@ -115,8 +115,7 @@
     </section>
 
     <p class="copyright">&copy; 2024 - This is a school project</p>
-
-</footer>
+  </footer>
 
 </body>
 <dialog id="passwordError">

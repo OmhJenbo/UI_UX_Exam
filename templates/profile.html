@@ -41,27 +41,27 @@
             <form id="formProfile">
                 <div>
                     <label for="profileName">Name</label>
-                    <input id="profileName" name="first_name" type="text" placeholder="Enter your new first name..">
+                    <input id="profileName" name="first_name" type="text" pattern="[A-Za-z]{2,50}" placeholder="Enter your new first name.." required>
                 </div>
                 <div>
                     <label for="profileLastName">Last Name</label>
-                    <input id="profileLastName" name="last_name" type="text" placeholder="Enter your new last name.. ">
+                    <input id="profileLastName" name="last_name" pattern="[A-Za-z]{2,50}" type="text" placeholder="Enter your new last name.. " required>
                 </div>
                 <div>
                     <label for="profileEmail">E-mail</label>
-                    <input id="profileEmail" name="email" type="email" placeholder="Enter your new email..">
+                    <input id="profileEmail" name="email" type="email" placeholder="Enter your new email.." required>
                 </div>
                 <div>
                     <label for="profileAddress">Address</label>
-                    <input id="profileAddress" name="address" type="text" placeholder="Enter your new address..">
+                    <input id="profileAddress" name="address" type="text" pattern="[A-Za-z0-9\s,.-]{5,100}" placeholder="Enter your new address.." required>
                 </div>
                 <div>
                     <label for="profileTel">Phone number</label>
-                    <input id="profileTel" name="phone_number" type="tel" placeholder="Enter your new phone number..">
+                    <input id="profileTel" name="phone_number" type="tel" pattern="\d{7,12}" placeholder="Enter your new phone number.." required>
                 </div>
                 <div>
                     <label for="profileDob">Date of birth</label>
-                    <input id="profileDob" name="birth_date" type="date" placeholder="Enter your date of birth..">
+                    <input id="profileDob" name="birth_date" type="date" placeholder="Enter your date of birth.." required>
                 </div>
                 <button id="updateButton" type="submit">Update your profile</button>
                 <button id="deleteButton" type="button">Delete your profile</button>
@@ -69,10 +69,10 @@
         </section>
     </main>
     <footer>
-
         <section class="socials">
             <img src="../assets/img/logo.svg" alt="E-Borrows logo"/>
             <div>
+                <!-- Would be with a ahref link if the website had socials -->
                 <img src="../assets/img/instagram.svg" alt="instagram">
                 <img src="../assets/img/facebook.svg" alt="facebook">
                 <img src="../assets/img/linkedin.svg" alt="linkedin">
@@ -83,9 +83,9 @@
             <header>
                 <h5>Contact</h5>
             </header>
-            <a href="mailto:eborrow@mail.com">eborrow@mail.com</a>
-            <a href="tel:+4530303030">+4530303030</a>
-            <p>Jensens Vej 43, København K</p>
+            <a href="mailto:eborrow@mail.com" aria-label="Send an email to eborrow@mail.com">eborrow@mail.com</a>
+            <a href="tel:+4530303030" aria-label="Call E-borrow">+4530303030</a>
+            <address><p>Jensens Vej 43, København K</p></address>
         </section>
 
         <section class="content">
@@ -98,7 +98,6 @@
         </section>
 
         <p class="copyright">&copy; 2024 - This is a school project</p>
-
     </footer>
 </body>
 </html>
