@@ -22,14 +22,15 @@
               <div></div>
           </button>
           <div id="navlinks">
-              <ul>
-                  <li><a href="/index.html">Home</a></li>
-                  <li><a href="/templates/ebooks.html">E-books</a></li>
-                  <li><a id="settings" class="hidden" href="../templates/profile.html">Settings</a></li>
-                  <li><a id="signup" class="hidden" href="../templates/signup.html">Signup</a></li>
-                  <li><a id="login" class="hidden" href="../templates/login.html">Login</a></li>
-                  <li><button id="logout" class="hidden">Logout</button></li>
-              </ul>
+            <ul>
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/templates/ebooks.html">E-books</a></li>
+              <li><a id="admin" href="/templates/admin.html" class="hidden">Admin</a></li>
+              <li><a id="settings" class="hidden" href="/templates/profile.html">Settings</a></li>
+              <li><a id="signup" class="hidden" href="/templates/signup.html">Signup</a></li>
+              <li><a id="login" class="hidden" href="/templates/login.html">Login</a></li>
+              <li><button id="logout" class="hidden">Logout</button></li>
+            </ul>
           </div>
       </nav>
       <div class="container">
@@ -63,11 +64,11 @@
             </div>
             <div>
               <label for="addAuthor">Author by id</label>
-              <input type="text" id="addAuthor" name="addAuthor" placeholder="Jussi Adler-Olsen" required />
+              <input type="text" id="addAuthor" name="addAuthor" placeholder="238" required />
             </div>
             <div>
               <label for="addPublisher">Publisher by id</label>
-              <input type="text" id="addPublisher" name="addPublisher" placeholder="Politiken" required />
+              <input type="text" id="addPublisher" name="addPublisher" placeholder="116" required />
             </div>
             <div>
               <label for="addPublishingYear">Publishing Year</label>
@@ -115,7 +116,7 @@
             <input type="text" id="searchInput" name="search" placeholder="Type to search..." />
           </div>
           <button type="submit">Search</button>
-          <a class="nextButton" href="../templates/lookup_ids.html">Go to the full list of IDs</a>
+          <a class="nextButton" href="../templates/lookup_ids.html" target="_blank">Go to the full list of IDs</a>
         </form>
         <div id="searchResult"></div>
       </section>

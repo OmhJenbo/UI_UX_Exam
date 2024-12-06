@@ -150,8 +150,8 @@
         width: auto;
         margin-top: 0;
 
-        &:nth-child(4) a,
         &:nth-child(5) a,
+        &:nth-child(6) a,
         button {
           background-color: var(--tertiaryColor);
           color: var(--backgroundColor);
