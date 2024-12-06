@@ -1,7 +1,9 @@
 body {
-    margin: var(--marginMedium);
     background-color: var(--backgroundColor);
     main {
+        margin-left: var(--marginMedium);
+        margin-right: var(--marginMedium);
+        margin-bottom: var(--marginXlarge);
         display: grid;
         grid-template-columns: 1fr;
         #formSection {
@@ -14,7 +16,8 @@ body {
                 font-weight: 700;
                 font-size: var(--fontMediumHeader);
                 color: var(--primaryColor);
-                padding-bottom: var(--paddingXlarge);
+                padding-bottom: var(--paddingLarge);
+                margin-top: var(--marginXlarge);
                 text-align: center;
             }
             #formProfile {

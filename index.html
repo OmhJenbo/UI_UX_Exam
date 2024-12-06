@@ -11,11 +11,13 @@
     <link rel="stylesheet" href="css/__footer.css">
     <script src="js/scripts.js" type="module"></script>
     <script src="js/loggedin.js"></script>
+    <!-- <script src="js/logout.js" type="module"></script> -->
   </head>
   <body>
     <header>
-      <nav>
+      <nav id="navigation">
         <img src="assets/img/logo.svg" alt="E-Borrows logo" />
+
         <button class="burger-menu" aria-label="Toggle navigation">
             <div></div>
             <div></div>
@@ -25,15 +27,15 @@
             <ul>
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/templates/ebooks.html">E-books</a></li>
-                <li><a href="/templates/signup.html">Signup</a></li>
-                <li><a href="/templates/login.html">Login</a></li>
+                <li><a id="settings" class="hidden" href="/templates/profile.html">Settings</a></li>
+                <li><a id="signup" class="hidden" href="/templates/signup.html">Signup</a></li>
+                <li><a id="login" class="hidden" href="/templates/login.html">Login</a></li>
+                <li><button id="logout" class="hidden">Logout</button></li>
             </ul>
         </div>
       </nav>
       <div class="container">
-      
-    
-      <img class="backgroundImage" src="assets/img/image_6.png" alt="A person reading a book"/>
+        <img class="backgroundImage" src="assets/img/image_6.png" alt="A person reading a book"/>
         <div class="image_overlay"></div>
         <div class="text_overlay">
           <img src="assets/img/logo.svg" alt="E-Borrows logo"/>
@@ -52,7 +54,7 @@
         </p>
       </section>
       <section class="list_section">
-        <img src="assets/img/image_4.png" alt="decorative image of an e-book" />
+        <img src="assets/img/image_7.png" alt="decorative image of an e-book" />
         <div>
           <section class="list">
             <h2>Why choose us?</h2>

@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/x-icon" href="../assets/img/ebook.svg">
-        <link rel="stylesheet" href="../css/styles.css">
-        <link rel="stylesheet" href="../css/_ebooks.css">
-        <script src="../js/ebooks.js" type="module"></script>
-        <script src="../js/scripts.js" type="module"></script>
-        <title>E-books</title>
-    </head>
-
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Look up IDs</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/ebook.svg">
+    <link rel="stylesheet" href="../css/_lookup.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/lookup.js"></script>
+    <script src="../js/scripts.js" type="module"></script>
+</head>
+<body>
     <header>
         <nav id="navigation">
             <img src="../assets/img/logo.svg" alt="E-Borrows logo" />
-    
+            
             <button class="burger-menu" aria-label="Toggle navigation">
                 <div></div>
                 <div></div>
@@ -34,32 +33,29 @@
         </nav>
     </header>
     <main>
-        <div id="header">
-            <picture>
-                <source srcset="../assets/img/mobile_ebook.jpg" media="(max-width: 410px)">
-                <source srcset="../assets/img/tablet_ebook.jpg" media="(max-width: 768px)">
-                <source srcset="../assets/img/desktop_ebook.jpg" media="(min-width: 768px)">
-                <img src="image-desktop.jpg" alt="Description">
-            </picture>
-            <header id="titles">
-                <h1>E-BOOKS</h1>
-                <h2>Browse through our selection of E-books here</h2>
-            </header>
-        </div>
-        <section id="search">
-            <!-- <h2 id="searchHeader">Search for books!</h2> -->
-            <label id="searchHeader" for="searchInput">Search for books!</label>
-            <form id="searchForm">
-                <!-- <label for="searchBook">Search for a book</label> -->
-                <input type="text" id="searchInput" name="search" placeholder="Search for a book" />
-                <button type="submit">Search</button>
-            </form>
-            <div id="searchResults"></div>
-        </section>
-        <section id="bookList">
+        <a class="backArrow" href="../templates/admin.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#323DD2" class="bi bi-arrow-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+            </svg>
+            <span>Go back to admin</span>
+        </a>
+        <header>
+            <h1>Look up IDs</h1>
+        </header>
+        <section>
+            <div class="column" id="books">
+                <h2>Books</h2>
+            </div>
+            <div class="column" id="authors">
+                <h2>Authors</h2>
+            </div>
+            <div class="column" id="publishers">
+                <h2>Publishers</h2>
+            </div>
         </section>
     </main>
     <footer>
+
         <section class="socials">
             <img src="../assets/img/logo.svg" alt="E-Borrows logo"/>
             <div>
@@ -91,5 +87,4 @@
 
     </footer>
 </body>
-
 </html>

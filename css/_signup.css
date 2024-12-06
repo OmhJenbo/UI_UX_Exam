@@ -1,7 +1,9 @@
 body {
-    margin: var(--marginMedium);
     background-color: var(--primaryColor);
     main {
+        margin-left: var(--marginMedium);
+        margin-right: var(--marginMedium);
+        margin-bottom: var(--marginXlarge);
         display: grid;
         grid-template-columns: 1fr;
         img {
@@ -17,7 +19,8 @@ body {
                 font-weight: 700;
                 font-size: var(--fontMediumHeader);
                 color: var(--backgroundColor);
-                padding-bottom: var(--paddingXlarge);
+                padding-bottom: var(--paddingLarge);
+                margin-top: var(--marginXlarge);
                 text-align: center;
             }
             #formSignup {
@@ -58,8 +61,8 @@ body {
 }
 @media (min-width: 600px) {
     body {
-        margin: 0;
         main {
+            margin: 0rem;
             grid-template-columns: 1fr 1fr;
             img {
                 display: block;
@@ -80,6 +83,7 @@ body {
 @media (min-width: 768px) {
     body {
         main {
+            margin: 0rem;
             img {
                 display: block;
                 height: 100vh;
