@@ -37,6 +37,9 @@ body {
                         background-color: var(--backgroundColor);
                         padding: var(--paddingSmall);
                         font-family: var(--fontFamilyBody);
+                        color: var(--primaryColor);
+                    }
+                    input::placeholder {
                         color: var(--quaternaryColor);
                     }
                 }
