@@ -45,7 +45,7 @@ document.querySelector("#formSignup").addEventListener("submit", (e) => {
   const firstName = e.target.signupName.value.trim();
   const lastName = e.target.signupLastName.value.trim();
   const email = e.target.signupEmail.value.trim();
-  const adress = e.target.signupAdress.value.trim();
+  const address = e.target.signupAddress.value.trim();
   const phone_number = e.target.signupTel.value.trim();
   const birth_date = e.target.signupDOB.value.trim();
   const passworded = e.target.signupPassword.value.trim();
@@ -55,7 +55,7 @@ document.querySelector("#formSignup").addEventListener("submit", (e) => {
   params.append("password", passworded);
   params.append("first_name", firstName);
   params.append("last_name", lastName);
-  params.append("address", adress);
+  params.append("address", address);
   params.append("phone_number", phone_number);
   params.append("birth_date", birth_date);
 
