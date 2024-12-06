@@ -63,11 +63,11 @@
             </div>
             <div>
               <label for="addAuthor">Author by id</label>
-              <input type="text" id="addAuthor" name="addAuthor" placeholder="Jussi Adler-Olsen" required />
+              <input type="text" id="addAuthor" name="addAuthor" placeholder="example: 100" pattern="\d+" required />
             </div>
             <div>
               <label for="addPublisher">Publisher by id</label>
-              <input type="text" id="addPublisher" name="addPublisher" placeholder="Politiken" required />
+              <input type="text" id="addPublisher" name="addPublisher" placeholder="example: 200" pattern="\d+" required />
             </div>
             <div>
               <label for="addPublishingYear">Publishing Year</label>
@@ -112,7 +112,7 @@
         <form id="searchForm">
           <div>
             <label for="searchInput">Search for an E-book by their ID:</label>
-            <input type="text" id="searchInput" name="search" placeholder="Type to search..." />
+            <input type="text" id="searchInput" name="search" placeholder="example: 1251" pattern="\d+"  required/>
           </div>
           <button type="submit">Search</button>
           <a class="nextButton" href="../templates/lookup_ids.html">Go to the full list of IDs</a>
@@ -125,9 +125,9 @@
       <section class="socials">
           <img src="../assets/img/logo.svg" alt="E-Borrows logo"/>
           <div>
-              <img src="../assets/img/instagram.svg" alt="instagram">
-              <img src="../assets/img/facebook.svg" alt="facebook">
-              <img src="../assets/img/linkedin.svg" alt="linkedin">
+            <a href="../../index.html" class="socialsIcons"><img src="../assets/img/instagram.svg" alt="instagram"></a>
+            <a href="../../index.html" class="socialsIcons"><img src="../assets/img/facebook.svg" alt="facebook"></a>
+            <a href="../../index.html" class="socialsIcons"><img src="../assets/img/linkedin.svg" alt="linkedin"></a>
           </div>
       </section>
 

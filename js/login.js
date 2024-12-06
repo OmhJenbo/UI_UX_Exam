@@ -35,7 +35,7 @@ export const handleFetchCatchError = (error) => {
 document.querySelector("#formLogin").addEventListener("submit", (e) => {
     e.preventDefault(); 
 
-    const email = e.target.loginEmail.value.trim();
+    const email = e.target.loginEmail.value.toLowerCase().trim();
     const password = e.target.loginPassword.value.trim();
 
     const params = new URLSearchParams();
