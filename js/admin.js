@@ -30,6 +30,7 @@ export const handleFetchCatchError = (error) => {
   document.querySelector("main").append(errorSection);
 };
 
+
 document.querySelector("#form-add-book").addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -45,7 +46,10 @@ document.querySelector("#form-add-book").addEventListener("submit", (e) => {
   })
     .then((response) => {
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.error}`);
+        return response.json().then((error) => {
+          console.log("Parsed error response:", error);
+          throw new Error(error.error || "An unknown error occurred");
+        });
       }
       return response.json();
     })
@@ -55,8 +59,8 @@ document.querySelector("#form-add-book").addEventListener("submit", (e) => {
       e.target.reset();
     })
     .catch((error) => {
-      console.error("Error adding book:", error);
-      alert(`Error adding book: ${error.message}`);
+      console.error("Full error object:", error);
+      alert(error.message); // display the error message the api gives, works for author id, publication id, and invalid year
     });
 });
 
