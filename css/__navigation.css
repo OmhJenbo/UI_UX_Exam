@@ -83,6 +83,9 @@
       align-items: center;
       width: 100%;
     }
+    /* .loginNav {
+      border-top: 1px solid var(--secondaryColor);
+    } */
 
     li {
       width: 100%; 
@@ -145,7 +148,9 @@
         list-style: none;
         gap: var(--smallGap);
       }
-
+      /* .loginNav {
+        border-top: none;
+      } */
       li {
         width: auto;
         margin-top: 0;

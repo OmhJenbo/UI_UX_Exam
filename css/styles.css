@@ -10,9 +10,6 @@
 }
 
 body {
-  /* background-color: var(--backgroundColor); */
-  font-family: var(--fontFamilyBody);
-
   .skip-link {
     position: absolute;
     top: var(--negativeGap);
@@ -38,7 +35,6 @@ body {
     font-family: var(--fontFamilyHeaders);
     font-weight: var(--fontWeightBold);
     font-size: var(--fontMediumHeader);
-    /* font-size: var(--fontLargeHeader); */
   }
   h2 {
     font-family: var(--fontFamilyHeaders);
