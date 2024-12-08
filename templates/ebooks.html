@@ -9,17 +9,14 @@
     <link rel="stylesheet" href="../css/_ebooks.css">
     <script src="../js/ebooks.js" type="module"></script>
     <script src="../js/scripts.js" type="module"></script>
-    <script src="../js/search_by_author.js" defer></script>
     <title>E-books</title>
 </head>
 
 <body>
-    <a href="../index.html" class="skip-link">Skip to Home Page</a>
-    <a href="signup.html" class="skip-link">Skip to Signup</a>
-    <a href="login.html" class="skip-link">Skip to Login</a>
+    <a href="#main-content" class="skip-link">Skip navigation</a>
     <header>
         <nav id="navigation">
-            <a href="../../index.html"><img src="../assets/img/logo.svg" alt="E-Borrows logo" /> </a>
+            <a href="../../index.html"><img src="../assets/img/logo.svg" alt="E-Borrows logo"></a>
 
             <button class="burger-menu" aria-label="Toggle navigation">
                 <div></div>
@@ -53,62 +50,18 @@
             </header>
         </div>
         <section id="search">
-            <!-- <h2 id="searchHeader">Search for books!</h2> -->
             <label id="searchHeader" for="searchInput">Search for books!</label>
             <form id="searchForm">
-                <!-- <label for="searchBook">Search for a book</label> -->
-                <input type="text" id="searchInput" name="search" placeholder="Search for a book" />
+                <input type="text" id="searchInput" name="search" placeholder="Search for a book">
                 <button type="submit">Search</button>
             </form>
             <div id="searchResults"></div>
         </section>
-        <section id="bookList">
-        </section>
-        <section id="search_by_author">
-            <h2>Search book by author</h2>
-            <ul id="ul">
-                <li><button id="a-button" data-letter="A">A</button></li>
-                <li><button data-letter="B">B</button></li>
-                <li><button data-letter="C">C</button></li>
-                <li><button data-letter="D">D</button></li>
-                <li><button data-letter="E">E</button></li>
-                <li><button data-letter="F">F</button></li>
-                <li><button data-letter="G">G</button></li>
-                <li><button data-letter="H">H</button></li>
-                <li><button data-letter="I">I</button></li>
-                <li><button data-letter="J">J</button></li>
-                <li><button data-letter="K">K</button></li>
-                <li><button data-letter="L">L</button></li>
-                <li><button data-letter="M">M</button></li>
-                <li><button data-letter="N">N</button></li>
-                <li><button data-letter="O">O</button></li>
-                <li><button data-letter="P">P</button></li>
-                <li><button data-letter="Q">Q</button></li>
-                <li><button data-letter="R">R</button></li>
-                <li><button data-letter="S">S</button></li>
-                <li><button data-letter="T">T</button></li>
-                <li><button data-letter="U">U</button></li>
-                <li><button data-letter="V">V</button></li>
-                <li><button data-letter="W">W</button></li>
-                <li><button data-letter="X">X</button></li>
-                <li><button data-letter="Y">Y</button></li>
-                <li><button data-letter="Z">Z</button></li>
-            </ul>
-
-            <section id="authorSection">
-                <!-- <h2>Authors</h2> -->
-                <ul id="authorList"></ul>
-
-            </section>
-            <section id="bookSection">
-                <!-- <h2>Books</h2> -->
-                <ul id="bookListByAuthor"></ul>
-            </section>
-        </section>
+        <section id="bookList"></section>
     </main>
     <footer>
         <section class="socials">
-            <img src="../assets/img/logo.svg" alt="E-Borrows logo" />
+            <img src="../assets/img/logo.svg" alt="E-Borrows logo">
             <div>
                 <a href="../../index.html" class="socialsIcons"><img src="../assets/img/instagram.svg"
                         alt="instagram"></a>
@@ -119,6 +72,16 @@
             </div>
         </section>
 
+        <section class="contact">
+            <header>
+                <h4>Contact</h4>
+            </header>
+            <a href="mailto:eborrow@mail.com" aria-label="Send an email to eborrow@mail.com">eborrow@mail.com</a>
+            <a href="tel:+4530303030" aria-label="Call E-borrow">+4530303030</a>
+            <address>
+                <p>Jensens Vej 43, København K</p>
+            </address>
+        </section>
         <section class="contact">
             <header>
                 <h4>Contact</h4>
