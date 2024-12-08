@@ -1,88 +1,98 @@
+// The base URL for API requests
 const baseUrl = "http://localhost:8080";
 
-// Function to check if the user is logged in
-function checkLoginStatus() {
-  const userId = sessionStorage.getItem('userId'); // Retrieve user ID
-  //If the user is already in session, it will be redirected to the ebooks page instead
-  if (userId) {
-      window.location.href = '../templates/ebooks.html'; // Redirect to ebooks
-  }
-}
-
-/**
- * Handles the first .then() in a fetch request,
- * raising an error if the response code is not a 2xx
- */
-const handleAPIError = (response) => {
-  console.log("Raw response:", response);
-  if (response.ok) {
-    return response.json();
-  }
-  // Parse the error message from the response JSON and throw it
-  return response.json().then((data) => {
-    throw new Error(data.error || "An unknown error occurred");
-  });
+// Redirects the user to a specified URL
+const redirectTo = (url) => {
+  window.location.href = url;
 };
 
-document.querySelector("#formSignup").addEventListener("submit", (e) => {
-  e.preventDefault();
+// Shows a modal dialog for user messages or errors
+const showModal = (selector) => {
+  const modal = document.querySelector(selector);
+  if (modal) modal.showModal();
+};
 
-  // Validate password, both must match
-  const password = e.target.signupPassword.value.trim();
-  const repeatPassword = e.target.signupRepeatPassword.value.trim();
+// Closes a displayed modal dialog
+const closeModal = (selector) => {
+  const modal = document.querySelector(selector);
+  if (modal) modal.close();
+};
 
-  // If the passwords don't match
+// Checks if the user is already logged in by looking for a userId in session storage.
+// If found, the user is redirected to the ebooks page.
+const checkLoginStatus = () => {
+  if (sessionStorage.getItem("userId")) {
+    redirectTo("../templates/ebooks.html");
+  }
+};
+
+// Handles API responses by checking for success or throwing an error if something went wrong.
+// On success, parses and returns the JSON response; on error, retrieves the message and throws it.
+const handleAPIError = async (response) => {
+  if (response.ok) return response.json();
+  const errorData = await response.json();
+  throw new Error(errorData.error || "An unknown error occurred");
+};
+
+// Handles the submission of the signup form.
+// It ensures that both password fields match, prepares the data, and sends it to the server.
+// On successful signup, redirects the user to the login page.
+const handleFormSubmit = (event) => {
+  event.preventDefault(); // Prevent default form submission behavior
+
+  const form = event.target;
+  const password = form.signupPassword.value.trim();
+  const repeatPassword = form.signupRepeatPassword.value.trim();
+
+  // Check if the passwords match; if not, show an error modal
   if (password !== repeatPassword) {
-    document.querySelector("#passwordError").showModal();
-    return false;
+    showModal("#passwordError");
+    return;
   }
 
-  // Sign up in the API
-  const firstName = e.target.signupName.value.trim();
-  const lastName = e.target.signupLastName.value.trim();
-  const email = e.target.signupEmail.value.toLowerCase().trim();
-  const address = e.target.signupAddress.value.trim();
-  const phone_number = e.target.signupTel.value.trim();
-  const birth_date = e.target.signupDOB.value.trim();
-  const passworded = e.target.signupPassword.value.trim();
+  // Convert form data into URL-encoded parameters
+  const formData = new URLSearchParams(
+    Array.from(new FormData(form)).reduce((acc, [key, value]) => {
+      acc[key] = value.trim();
+      return acc;
+    }, {})
+  );
 
-  const params = new URLSearchParams();
-  params.append("email", email);
-  params.append("password", passworded);
-  params.append("first_name", firstName);
-  params.append("last_name", lastName);
-  params.append("address", address);
-  params.append("phone_number", phone_number);
-  params.append("birth_date", birth_date);
-
-  console.log("Params er", params);
-
+  // Send a POST request to the API to create a new user
   fetch(`${baseUrl}/users`, {
     method: "POST",
-    body: params,
+    body: formData,
   })
     .then(handleAPIError)
     .then((data) => {
-      console.log("Parsed data:", data);
-      // Check for key "user_id" in response
-      if (Object.keys(data).includes("user_id")) {
+      // If a user_id is returned, signup was successful; redirect to the login page
+      if (data.user_id) {
         console.log("Signup successful, redirecting...");
-        window.location.href = "../templates/login.html";
+        redirectTo("../templates/login.html");
       } else {
-        console.warn("Unexpected response structure:", data);
-        throw new Error(data.error);
+        // If no user_id is returned, throw an error
+        throw new Error(data.error || "Unexpected response structure");
       }
     })
-    .catch((error) => {
-      // Display the API error as an alert
-      alert(error.message);
-    });
-});
+    // If any error occurs, alert the user
+    .catch((error) => alert(error.message));
+};
 
-// Function to close the dialog
-document.querySelector(".close").addEventListener("click", () => {
-  document.getElementById("passwordError").close(); // Closes the dialog
-});
+// Sets up event listeners for the signup form and modal close buttons
+const initializeEventListeners = () => {
+  const signupForm = document.querySelector("#formSignup");
+  if (signupForm) signupForm.addEventListener("submit", handleFormSubmit);
 
-// Check login status when the page loads
-document.addEventListener('DOMContentLoaded', checkLoginStatus);
+  // Add click event listeners to any element with the ".close" class to close the error modal
+  document.querySelectorAll(".close").forEach((button) =>
+    button.addEventListener("click", () => closeModal("#passwordError"))
+  );
+};
+
+// When the page finishes loading:
+// 1. Check if the user is already logged in
+// 2. Initialize form and modal event listeners
+document.addEventListener("DOMContentLoaded", () => {
+  checkLoginStatus();
+  initializeEventListeners();
+});
