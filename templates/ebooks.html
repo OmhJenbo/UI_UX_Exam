@@ -15,84 +15,80 @@
         <a href="../index.html" class="skip-link">Skip to Home Page</a>
         <a href="signup.html" class="skip-link">Skip to Signup</a>
         <a href="login.html" class="skip-link">Skip to Login</a>
-    <header>
-        <nav id="navigation">
-            <a href="../../index.html"><img src="../assets/img/logo.svg" alt="E-Borrows logo" /> </a>
-    
-            <button class="burger-menu" aria-label="Toggle navigation">
-                <div></div>
-                <div></div>
-                <div></div>
-            </button>
-            <div id="navlinks">
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../templates/ebooks.html">E-books</a></li>
-                    <li><a id="admin" href="../templates/admin.html" class="hidden">Admin</a></li>
-                    <li><a id="settings" class="hidden" href="../templates/profile.html">Settings</a></li>
-                    <li><a id="signup" class="hidden" href="../templates/signup.html">Signup</a></li>
-                    <li><a id="login" class="hidden" href="../templates/login.html">Login</a></li>
-                    <li><button id="logout" class="hidden">Logout</button></li>
-                </ul>
+        <header>
+            <nav id="navigation">
+                <a href="../../index.html"><img src="../assets/img/logo.svg" alt="E-Borrows logo"></a>
+        
+                <button class="burger-menu" aria-label="Toggle navigation">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
+                <div id="navlinks">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../templates/ebooks.html">E-books</a></li>
+                        <li><a id="admin" href="../templates/admin.html" class="hidden">Admin</a></li>
+                        <li><a id="settings" class="hidden" href="../templates/profile.html">Settings</a></li>
+                        <li><a id="signup" class="hidden" href="../templates/signup.html">Signup</a></li>
+                        <li><a id="login" class="hidden" href="../templates/login.html">Login</a></li>
+                        <li><button id="logout" class="hidden">Logout</button></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main id="main-content">
+            <div id="header">
+                <picture>
+                    <source srcset="../assets/img/mobile_ebook.jpg" media="(max-width: 410px)">
+                    <source srcset="../assets/img/tablet_ebook.jpg" media="(max-width: 768px)">
+                    <source srcset="../assets/img/desktop_ebook.jpg" media="(min-width: 768px)">
+                    <img src="../image-desktop.jpg" alt="Description">
+                </picture>
+                <header id="titles">
+                    <h1>E-BOOKS</h1>
+                    <h2>Browse through our selection of E-books here</h2>
+                </header>
             </div>
-        </nav>
-    </header>
-    <main id="main-content">
-        <div id="header">
-            <picture>
-                <source srcset="../assets/img/mobile_ebook.jpg" media="(max-width: 410px)">
-                <source srcset="../assets/img/tablet_ebook.jpg" media="(max-width: 768px)">
-                <source srcset="../assets/img/desktop_ebook.jpg" media="(min-width: 768px)">
-                <img src="../image-desktop.jpg" alt="Description">
-            </picture>
-            <header id="titles">
-                <h1>E-BOOKS</h1>
-                <h2>Browse through our selection of E-books here</h2>
-            </header>
-        </div>
-        <section id="search">
-            <!-- <h2 id="searchHeader">Search for books!</h2> -->
-            <label id="searchHeader" for="searchInput">Search for books!</label>
-            <form id="searchForm">
-                <!-- <label for="searchBook">Search for a book</label> -->
-                <input type="text" id="searchInput" name="search" placeholder="Search for a book" />
-                <button type="submit">Search</button>
-            </form>
-            <div id="searchResults"></div>
-        </section>
-        <section id="bookList">
-        </section>
-    </main>
-    <footer>
-        <section class="socials">
-            <img src="../assets/img/logo.svg" alt="E-Borrows logo"/>
-            <div>
-                <a href="../../index.html" class="socialsIcons"><img src="../assets/img/instagram.svg" alt="instagram"></a>
-                <a href="../../index.html" class="socialsIcons"><img src="../assets/img/facebook.svg" alt="facebook"></a>
-                <a href="../../index.html" class="socialsIcons"><img src="../assets/img/linkedin.svg" alt="linkedin"></a>
-            </div>
-        </section>
+            <section id="search">
+                <label id="searchHeader" for="searchInput">Search for books!</label>
+                <form id="searchForm">
+                    <input type="text" id="searchInput" name="search" placeholder="Search for a book">
+                    <button type="submit">Search</button>
+                </form>
+                <div id="searchResults"></div>
+            </section>
+            <section id="bookList"></section>
+        </main>
+        <footer>
+            <section class="socials">
+                <img src="../assets/img/logo.svg" alt="E-Borrows logo">
+                <div>
+                    <a href="../../index.html" class="socialsIcons"><img src="../assets/img/instagram.svg" alt="instagram"></a>
+                    <a href="../../index.html" class="socialsIcons"><img src="../assets/img/facebook.svg" alt="facebook"></a>
+                    <a href="../../index.html" class="socialsIcons"><img src="../assets/img/linkedin.svg" alt="linkedin"></a>
+                </div>
+            </section>
 
-        <section class="contact">
-            <header>
-                <h4>Contact</h4>
-            </header>
-            <a href="mailto:eborrow@mail.com" aria-label="Send an email to eborrow@mail.com">eborrow@mail.com</a>
-            <a href="tel:+4530303030" aria-label="Call E-borrow">+4530303030</a>
-            <address><p>Jensens Vej 43, København K</p></address>
-        </section>
+            <section class="contact">
+                <header>
+                    <h4>Contact</h4>
+                </header>
+                <a href="mailto:eborrow@mail.com" aria-label="Send an email to eborrow@mail.com">eborrow@mail.com</a>
+                <a href="tel:+4530303030" aria-label="Call E-borrow">+4530303030</a>
+                <address><p>Jensens Vej 43, København K</p></address>
+            </section>
 
-        <section class="content">
-            <header>
-                <h4>Content</h4>
-            </header>
-            <p>Texts generated by <a href="https://chatgpt.com/" title="ChatGPT" target="_blank">ChatGPT</a></p>
-            <p>Images generated by <a href="https://figma.com/" title="Figma" target="_blank">Figma</a></p>
-            <p>Books loaded from <a href="https://github.com/arturomorarioja/py_library_api_v2.git" title="Py library v2" target="_blank">Py library v2</a></p>
-        </section>
+            <section class="content">
+                <header>
+                    <h4>Content</h4>
+                </header>
+                <p>Texts generated by <a href="https://chatgpt.com/" title="ChatGPT" target="_blank">ChatGPT</a></p>
+                <p>Images generated by <a href="https://figma.com/" title="Figma" target="_blank">Figma</a></p>
+                <p>Books loaded from <a href="https://github.com/arturomorarioja/py_library_api_v2.git" title="Py library v2" target="_blank">Py library v2</a></p>
+            </section>
 
-        <p class="copyright">&copy; 2024 - This is a school project</p>
-    </footer>
-</body>
-
+            <p class="copyright">&copy; 2024 - This is a school project</p>
+        </footer>
+    </body>
 </html>

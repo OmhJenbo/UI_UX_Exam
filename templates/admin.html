@@ -1,10 +1,11 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../assets/img/ebook.svg">
-    <link rel="stylesheet" href="../css/_admin.css" />
-    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/_admin.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <script src="../js/admin.js" type="module"></script>
     <script src="../js/admin_nav.js"></script>
     <script src="../js/admin_search.js" defer></script>
@@ -14,7 +15,7 @@
   <body>
     <header>
       <nav id="navigation">
-          <a href="../../index.html"><img src="../assets/img/logo.svg" alt="E-Borrows logo" /> </a>
+          <a href="../../index.html"><img src="../assets/img/logo.svg" alt="E-Borrows logo"></a>
           
           <button class="burger-menu" aria-label="Toggle navigation">
               <div></div>
@@ -34,7 +35,7 @@
           </div>
       </nav>
       <div class="container">
-        <img class="backgroundImage" src="../assets/img/image_1.png" alt="A person reading a book"/>
+        <img class="backgroundImage" src="../assets/img/image_1.png" alt="A person reading a book">
         <div class="image_overlay" aria-hidden="true"></div>
         <div class="text_overlay">
           <h1>ADMIN</h1>
@@ -66,8 +67,7 @@
                 name="bookTitle" 
                 placeholder="Kvinden i buret" 
                 title="Please add the title of the book" 
-                required 
-              />
+                required>
             </div>
             <div>
               <label for="addAuthor">Author by id</label>
@@ -78,8 +78,7 @@
                 placeholder="example: 100" 
                 pattern="\d+" 
                 title="Only numeric values allowed" 
-                required 
-              />
+                required>
             </div>
             <div>
               <label for="addPublisher">Publisher by id</label>
@@ -90,8 +89,7 @@
                 placeholder="example: 200" 
                 pattern="\d+" 
                 title="Only numeric values allowed" 
-                required 
-              />
+                required>
             </div>
             <div>
               <label for="addPublishingYear">Publishing Year</label>
@@ -102,8 +100,7 @@
                 placeholder="2007"
                 pattern="^(18|19|20)\d{2}$" 
                 title="Only years from 1800 onward are accepted" 
-                required 
-              />
+                required>
             </div>
             <button type="submit">Add Book</button>
           </form>
@@ -122,8 +119,7 @@
                 placeholder="Author's Name" 
                 pattern="^[a-zA-Z\s]+$" 
                 title="Please enter a valid name (letters and spaces only)" 
-                required 
-              />
+                required>
             </div>
             <div>
               <label for="authorLastName">Last Name</label>
@@ -134,8 +130,7 @@
                 placeholder="Author's Last Name" 
                 pattern="^[a-zA-Z\s]+$" 
                 title="Please enter a valid last name (letters and spaces only)" 
-                required 
-              />
+                required>
             </div>
             <button type="submit">Add Author</button>
           </form>
@@ -154,8 +149,7 @@
                 placeholder="Publisher's Name" 
                 pattern="^[a-zA-Z\s]+$" 
                 title="Please enter a valid publisher name (letters and spaces only)" 
-                required 
-              />
+                required>
             </div>
             <button type="submit">Add Publisher</button>
           </form>
@@ -173,8 +167,7 @@
                 placeholder="example: 1251" 
                 pattern="\d+" 
                 title="Only numeric values allowed" 
-                required 
-              />
+                required>
             </div>
             <button type="submit">Search</button>
             <a class="nextButton" href="../templates/lookup_ids.html" target="_blank">Go to the full list of IDs</a>
@@ -185,7 +178,7 @@
     </main>
     <footer>
       <section class="socials">
-          <img src="../assets/img/logo.svg" alt="E-Borrows logo"/>
+          <img src="../assets/img/logo.svg" alt="E-Borrows logo">
           <div>
             <a href="../../index.html" class="socialsIcons"><img src="../assets/img/instagram.svg" alt="instagram"></a>
             <a href="../../index.html" class="socialsIcons"><img src="../assets/img/facebook.svg" alt="facebook"></a>
@@ -214,5 +207,4 @@
       <p class="copyright">&copy; 2024 - This is a school project</p>
   </footer>
   </body>
-
 </html>
