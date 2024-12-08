@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="icon" type="image/x-icon" href="../assets/img/ebook.svg">
     <link rel="stylesheet" href="../css/_login.css">
@@ -12,9 +12,7 @@
   </head>
 
   <body>
-    <a href="../index.html" class="skip-link">Skip to Home Page</a>
-    <a href="ebooks.html" class="skip-link">Go to E-books</a>
-    <a href="signup.html" class="skip-link">Skip to Signup</a>
+    <a href="#loginContent" class="skip-link">Skip navigation</a>
     <header>
       <nav id="navigation">
         <a href="../../index.html" aria-label="Go to home page"><img src="../assets/img/logo.svg" alt="" /> </a>
@@ -36,9 +34,9 @@
             </ul>
         </div>
       </nav>
-  </header>
-    <main>
-      <img src="../assets/img/image_7.png" alt="Decorating image for the login page" id="loginPageImage"/>
+    </header>
+    <main id="loginContent">
+      <img src="../assets/img/image_7.png" alt="Decorating image for the login page" id="loginPageImage">
       <section id="formSection">
         <header>
           <h1 id="loginHeader">Login here!</h1>
@@ -46,7 +44,7 @@
         <form id="formLogin">
           <div>
             <label for="loginEmail">E-mail</label>
-            <input type="email" id="loginEmail" name="email" placeholder="example@email.com" required/>
+            <input type="email" id="loginEmail" name="email" placeholder="example@email.com" required>
           </div>
           <div>
             <label for="loginPassword">Password</label>
@@ -54,11 +52,8 @@
               id="loginPassword" 
               name="password" 
               placeholder="Password"
-              required/>
+              required>
           </div>
-          <!-- minlength="8"
-              pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{9,}" 
-              title="Password must be at least 8 characters and have at least one lowercase and uppercase letter, one number, and one special character." -->
           <button type="submit">Login</button>
         </form>
       </section>
@@ -66,7 +61,7 @@
 
     <footer>
       <section class="socials">
-          <img src="../assets/img/logo.svg" alt="E-Borrows logo"/>
+          <img src="../assets/img/logo.svg" alt="E-Borrows logo">
           <div>
             <a href="../../index.html" class="socialsIcons" aria-label="Visit our Instagram profile"><img src="../assets/img/instagram.svg" alt=""></a>
             <a href="../../index.html" class="socialsIcons" aria-label="Visit our Facebook profile"><img src="../assets/img/facebook.svg" alt=""></a>
