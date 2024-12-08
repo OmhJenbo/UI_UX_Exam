@@ -40,7 +40,7 @@ document.querySelector("#formSignup").addEventListener("submit", (e) => {
   // Sign up in the API
   const firstName = e.target.signupName.value.trim();
   const lastName = e.target.signupLastName.value.trim();
-  const email = e.target.signupEmail.value.trim();
+  const email = e.target.signupEmail.value.toLowerCase().trim();
   const address = e.target.signupAddress.value.trim();
   const phone_number = e.target.signupTel.value.trim();
   const birth_date = e.target.signupDOB.value.trim();

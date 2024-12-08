@@ -1,3 +1,4 @@
+
 body {
   background-color: var(--backgroundColor);
   
@@ -39,6 +40,8 @@ body {
     margin-left: var(--marginMedium);
     margin-right: var(--marginMedium);
     margin-bottom: var(--marginXlarge);
+    display: grid;
+    grid-template-columns: 1fr;
     #formSection {
       width: 100%;
       max-width: 350px;
@@ -225,7 +228,6 @@ body {
       }
     } 
     main {
-      grid-template-columns: 1fr 1fr;
 
       img {
         display: block;

@@ -14,7 +14,7 @@
   <body>
     <header>
       <nav id="navigation">
-          <img src="../assets/img/logo.svg" alt="E-Borrows logo" />
+          <a href="../../index.html"><img src="../assets/img/logo.svg" alt="E-Borrows logo" /> </a>
           
           <button class="burger-menu" aria-label="Toggle navigation">
               <div></div>
@@ -60,20 +60,20 @@
           <form>
             <div>
               <label for="bookTitle">Book title</label>
-              <input type="text" id="bookTitle" name="bookTitle" placeholder="Kvinden i buret" required />
+              <input type="text" id="bookTitle" name="bookTitle" placeholder="Kvinden i buret" title="Please add the title of the book" required />
             </div>
             <div>
               <label for="addAuthor">Author by id</label>
-              <input type="text" id="addAuthor" name="addAuthor" placeholder="238" required />
+              <input type="text" id="addAuthor" name="addAuthor" placeholder="example: 100" pattern="\d+" title="Only numeric values allowed" required />
             </div>
             <div>
               <label for="addPublisher">Publisher by id</label>
-              <input type="text" id="addPublisher" name="addPublisher" placeholder="116" required />
+              <input type="text" id="addPublisher" name="addPublisher" placeholder="example: 200" pattern="\d+" title="Only numeric values allowed" required />
             </div>
             <div>
               <label for="addPublishingYear">Publishing Year</label>
               <input type="text" id="addPublishingYear" name="addPublishingYear" placeholder="2007"
-                pattern="^(19|20)\d{2}$" required />
+                pattern="^(19|20)\d{2}$" title="Only years from 1800's and later are accepted" required />
             </div>
             <button type="submit">Add Book</button>
           </form>
@@ -85,11 +85,11 @@
           <form>
             <div>
               <label for="authorName">Name</label>
-              <input type="text" id="authorName" name="authorName" placeholder="Author's Name" required />
+              <input type="text" id="authorName" name="authorName" placeholder="Author's Name" title="Please enter the authors first name" required />
             </div>
             <div>
               <label for="authorLastName">Last Name</label>
-              <input type="text" id="authorLastName" name="authorLastName" placeholder="Author's Last Name" required />
+              <input type="text" id="authorLastName" name="authorLastName" placeholder="Author's Last Name" title="Please enter the Author's last name" required />
             </div>
             <button type="submit">Add Author</button>
           </form>
@@ -101,7 +101,7 @@
           <form>
             <div>
               <label for="publisherName">Publisher Name</label>
-              <input type="text" id="publisherName" name="publisherName" placeholder="Publisher's Name" required />
+              <input type="text" id="publisherName" name="publisherName" placeholder="Publisher's Name" title="Please enter the publisher's name" required />
             </div>
             <button type="submit">Add Publisher</button>
           </form>
@@ -113,7 +113,7 @@
         <form id="searchForm">
           <div>
             <label for="searchInput">Search for an E-book by their ID:</label>
-            <input type="text" id="searchInput" name="search" placeholder="Type to search..." />
+            <input type="text" id="searchInput" name="search" placeholder="example: 1251" pattern="\d+" title="Only numeric values allowed"  required/>
           </div>
           <button type="submit">Search</button>
           <a class="nextButton" href="../templates/lookup_ids.html" target="_blank">Go to the full list of IDs</a>
@@ -125,10 +125,9 @@
       <section class="socials">
           <img src="../assets/img/logo.svg" alt="E-Borrows logo"/>
           <div>
-              <!-- Would be with a ahref link if the website had socials -->
-              <img src="../assets/img/instagram.svg" alt="instagram">
-              <img src="../assets/img/facebook.svg" alt="facebook">
-              <img src="../assets/img/linkedin.svg" alt="linkedin">
+            <a href="../../index.html" class="socialsIcons"><img src="../assets/img/instagram.svg" alt="instagram"></a>
+            <a href="../../index.html" class="socialsIcons"><img src="../assets/img/facebook.svg" alt="facebook"></a>
+            <a href="../../index.html" class="socialsIcons"><img src="../assets/img/linkedin.svg" alt="linkedin"></a>
           </div>
       </section>
 
