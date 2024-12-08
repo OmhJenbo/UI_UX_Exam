@@ -15,9 +15,6 @@ body {
             justify-self: center;
             align-content: center;
             h1 {
-                font-family: var(--fontFamilyHeaders);
-                font-weight: 700;
-                font-size: var(--fontMediumHeader);
                 color: var(--backgroundColor);
                 padding-bottom: var(--paddingLarge);
                 margin-top: var(--marginXlarge);
@@ -48,14 +45,8 @@ body {
                 button {
                     background-color: var(--tertiaryColor);
                     color: var(--backgroundColor);
-                    font-family: var(--fontFamilyHeaders);
-                    font-weight: 700;
-                    font-size: var(--fontSmallHeader);
-                    border: 0;
-                    border-radius: var(--borderRadius);
                     padding: var(--paddingSmall);
                     width: 100%;
-                    cursor: pointer;
                 }
                 
             }

@@ -12,9 +12,9 @@ body {
             color: var(--secondaryColor);
         }
         h1 {
-            font-family: var(--fontFamilyHeaders);
+            /* font-family: var(--fontFamilyHeaders);
             font-weight: 700;
-            font-size: var(--fontMediumHeader);
+            font-size: var(--fontMediumHeader); */
             color: var(--primaryColor);
             padding-bottom: var(--paddingLarge);
             text-align: center;
@@ -33,12 +33,10 @@ body {
                     border-bottom: var(--border-bottom);
                     margin-bottom: var(--marginSmall);
                     padding-bottom: var(--paddingSmall);
-                    font-family: var(--fontFamilyHeaders);
-                    font-weight: 600;
-                    font-size: var(--fontSmallerMediumHeader);
                 }
                 .item {
                     margin: var(--marginSmall) 0;
+                    font-family: var(--fontFamilyBody);
                 }
             }
         }

@@ -10,22 +10,6 @@ function checkLoginStatus() {
 }
 
 /**
- * Handles an error in a fetch request's .catch(),
- * displaying an error message on the page
- */
-const handleFetchCatchError = (error) => {
-  const errorSection = document.createElement("section");
-  errorSection.innerHTML = `
-        <header>    
-            <h3>Error</h3>
-        </header>
-        <p>Dear user, we are truly sorry to inform that there was an error while getting the data</p>
-        <p class="error">${error}</p>
-    `;
-  document.querySelector("main").append(errorSection);
-};
-
-/**
  * Handles the first .then() in a fetch request,
  * raising an error if the response code is not a 2xx
  */
@@ -34,17 +18,20 @@ const handleAPIError = (response) => {
   if (response.ok) {
     return response.json();
   }
-  throw new Error("HTTP response error");
+  // Parse the error message from the response JSON and throw it
+  return response.json().then((data) => {
+    throw new Error(data.error || "An unknown error occurred");
+  });
 };
 
 document.querySelector("#formSignup").addEventListener("submit", (e) => {
   e.preventDefault();
 
-  //Validate password, both must match
+  // Validate password, both must match
   const password = e.target.signupPassword.value.trim();
   const repeatPassword = e.target.signupRepeatPassword.value.trim();
 
-  // If the password dont match
+  // If the passwords don't match
   if (password !== repeatPassword) {
     document.querySelector("#passwordError").showModal();
     return false;
@@ -86,7 +73,10 @@ document.querySelector("#formSignup").addEventListener("submit", (e) => {
         throw new Error(data.error);
       }
     })
-    .catch(handleFetchCatchError);
+    .catch((error) => {
+      // Display the API error as an alert
+      alert(error.message);
+    });
 });
 
 // Function to close the dialog

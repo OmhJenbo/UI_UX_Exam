@@ -1,6 +1,7 @@
 @import "_variables.css";
 @import "__navigation.css";
 @import "__footer.css";
+@import "_books.css";
 
 * {
   margin: 0;
@@ -9,76 +10,72 @@
 }
 
 body {
-  /* background-color: var(--backgroundColor); */
-  font-family: var(--fontFamilyBody);
+  .skip-link {
+    position: absolute;
+    top: var(--negativeGap);
+    left: 0;
+    background: var(--secondaryColor);
+    color: var(--backgroundColor);
+    padding: var(--paddingSmall);
+    text-decoration: none;
+    z-index: 100;
+    transition: top 0.3s;
+
+    &:focus {
+      top: var(--smallGap);
+    }
+  }
 
   img {
     width: 100%;
     max-height: 550px;
     object-fit: cover;
-
   }
-  main {
-    section#bookList {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: var(--alignCenter);
-      padding: var(--paddingLarge);
-      gap: 30px;
-
-      .bookCard {
-        background-color: var(--white);
-        border: var(--border);
-        border-radius: var(--borderRadius);
-        width: var(--cardWidth);
-        position: relative;
-        padding: var(--paddingMedium);
-        display: flex;
-        flex-direction: column;
-
-        h2 {
-          padding: var(--normalPadding);
-          color: var(--secondaryColor);
-          font-size: var(--fontSmallerMediumHeader);
-          font-family: var(--fontFamilyHeaders);
-          font-weight: var(--fontWeightBold);
-        }
-
-        h3 {
-          padding: var(--normalPadding);
-          color: var(--tertiaryColor);
-          font-size: var(--fontSmallHeader);
-          font-weight: var(--fontWeightSemiBold);
-          font-family: var(--fontFamilyHeaders);
-        }
-
-        p {
-          font-size: var(--fontFamilyBody);
-          line-height: 1.5;
-          color: var(--quaternaryColor);
-
-          &:first-of-type {
-            margin-top: var(--marginMedium);
-          }
-
-          &:last-of-type {
-            margin-bottom: var(--marginSmall);
-          }
-        }
-
-        button {
-          background-color: var(--secondaryColor);
-          color: var(--backgroundColor);
-          border: none;
-          border-radius: var(--borderRadius);
-          padding: var(--paddingSmallerMedium) var(--paddingBiggerMedium);
-          font-size: 16px;
-          font-weight: var(--fontWeightBold);
-          text-align: var(--alignCenter);
-          cursor: pointer;
-          margin-top: auto;
-        }
-      }
-    }
+  h1 {
+    font-family: var(--fontFamilyHeaders);
+    font-weight: var(--fontWeightBold);
+    font-size: var(--fontMediumHeader);
+  }
+  h2 {
+    font-family: var(--fontFamilyHeaders);
+    font-weight: var(--fontWeightSemiBold);
+    font-size: var(--fontMediumHeader );
+  }
+  h3 {
+    font-family: var(--fontFamilyHeaders);
+    font-weight: var(--fontWeightSemiBold);
+    font-size: var(--fontSmallerMediumHeader); 
+  }
+  h4 {
+    font-family: var(--fontFamilyHeaders);
+    font-weight: var(--fontWeightSemiBold);
+    font-size: var(--fontSmallHeader);
+  }
+  p {
+    font-family: var(--fontFamilyBody);
+    font-size: var(--fontBody);
+    font-weight: var(--fontWeightRegular);
+  }
+  a {
+    font-family: var(--fontFamilyBody);
+    font-size: var(--fontBody);
+    font-weight: var(--fontWeightRegular);
+  }
+  button {
+    font-family: var(--fontFamilyHeaders);
+    font-size: var(--fontSmallHeader);
+    font-weight: var(--fontWeightBold);
+    text-align: var(--alignCenter);
+    cursor: pointer;
+    border: 0;
+    border-radius: var(--borderRadius);
+  }
+}
+@media (min-width: 600px) {
+  h1 {
+    font-size: var(--fontLargeHeader);
+  }
+  h2 {
+    font-size: var(--fontMediumHeader);
   }
 }

@@ -15,21 +15,11 @@ const handleAPIError = (response) => {
     if (response.ok) {
         return response.json();
     }
-    throw new Error('HTTP response error');
-}
-
-// This function handles any fetch errors (like network issues) and displays them on the page
-export const handleFetchCatchError = (error) => {
-    const errorSection = document.createElement('section'); // Create a new section element where the rror goes
-    errorSection.innerHTML = `
-        <header>    
-            <h3>Error</h3> <!-- Display a header for the error message -->
-        </header>
-        <p>Dear user, we are truly sorry to inform that there was an error while getting the data</p>
-        <p class="error">${error}</p> <!-- Show the specific error message -->
-    `;
-    document.querySelector('main').append(errorSection);
-}
+    // Parse the error message from the API response and throw it
+    return response.json().then((data) => {
+        throw new Error(data.error || "An unknown error occurred");
+    });
+};
 
 // Event listener for the form submission (when the user clicks the "Login" button)
 document.querySelector("#formLogin").addEventListener("submit", (e) => {
@@ -58,7 +48,7 @@ document.querySelector("#formLogin").addEventListener("submit", (e) => {
             // also saves the user_id in sessionStorage, used for loaning a book.
             sessionStorage.setItem("userId", data.user_id);
 
-            // Redirects to a different page on succesful login depending on the role of the user
+            // Redirects to a different page on successful login depending on the role of the user
             if (email === "admin.library@mail.com") {
                 window.location.href = "../templates/admin.html";
             } else {
@@ -69,7 +59,10 @@ document.querySelector("#formLogin").addEventListener("submit", (e) => {
             throw new Error(data.error); // If the response has an error, throw an error
         }
     })
-    .catch(handleFetchCatchError); // If there's an error in the fetch request, handle it here
+    .catch((error) => {
+        // Display the error message as an alert (on wrong pw for example it will diplay wrong credentials)
+        alert(error.message);
+    });
 });
 
 // Check login status when the page loads

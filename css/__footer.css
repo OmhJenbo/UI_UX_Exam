@@ -27,10 +27,7 @@ footer {
         display: flex;
         flex-direction: column;
         margin-bottom: var(--marginMedium);
-        header h5 {
-            font-family: var(--fontFamilyHeaders);
-            font-weight: 600;
-            font-size: var(--fontSmallHeade);
+        header h4 {
             color: var(--tertiaryColor);
             margin-bottom: var(--marginSmall);
         }
