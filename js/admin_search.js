@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:8080"; // The base URL for your API
+import {baseUrl} from './scripts.js'; // The base URL for the API
 
 // Add an event listener to the search form, so when it's submitted,
 // we'll execute the `performSearch` function.

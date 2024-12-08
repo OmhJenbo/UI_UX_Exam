@@ -1,6 +1,7 @@
+import {baseUrl} from './scripts.js';
 document.addEventListener("DOMContentLoaded", async () => {
     // Base URL for the user API
-    const API_BASE_URL = "http://127.0.0.1:8080/users";
+    const API_BASE_URL = `${baseUrl}/users`;
 
     // Reference to the profile form
     const formProfile = document.getElementById("formProfile");
