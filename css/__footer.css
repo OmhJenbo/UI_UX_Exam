@@ -19,8 +19,8 @@ footer {
             gap: var(--mediumGap);
             justify-content: center;
             align-items: var(--alignCenter);
-            #socialsIcons img {
-                width: 30%;
+            .socialsIcons img {
+                width: 100%;
             }
         }
     }
