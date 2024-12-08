@@ -19,7 +19,7 @@ function handleLoanClick(e) {
 
   const userId = sessionStorage.getItem("userId"); // get userid from session to put in the fetch
   if (!userId) {
-    window.location.href = "../templates/login.html"; // Redirect to login if no user ID
+    window.location.href = "../templates/login.html"; // Redirect to login if no user Id in session
     return;
   }
 
@@ -69,18 +69,15 @@ function fetchBooks(url) {
     .catch((error) => console.error("Error fetching books:", error));
 }
 
-// Render books to the page
+// render books to the page
 function renderBooks(books) {
   const bookList = document.getElementById("bookList");
-  if (!bookList) return;
 
-  bookList.innerHTML = "";
+  bookList.innerHTML = ""; // clear existing content
+
+  const fragment = document.createDocumentFragment(); // create a document fragment
 
   books.forEach((book) => {
-    if (!book.book_id) {
-      console.warn("Skipping book with missing ID:", book); // dont fetch a book if the id is missing in the API
-      return;
-    }
 
     const bookCard = document.createElement("div");
     bookCard.classList.add("bookCard");
@@ -94,8 +91,12 @@ function renderBooks(books) {
       <button class="loanBook">Loan this book</button>
     `;
 
-    bookList.append(bookCard);
+    // append the book card to the fragment instead of the DOM
+    fragment.appendChild(bookCard);
   });
+
+  // append the entire fragment to the DOM in one manipulation
+  bookList.appendChild(fragment);
 }
 
 // error from api
