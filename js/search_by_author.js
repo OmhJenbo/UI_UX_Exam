@@ -142,7 +142,24 @@ function init() {
 async function loadAuthors(letter) {
   const authorList = document.getElementById("authorList");
   const bookListByAuthor = document.getElementById("bookListByAuthor");
+  const authorSection = document.getElementById("authorSection"); // Container for authors and heading
+  const bookSection = document.getElementById("bookSection"); // Container for books and heading
+
   bookListByAuthor.innerHTML = ""; // Clear the books list when a new letter is clicked
+
+  // Remove the <h2> from the book section
+  const bookHeading = bookSection.querySelector("h2");
+  if (bookHeading) {
+    bookHeading.remove();
+  }
+
+  // Add or update the <h2> for the selected letter
+  let h2Element = authorSection.querySelector("h2");
+  if (!h2Element) {
+    h2Element = document.createElement("h2");
+    authorSection.prepend(h2Element);
+  }
+  h2Element.textContent = `Authors starting with "${letter}"`;
 
   // Check if authors for the letter are already cached
   if (authorCache[letter]) {
@@ -199,6 +216,15 @@ function displayAuthors(authors, letter) {
 // Function to load books by a specific author
 async function loadBooks(authorId, authorName) {
   const bookListByAuthor = document.getElementById("bookListByAuthor");
+  const bookSection = document.getElementById("bookSection"); // Container for books and heading
+
+  // Add or update the <h2> for the selected letter
+  let h2Element = bookSection.querySelector("h2");
+  if (!h2Element) {
+    h2Element = document.createElement("h2");
+    bookSection.prepend(h2Element);
+  }
+  h2Element.textContent = `Books by "${authorName}"`;
 
   // Check if books for the author are already cached
   if (bookCache[authorId]) {
