@@ -60,66 +60,128 @@
           <form>
             <div>
               <label for="bookTitle">Book title</label>
-              <input type="text" id="bookTitle" name="bookTitle" placeholder="Kvinden i buret" title="Please add the title of the book" required />
+              <input 
+                type="text" 
+                id="bookTitle" 
+                name="bookTitle" 
+                placeholder="Kvinden i buret" 
+                title="Please add the title of the book" 
+                required 
+              />
             </div>
             <div>
               <label for="addAuthor">Author by id</label>
-              <input type="text" id="addAuthor" name="addAuthor" placeholder="example: 100" pattern="\d+" title="Only numeric values allowed" required />
+              <input 
+                type="text" 
+                id="addAuthor" 
+                name="addAuthor" 
+                placeholder="example: 100" 
+                pattern="\d+" 
+                title="Only numeric values allowed" 
+                required 
+              />
             </div>
             <div>
               <label for="addPublisher">Publisher by id</label>
-              <input type="text" id="addPublisher" name="addPublisher" placeholder="example: 200" pattern="\d+" title="Only numeric values allowed" required />
+              <input 
+                type="text" 
+                id="addPublisher" 
+                name="addPublisher" 
+                placeholder="example: 200" 
+                pattern="\d+" 
+                title="Only numeric values allowed" 
+                required 
+              />
             </div>
             <div>
               <label for="addPublishingYear">Publishing Year</label>
-              <input type="text" id="addPublishingYear" name="addPublishingYear" placeholder="2007"
-                pattern="^(19|20)\d{2}$" title="Only years from 1800's and later are accepted" required />
+              <input 
+                type="text" 
+                id="addPublishingYear" 
+                name="addPublishingYear" 
+                placeholder="2007"
+                pattern="^(18|19|20)\d{2}$" 
+                title="Only years from 1800 onward are accepted" 
+                required 
+              />
             </div>
             <button type="submit">Add Book</button>
           </form>
         </section>
-
+        
         <!-- Add Author Form -->
         <section id="form-add-author" class="form-container">
           <h3>Add an Author</h3>
           <form>
             <div>
               <label for="authorName">Name</label>
-              <input type="text" id="authorName" name="authorName" placeholder="Author's Name" title="Please enter the authors first name" required />
+              <input 
+                type="text" 
+                id="authorName" 
+                name="authorName" 
+                placeholder="Author's Name" 
+                pattern="^[a-zA-Z\s]+$" 
+                title="Please enter a valid name (letters and spaces only)" 
+                required 
+              />
             </div>
             <div>
               <label for="authorLastName">Last Name</label>
-              <input type="text" id="authorLastName" name="authorLastName" placeholder="Author's Last Name" title="Please enter the Author's last name" required />
+              <input 
+                type="text" 
+                id="authorLastName" 
+                name="authorLastName" 
+                placeholder="Author's Last Name" 
+                pattern="^[a-zA-Z\s]+$" 
+                title="Please enter a valid last name (letters and spaces only)" 
+                required 
+              />
             </div>
             <button type="submit">Add Author</button>
           </form>
         </section>
-
+        
         <!-- Add Publisher Form -->
         <section id="form-add-publisher" class="form-container">
           <h3>Add a Publisher</h3>
           <form>
             <div>
               <label for="publisherName">Publisher Name</label>
-              <input type="text" id="publisherName" name="publisherName" placeholder="Publisher's Name" title="Please enter the publisher's name" required />
+              <input 
+                type="text" 
+                id="publisherName" 
+                name="publisherName" 
+                placeholder="Publisher's Name" 
+                pattern="^[a-zA-Z\s]+$" 
+                title="Please enter a valid publisher name (letters and spaces only)" 
+                required 
+              />
             </div>
             <button type="submit">Add Publisher</button>
           </form>
         </section>
-      </section>
-
-      <section id="search">
-        <h3 id="searchHeader">Search for books by their id</h3>
-        <form id="searchForm">
-          <div>
-            <label for="searchInput">Search for an E-book by their ID:</label>
-            <input type="text" id="searchInput" name="search" placeholder="example: 1251" pattern="\d+" title="Only numeric values allowed"  required/>
-          </div>
-          <button type="submit">Search</button>
-          <a class="nextButton" href="../templates/lookup_ids.html" target="_blank">Go to the full list of IDs</a>
-        </form>
-        <div id="searchResult"></div>
-      </section>
+        
+        <section id="search">
+          <h3 id="searchHeader">Search for books by their id</h3>
+          <form id="searchForm">
+            <div>
+              <label for="searchInput">Search for an E-book by their ID:</label>
+              <input 
+                type="text" 
+                id="searchInput" 
+                name="search" 
+                placeholder="example: 1251" 
+                pattern="\d+" 
+                title="Only numeric values allowed" 
+                required 
+              />
+            </div>
+            <button type="submit">Search</button>
+            <a class="nextButton" href="../templates/lookup_ids.html" target="_blank">Go to the full list of IDs</a>
+          </form>
+          <div id="searchResult"></div>
+        </section>
+        
     </main>
     <footer>
       <section class="socials">
