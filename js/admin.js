@@ -2,15 +2,15 @@ const baseUrl = "http://localhost:8080";
 
 // Function to check if the user is logged in as admin
 function checkLoginStatus() {
-  const userId = sessionStorage.getItem('userId'); // Retrieve user ID
+  const userId = sessionStorage.getItem('userId'); // Take the userId from session
 
-  if (userId != "2679") {
+  if (userId != "2679") { // 2679 is the admins userId
     alert('You must be an admin to access this page.');
     window.location.href = '../templates/login.html'; // Redirect to the login page
   }
 }
 
-// Reusable function to handle API responses
+// reusable function to handle API responses
 const handleAPIError = (response) => {
   if (response.ok) {
     return response.json();
@@ -18,49 +18,44 @@ const handleAPIError = (response) => {
   throw new Error(`HTTP error! Status: ${response.status}}`);
 };
 
-export const handleFetchCatchError = (error) => {
-  const errorSection = document.createElement("section");
-  errorSection.innerHTML = `
-    <header>
-      <h3>Error</h3>
-    </header>
-    <p>There was an error while processing your request:</p>
-    <p class="error">${error.message}</p>
-  `;
-  document.querySelector("main").append(errorSection);
-};
-
-
+// add a book
 document.querySelector("#form-add-book").addEventListener("submit", (e) => {
   e.preventDefault();
 
+  // caching the things put in the form to avoid repeated interactions with the dom
+  const form = e.target; // cache the form itself to access its fields better
+  const title = form.bookTitle.value.trim();
+  const authorId = form.addAuthor.value.trim();
+  const publisherId = form.addPublisher.value.trim();
+  const publishingYear = form.addPublishingYear.value.trim();
+
+  // makes a formdata object to store the data in
   const formData = new FormData();
-  formData.append("title", e.target.bookTitle.value.trim());
-  formData.append("author_id", e.target.addAuthor.value.trim());
-  formData.append("publisher_id", e.target.addPublisher.value.trim());
-  formData.append("publishing_year", e.target.addPublishingYear.value.trim());
+  formData.append("title", title);
+  formData.append("author_id", authorId);
+  formData.append("publisher_id", publisherId);
+  formData.append("publishing_year", publishingYear);
 
   fetch(`${baseUrl}/admin/books`, {
     method: "POST",
     body: formData,
   })
     .then((response) => {
+      // if the response is not ok display the error returned as json
       if (!response.ok) {
         return response.json().then((error) => {
-          console.log("Parsed error response:", error);
           throw new Error(error.error || "An unknown error occurred");
         });
       }
+      // return the json data if the request is successful
       return response.json();
     })
     .then((data) => {
-      console.log("Book added successfully:", data);
       alert("Book added successfully!");
-      e.target.reset();
+      form.reset(); // reset the form
     })
     .catch((error) => {
-      console.error("Full error object:", error);
-      alert(error.message); // display the error message the api gives, works for author id, publication id, and invalid year
+      alert(error.message); // display the error message as an alert
     });
 });
 
@@ -68,28 +63,34 @@ document.querySelector("#form-add-book").addEventListener("submit", (e) => {
 document.querySelector("#form-add-author").addEventListener("submit", (e) => {
   e.preventDefault();
 
+  // caching the things put in the form to avoid repeated interactions with the dom
+  const form = e.target; // cache the form itself to access its fields better
+  const firstName = form.authorName.value.trim(); 
+  const lastName = form.authorLastName.value.trim();
+
+  // makes a formdata object to store the data in
   const formData = new FormData();
-  formData.append("first_name", e.target.authorName.value.trim());
-  formData.append("last_name", e.target.authorLastName.value.trim());
+  formData.append("first_name", firstName);
+  formData.append("last_name", lastName);
 
   fetch(`${baseUrl}/admin/authors`, {
     method: "POST",
     body: formData,
   })
     .then((response) => {
+      // if the response is not ok throw an error
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
+      // return the json data if the request is successful
       return response.json();
     })
     .then((data) => {
-      console.log("Author added successfully:", data);
       alert("Author added successfully!");
-      e.target.reset();
+      form.reset(); // reset the form
     })
     .catch((error) => {
-      console.error("Error adding author:", error);
-      alert(`Error adding author: ${error.message}`);
+      alert(`Error adding author: ${error.message}`); // display the error message as an alert
     });
 });
 
@@ -97,27 +98,32 @@ document.querySelector("#form-add-author").addEventListener("submit", (e) => {
 document.querySelector("#form-add-publisher").addEventListener("submit", (e) => {
   e.preventDefault();
 
+  // caching the things put in the form to avoid repeated interactions with the dom
+  const form = e.target; // cache the form itself to access its fields better
+  const publisherName = form.publisherName.value.trim();
+
+  // makes a formdata object to store the data in
   const formData = new FormData();
-  formData.append("name", e.target.publisherName.value.trim());
+  formData.append("name", publisherName)
 
   fetch(`${baseUrl}/admin/publishers`, {
     method: "POST",
     body: formData,
   })
     .then((response) => {
+      // if the response is not ok throw an error
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
+      // return the json data if the request is successful
       return response.json();
     })
     .then((data) => {
-      console.log("Publisher added successfully:", data);
       alert("Publisher added successfully!");
-      e.target.reset();
+      form.reset(); // reset the form
     })
     .catch((error) => {
-      console.error("Error adding publisher:", error);
-      alert(`Error adding publisher: ${error.message}`);
+      alert(`Error adding publisher: ${error.message}`); // display the error message as an alert
     });
 });
 
