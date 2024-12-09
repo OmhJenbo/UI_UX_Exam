@@ -85,11 +85,11 @@
   /* Widths */
   --widthLarge: 7rem;
   --cardWidth: 15.625rem;
-  --burgerMenuWidth: 40px;
+  --burgerMenuWidth: 3.125rem;
 
   /* Heights */
-  --burgerMenuDivHeight: 3px;
-  --burgerMenuHeight: 40px;
+  --burgerMenuDivHeight: 0.188rem;
+  --burgerMenuHeight: 2.5rem;
 
   /* Box shadows */
   --boxShadow: 0 0.45rem 0.9rem #2a2929;
