@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/_landingpage.css">
   <link rel="stylesheet" href="css/__navigation.css">
   <link rel="stylesheet" href="css/__footer.css">
-  <script src="js/scripts.js" type="module"></script>
+  <script src="js/scripts.js" defer></script>
   <script src="js/loggedin.js" type="module"></script>
   <!-- <script src="js/logout.js" type="module"></script> -->
 </head>
@@ -19,7 +19,7 @@
   <a href="#main-content" class="skip-link">Skip navigation</a>
   <header>
     <nav id="navigation">
-      <a href="index.html" aria-label="Go to home page"><img src="assets/img/logo.svg" alt="" /></a>
+      <a href="index.html" aria-label="Go to home page"><img src="assets/img/logo.svg" alt=""></a>
       <button class="burger-menu" aria-label="Toggle navigation">
         <div></div>
         <div></div>
@@ -38,7 +38,12 @@
       </div>
     </nav>
     <div class="container">
-      <img class="backgroundImage" src="assets/img/image_6.png" alt="A person reading a book">
+      <picture class="backgroundImage">
+        <source srcset="../assets/img/mobile-home.webp" media="(max-width: 410px)">
+        <source srcset="../assets/img/tablet-home.webp" media="(max-width: 768px)">
+        <source srcset="../assets/img/desktop-home.webp" media="(min-width: 768px)">
+        <img src="../assets/img/desktop-home.webp" alt="Decorative image for homepage">
+      </picture>
       <div class="image_overlay" aria-hidden="true"></div>
       <div class="text_overlay">
         <h1>Home</h1>
@@ -55,7 +60,7 @@
       </p>
     </section>
     <section class="list_section">
-      <img src="assets/img/image_7.png" alt="decorative image of an e-book" loading="lazy">
+      <img src="assets/img/image_7.webp" alt="decorative image of an e-book" loading="lazy">
       <div>
         <section class="list">
           <header>
@@ -113,7 +118,7 @@
           clicks.
         </p>
       </div>
-      <img src="assets/img/image_1.png" alt="" loading="lazy">
+      <img src="assets/img/image_1.webp" alt="" loading="lazy">
     </section>
     <section class="browseBooks">
       <header>

@@ -4,34 +4,38 @@ body {
     margin-bottom: 5rem;
     margin-top: 5rem;
   }
-  #header {
-    position: relative;
-    picture {
+  header {
+    .container {
       position: relative;
-      top: 0;
-    }
-    #titles {
-      position: absolute;
-      top: 70%;
-      h1 {
-        top: 65%;
-        font-size: var(--fontLargeHeader);
-        color: var(--tertiaryColor);
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
+      .backgroundImage {
+        height: 550px;
+        width: 100%;
+        object-fit: cover;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
       }
-      h2 {
-        top: 78%;
-        margin-left: auto;
-        margin-right: auto;
-        color: var(--backgroundColor);
-        font-size: var(--fontSmallerMediumHeader);
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
+      .image_overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+      }
+      .text_overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        h1 {
+          color: var(--tertiaryColor);
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+        }
       }
     }
   }
@@ -126,70 +130,8 @@ body {
   }
 }
 
-@media (min-width: 410px) {
-  body {
-    #header {
-      position: relative;
-      picture {
-        position: relative;
-        top: 0;
-      }
-      #titles {
-        top: 50%;
-        @media (min-width: 550px) {
-          top: 60%;
-        }
-        h1 {
-          margin-left: var(--marginMedium);
-          /* padding: var(--paddingSmall) var(--paddingMedium); */
-          /* color: var(--secondaryColor); */
-          font-weight: var(--fontWeightBold);
-          font-family: var(--fontFamilyHeaders);
-          font-size: var(--fontLargeHeader);
-          text-align: start;
-          width: fit-content;
-        }
-        h2 {
-          margin-left: var(--marginMedium);
-          color: var(--backgroundColor);
-          font-family: var(--fontFamilyHeaders);
-          font-size: var(--fontSmallerMediumHeader);
-          width: 80%;
-          text-align: start;
-        }
-      }
-    }
-  }
-}
-
 @media (min-width: 800px) {
   body {
-    #header {
-      #titles {
-        top: 65%;
-        h1 {
-          /* top: 60%; */
-          margin-left: var(--marginLarge);
-        }
-        h2 {
-          /* top: 80%; */
-          width: 60%;
-          margin-left: var(--marginLarge);
-        }
-        @media (min-width: 1040px) {
-          top: 75%;
-          /* background-color: hotpink; */
-          margin-left: var(--marginMedium);
-        }
-        #search {
-          width: 100%;
-          max-width: 95%;
-          justify-self: center;
-          margin-left: auto;
-          margin-right: auto;
-        }
-      }
-    }
     #search_by_author {
       margin: var(--marginXlarge);
       #authorSection {

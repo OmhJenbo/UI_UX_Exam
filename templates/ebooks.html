@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/_ebooks.css">
     <script src="../js/ebooks.js" type="module"></script>
-    <script src="../js/scripts.js" type="module"></script>
-    <script src="../js/search_by_author.js" defer></script>
+    <script src="../js/scripts.js" defer></script>
+    <script src="../js/search_by_author.js" type="module"></script>
     <title>E-books</title>
 </head>
 
@@ -17,8 +17,7 @@
     <a href="#main-content" class="skip-link">Skip navigation</a>
     <header>
         <nav id="navigation">
-            <a href="../index.html" aria-label="Go to home page"><img src="../assets/img/logo.svg" alt=""
-                    loading="lazy"></a>
+            <a href="../index.html" aria-label="Go to home page"><img src="../assets/img/logo.svg" alt=""></a>
 
             <button class="burger-menu" aria-label="Toggle navigation">
                 <div></div>
@@ -37,19 +36,20 @@
                 </ul>
             </div>
         </nav>
+        <div class="container">
+            <picture class="backgroundImage">
+                <source srcset="../assets/img/mobile_ebook.webp" media="(max-width: 410px)">
+                <source srcset="../assets/img/tablet_ebook.webp" media="(max-width: 768px)">
+                <source srcset="../assets/img/desktop_ebook.webp" media="(min-width: 768px)">
+                <img src="../assets/img/desktop_ebook.webp" alt="Decorative image for the ebooks page">
+            </picture>
+            <div class="image_overlay" aria-hidden="true"></div>
+            <div class="text_overlay">
+                <h1>E-BOOKS</h1>
+            </div>
+        </div>
     </header>
     <main id="main-content">
-        <div id="header">
-            <picture>
-                <source srcset="../assets/img/mobile_ebook.jpg" media="(max-width: 410px)">
-                <source srcset="../assets/img/tablet_ebook.jpg" media="(max-width: 768px)">
-                <source srcset="../assets/img/desktop_ebook.jpg" media="(min-width: 768px)">
-                <img src="../image-desktop.jpg" alt="Description" loading="lazy">
-            </picture>
-            <header id="titles">
-                <h1>E-BOOKS</h1>
-            </header>
-        </div>
         <section id="search">
             <label id="searchHeader" for="searchInput">Search for books!</label>
             <form id="searchForm">
