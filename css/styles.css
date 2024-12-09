@@ -35,43 +35,51 @@ body {
     max-height: 550px;
     object-fit: cover;
   }
+
   h1 {
     font-family: var(--fontFamilyHeaders);
     font-weight: var(--fontWeightBold);
     font-size: var(--fontLargeHeader);
     color: var(--tertiaryColor);
   }
+
   h2 {
     font-family: var(--fontFamilyHeaders);
     font-weight: var(--fontWeightSemiBold);
     font-size: var(--fontMediumHeader);
     color: var(--primaryColor);
   }
+
   h3 {
     font-family: var(--fontFamilyHeaders);
     font-weight: var(--fontWeightSemiBold);
     font-size: var(--fontSmallerMediumHeader);
   }
+
   h4 {
     font-family: var(--fontFamilyHeaders);
     font-weight: var(--fontWeightSemiBold);
     font-size: var(--fontSmallHeader);
   }
+
   p {
     font-family: var(--fontFamilyBody);
     font-size: var(--fontBody);
     font-weight: var(--fontWeightRegular);
   }
+
   li {
     font-size: var(--fontBody);
     font-family: var(--fontFamilyBody);
     font-weight: var(--fontWeightRegular);
   }
+
   a {
     font-family: var(--fontFamilyBody);
     font-size: var(--fontBody);
     font-weight: var(--fontWeightRegular);
   }
+
   button {
     font-family: var(--fontFamilyHeaders);
     font-size: var(--fontBody);
@@ -84,6 +92,7 @@ body {
     color: var(--backgroundColor);
     padding: var(--paddingSmall);
   }
+
   input {
     border-radius: var(--borderRadius);
     padding: var(--paddingSmall);

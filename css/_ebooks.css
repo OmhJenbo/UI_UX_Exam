@@ -4,6 +4,7 @@ body {
     margin-bottom: 5rem;
     margin-top: 5rem;
   }
+
   header {
     .container {
       position: relative;
@@ -16,6 +17,7 @@ body {
         right: 0;
         bottom: 0;
       }
+
       .image_overlay {
         position: absolute;
         left: 0;
@@ -24,12 +26,14 @@ body {
         bottom: 0;
         background: rgba(0, 0, 0, 0.5);
       }
+
       .text_overlay {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 100%;
+
         h1 {
           color: var(--tertiaryColor);
           margin-left: auto;
@@ -46,17 +50,20 @@ body {
     justify-self: center;
     margin-left: auto;
     margin-right: auto;
+
     form {
       display: flex;
       flex-direction: column;
       padding-bottom: var(--paddingMedium);
       position: relative;
+
       label {
         font-family: var(--fontFamilyBody);
         color: var(--primaryColor);
         padding-bottom: var(--paddingSmall);
         font-size: var(--fontBody);
       }
+
       input {
         border: 2px solid var(--secondaryColor);
         border-radius: var(--borderRadius);
@@ -65,9 +72,7 @@ body {
         font-family: var(--fontFamilyBody);
         color: var(--primaryColor);
       }
-      input::placeholder {
-        color: var(--quaternaryColor);
-      }
+
       button {
         position: absolute;
         width: 30%;
@@ -76,6 +81,7 @@ body {
         right: 0;
       }
     }
+
     #searchHeader {
       font-family: var(--fontFamilyHeaders);
       font-weight: 700;
@@ -86,25 +92,30 @@ body {
       padding-bottom: var(--paddingMedium);
     }
   }
+
   #search_by_author {
     margin: var(--marginMedium);
     margin-bottom: var(--marginXlarge);
     header h2 {
       text-align: center;
     }
+
     ul {
       display: flex;
       flex-wrap: wrap;
       gap: var(--smallGap);
       place-content: center;
       margin: var(--marginLarge) 0;
+
       li {
         list-style: none;
       }
     }
+
     #authorSection {
       #authorList {
         margin-top: var(--marginMedium);
+
         button {
           background-color: var(--primaryColor);
           font-weight: 400;
@@ -118,6 +129,7 @@ body {
         flex-direction: column;
         align-content: flex-start;
         margin: var(--marginMedium);
+
         li {
           font-family: var(--fontFamilyBody);
           font-weight: var(--fontWeightRegular);
@@ -134,6 +146,7 @@ body {
   body {
     #search_by_author {
       margin: var(--marginXlarge);
+
       #authorSection {
         #authorList {
           display: grid;
@@ -142,6 +155,7 @@ body {
           gap: var(--mediumGap);
         }
       }
+
       #bookSection {
         #bookList {
           margin-top: var(--marginLarge);
