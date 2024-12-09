@@ -75,10 +75,12 @@ body {
 
       button {
         position: absolute;
-        width: 30%;
-        height: 75%;
-        top: -3%;
+        width: 21%;
+        height: 33%;
+        top: 51%;
         right: 0;
+        display: grid;
+        place-content: center;
       }
     }
 
@@ -88,7 +90,6 @@ body {
       font-size: var(--fontMediumHeader);
       color: transparent;
       text-align: center;
-      padding-top: var(--paddingXlarge);
       padding-bottom: var(--paddingMedium);
     }
   }

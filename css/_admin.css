@@ -105,33 +105,54 @@ body {
     }
 
     #search {
-      margin-top: var(--marginLarge);
-      width: 100%;
+      width: 90%;
+      max-width: 650px;
       justify-self: center;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: var(--marginLarger);
 
-      div {
+      form {
         display: flex;
         flex-direction: column;
         padding-bottom: var(--paddingMedium);
+        position: relative;
+
+        label {
+          font-family: var(--fontFamilyBody);
+          color: var(--primaryColor);
+          padding-bottom: var(--paddingSmall);
+          font-size: var(--fontBody);
+        }
+
+        input {
+          border: 2px solid var(--secondaryColor);
+          border-radius: var(--borderRadius);
+          background-color: var(--backgroundColor);
+          padding: var(--paddingSmall);
+          font-family: var(--fontFamilyBody);
+          color: var(--primaryColor);
+          width: 100%;
+        }
+
+        button {
+          position: absolute;
+          width: 29%;
+          height: 45%;
+          top: 33%;
+          right: 0;
+          display: grid;
+          place-content: center;
+        }
       }
 
-      label {
-        font-family: var(--fontFamilyBody);
-        color: var(--primaryColor);
-        padding-bottom: var(--paddingSmall);
+      #searchHeader {
+        font-family: var(--fontFamilyHeaders);
+        font-weight: 700;
         font-size: var(--fontBody);
-      }
-
-      input {
-        border: 2px solid var(--secondaryColor);
-        background-color: var(--backgroundColor);
-        color: var(--primaryColor);
-      }
-
-      button {
-        background-color: var(--tertiaryColor);
-        color: var(--primaryColor);
-        width: 100%;
+        color: transparent;
+        text-align: center;
+        padding-bottom: var(--paddingMedium);
       }
 
       .book-info {
@@ -150,7 +171,8 @@ body {
         object-fit: cover; /* Maintain aspect ratio */
         border-radius: var(--borderRadius);
         display: block;
-        align-self: center;
+        margin-left: auto;
+        margin-right: auto;
       }
 
       .book-details {
