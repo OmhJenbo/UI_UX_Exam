@@ -1,19 +1,23 @@
 body {
   background-color: var(--primaryColor);
+
   main {
     margin-left: var(--marginMedium);
     margin-right: var(--marginMedium);
     margin-bottom: var(--marginXlarge);
     display: grid;
     grid-template-columns: 1fr;
+
     img {
       display: none;
     }
+
     #formSection {
       width: 100%;
       max-width: 350px;
       justify-self: center;
       align-content: center;
+
       h1 {
         font-size: var(--fontMediumHeader);
         color: var(--backgroundColor);
@@ -21,22 +25,26 @@ body {
         margin-top: var(--marginXlarge);
         text-align: center;
       }
+
       #formLogin {
         div {
           display: flex;
           flex-direction: column;
           padding-bottom: var(--paddingMedium);
+
           label {
             font-family: var(--fontFamilyBody);
             color: var(--backgroundColor);
             padding-bottom: var(--paddingSmall);
           }
+
           input {
             border: 2px solid var(--tertiaryColor);
             background-color: var(--primaryColor);
             color: var(--backgroundColor);
           }
         }
+
         button {
           background-color: var(--tertiaryColor);
           color: var(--primaryColor);
@@ -53,6 +61,7 @@ body {
       margin-right: 0rem;
       margin-bottom: var(--marginXlarge);
       grid-template-columns: 1fr 1fr;
+
       img {
         display: block;
         max-height: 800px;
@@ -60,9 +69,11 @@ body {
         object-fit: cover;
         justify-self: start;
       }
+
       #formSection {
         padding: var(--paddingMedium);
         max-width: 450px;
+
         h1 {
           margin-top: var(--marginLarge);
         }
