@@ -18,7 +18,8 @@
   <a href="#main-content" class="skip-link">Skip navigation</a>
   <header>
     <nav id="navigation">
-      <a href="../../index.html" aria-label="Go to home page"><img src="../assets/img/logo.svg" alt="" /> </a>
+      <a href="../../index.html" aria-label="Go to home page"><img src="../assets/img/logo.svg" alt="" loading="lazy">
+      </a>
 
       <button class="burger-menu" aria-label="Toggle navigation">
         <div></div>
@@ -29,16 +30,16 @@
         <ul>
           <li><a href="../index.html">Home</a></li>
           <li><a href="../templates/ebooks.html">E-books</a></li>
-          <li><a id="admin" href="../templates/admin.html" class="hidden">Admin</a></li>
-          <li><a id="settings" class="hidden" href="../templates/profile.html">Settings</a></li>
-          <li><a id="signup" class="hidden" href="../templates/signup.html">Signup</a></li>
-          <li><a id="login" class="hidden" href="../templates/login.html">Login</a></li>
-          <li><button id="logout" class="hidden">Logout</button></li>
+          <li id="admin" class="hidden"><a href="../templates/admin.html">Admin</a></li>
+          <li id="settings" class="hidden"><a href="../templates/profile.html">Settings</a></li>
+          <li id="signup" class="hidden bordertop"><a href="../templates/signup.html">Signup</a></li>
+          <li id="login" class="hidden"><a href="../templates/login.html">Login</a></li>
+          <li id="logout" class="hidden bordertop"><button>Logout</button></li>
         </ul>
       </div>
     </nav>
     <div class="container">
-      <img class="backgroundImage" src="../assets/img/image_1.png" alt="A person reading a book">
+      <img class="backgroundImage" src="../assets/img/image_1.png" alt="A person reading a book" loading="lazy">
       <div class="image_overlay" aria-hidden="true"></div>
       <div class="text_overlay">
         <h1>ADMIN</h1>
@@ -83,6 +84,7 @@
               pattern="^(18|19|20)\d{2}$" title="Only years from 1800 onward are accepted" required>
           </div>
           <button type="submit">Add Book</button>
+          <a class="nextButton" href="../templates/lookup_ids.html" target="_blank">Go to the full list of IDs</a>
         </form>
       </section>
 
@@ -101,6 +103,7 @@
               pattern="^[a-zA-Z\s]+$" title="Please enter a valid last name (letters and spaces only)" required>
           </div>
           <button type="submit">Add Author</button>
+          <a class="nextButton" href="../templates/lookup_ids.html" target="_blank">Go to the full list of IDs</a>
         </form>
       </section>
 
@@ -114,6 +117,7 @@
               pattern="^[a-zA-Z\s]+$" title="Please enter a valid publisher name (letters and spaces only)" required>
           </div>
           <button type="submit">Add Publisher</button>
+          <a class="nextButton" href="../templates/lookup_ids.html" target="_blank">Go to the full list of IDs</a>
         </form>
       </section>
 
@@ -126,7 +130,6 @@
               title="Only numeric values allowed" required>
           </div>
           <button type="submit">Search</button>
-          <a class="nextButton" href="../templates/lookup_ids.html" target="_blank">Go to the full list of IDs</a>
         </form>
         <div id="searchResult"></div>
       </section>
@@ -134,13 +137,14 @@
   </main>
   <footer>
     <section class="socials">
+      <img src="../assets/img/logo.svg" alt="E-Borrows logo">
       <div>
-        <a href="../../index.html" class="socialsIcons" aria-label="Visit our Instagram profile"><img
-            src="../assets/img/instagram.svg" alt=""></a>
-        <a href="../../index.html" class="socialsIcons" aria-label="Visit our Facebook profile"><img
-            src="../assets/img/facebook.svg" alt=""></a>
-        <a href="../../index.html" class="socialsIcons" aria-label="Visit our LinkedIn profile"><img
-            src="../assets/img/linkedin.svg" alt=""></a>
+        <a href="../index.html" class="socialsIcons" aria-label="Visit our Instagram profile"><img
+            src="../assets/img/instagram.svg" alt="" loading="lazy"></a>
+        <a href="../index.html" class="socialsIcons" aria-label="Visit our Facebook profile"><img
+            src="../assets/img/facebook.svg" alt="" loading="lazy"></a>
+        <a href="../index.html" class="socialsIcons" aria-label="Visit our LinkedIn profile"><img
+            src="../assets/img/linkedin.svg" alt="" loading="lazy"></a>
       </div>
     </section>
 

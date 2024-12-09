@@ -3,37 +3,39 @@ const baseUrl = "http://localhost:8080";
 
 // Wait for the page to fully load before running the script
 document.addEventListener("DOMContentLoaded", () => {
-  const numberOfBooks = 12; // Define how many books to fetch
-  fetchBooks(`${baseUrl}/books?n=${numberOfBooks}`); // Fetch books from the API when the page loads
+  const numberOfBooks = 12; // define how many books to fetch
+  fetchBooks(`${baseUrl}/books?n=${numberOfBooks}`); // fetch books from the API
 
   const bookList = document.getElementById("bookList");
   if (bookList) {
-    // Add a single event listener to handle clicks on loan buttons
+    // add a single event listener to handle clicks on loan buttons
     bookList.addEventListener("click", handleLoanClick);
   }
 });
 
 // Function to fetch books from the API and display them
 function fetchBooks(url) {
-  fetch(url) // Send a GET request to the API
+  fetch(url) // send a GET request to the API
     .then((response) => {
       if (!response.ok) {
-        // If the response is not successful, throw an error
+        // if the response is not successful, throw an error
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-      return response.json(); // Parse the response as JSON
+      return response.json(); // change the response to JSON
     })
     .then((books) => {
-      displayBooks(books); // Call the function to display books on the page
+      displayBooks(books); // call the function to display books on the page
+      // this calls the function that will render all the books on the page
     })
     .catch((error) => {
-      console.error("Error fetching book data:", error); // Log any errors that occur
+      console.error("error fetching book data:", error);
     });
 }
 
-// Function to display books on the page
+// function to display books on the page
 function displayBooks(books) {
-  const bookList = document.getElementById("bookList"); 
+  // this function is responsible for creating and adding book elements to the page
+  const bookList = document.getElementById("bookList");
   if (!bookList) return;
 
   bookList.innerHTML = ""; // clear any existing books from the container
@@ -42,29 +44,29 @@ function displayBooks(books) {
 
   books.forEach((book) => {
     if (!book.id && !book.book_id) {
-      console.warn("Skipping book with missing ID:", book); // Warn if the book has no valid ID
+      console.warn("skipping book with missing id:", book); // warn if the book has no valid id
       return;
     }
 
-    const bookId = book.id || book.book_id; // Use the correct ID property
+    const bookId = book.id || book.book_id; // use the correct id property
 
     const bookCard = document.createElement("div"); // create a new div for each book
     bookCard.classList.add("bookCard"); // add a class for the cards
-    bookCard.setAttribute("data-book-id", bookId); // add the book's ID to the card
+    bookCard.setAttribute("data-book-id", bookId); // add the book's id to the card
 
-    // Add the book details and loan button to the card
+    // add the book details and loan button to the card
     bookCard.innerHTML = `
       <h2>${book.title}</h2>
       <h3>${book.author}</h3>
       <p>${book.publishing_company}</p>
       <p>${book.publishing_year}</p>
-      <button class="loanBook">Loan this book</button>
+      <button class="loanBook">loan this book</button>
     `;
 
-    fragment.appendChild(bookCard); // Add the card to the fragment
+    fragment.appendChild(bookCard); // add the card to the fragment
   });
 
-  bookList.appendChild(fragment); // Add all book cards to the page at once to improve performance
+  bookList.appendChild(fragment); // add all book cards to the page at once to improve performance
 }
 
 // loan book

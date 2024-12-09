@@ -27,7 +27,6 @@ body {
         margin-left: auto;
         margin-right: auto;
         color: var(--backgroundColor);
-        font-family: var(--fontFamilyHeaders);
         font-size: var(--fontSmallerMediumHeader);
         width: 80%;
         margin-left: auto;
@@ -86,6 +85,53 @@ body {
       padding-bottom: var(--paddingMedium);
     }
   }
+  #search_by_author {
+    margin: var(--marginMedium);
+    margin-bottom: var(--marginXlarge);
+    header h2 {
+      text-align: center;
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--smallGap);
+      place-content: center;
+      margin: var(--marginLarge) 0;
+      li {
+        list-style: none;
+        button {
+          background-color: var(--tertiaryColor);
+          color: var(--backgroundColor);
+          padding: var(--paddingSmall);
+        }
+      }
+    }
+    #authorSection {
+      #authorList {
+        margin-top: var(--marginMedium);
+        button {
+          background-color: var(--primaryColor);
+          font-weight: 400;
+        }
+      }
+    }
+
+    #bookSection {
+      #bookListByAuthor {
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        margin: var(--marginMedium);
+        li {
+          font-family: var(--fontFamilyBody);
+          font-weight: var(--fontWeightRegular);
+          font-size: var(--fontBody);
+          list-style: disc;
+          text-align: left;
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 410px) {
@@ -102,7 +148,6 @@ body {
           top: 60%;
         }
         h1 {
-          /* top: 40%; */
           margin-left: var(--marginMedium);
           /* padding: var(--paddingSmall) var(--paddingMedium); */
           /* color: var(--secondaryColor); */
@@ -113,10 +158,8 @@ body {
           width: fit-content;
         }
         h2 {
-          /* top: 70%; */
           margin-left: var(--marginMedium);
           color: var(--backgroundColor);
-          /* font-weight: var(--fontWeightBold); */
           font-family: var(--fontFamilyHeaders);
           font-size: var(--fontSmallerMediumHeader);
           width: 80%;
@@ -156,24 +199,28 @@ body {
       }
     }
     #search_by_author {
-      margin-left: 2rem;
-      margin-top: 8rem;
-      margin-bottom: 8rem;
-      #ul {
-        display: flex;
-        place-content: center;
-
-        li {
-          list-style: none;
-
-          button {
-            padding: 0.4rem;
-            margin: 0.1rem;
-          }
+      margin: var(--marginXlarge);
+      #authorSection {
+        #authorList {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          margin-top: var(--marginLarge);
+          gap: var(--mediumGap);
         }
       }
+      #bookSection {
+        #bookList {
+          margin-top: var(--marginLarge);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    #search_by_author {
       #authorList {
-        display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
       }
     }

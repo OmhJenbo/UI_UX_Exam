@@ -1,7 +1,7 @@
 body {
     background-color: var(--backgroundColor);
     main {
-        margin: 0 var(--marginMedium);
+        margin: var(--marginLarge) var(--marginMedium);
         .backArrow {
             display: flex;
             padding-top: var(--marginXlarge);
@@ -69,7 +69,7 @@ body {
 @media (min-width: 768px){
     body {
         main {
-            margin: 0 var(--marginLarge);
+            margin: var(--marginLarge) var(--marginLarge);
             h1 {
                 font-size: var(--fontLargeHeader);
             }
@@ -83,7 +83,7 @@ body {
 @media (min-width: 1024px) {
     body {
         main {
-            margin: 0 var(--marginXlarge);
+            margin: var(--marginLarge) var(--marginXlarge);
         }
     }
 }
