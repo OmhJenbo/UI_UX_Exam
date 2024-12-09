@@ -24,7 +24,7 @@ body {
     #formSection {
       margin-top: var(--marginMedium);
       width: 100%;
-      max-width: 350px;
+      max-width: var(--width);
       justify-self: center;
       align-content: center;
       padding: var(--paddingMedium);
@@ -106,10 +106,8 @@ body {
 
     #search {
       width: 90%;
-      max-width: 650px;
+      width: 100%;
       justify-self: center;
-      margin-left: auto;
-      margin-right: auto;
       margin-top: var(--marginLarger);
 
       form {
@@ -137,7 +135,7 @@ body {
 
         button {
           position: absolute;
-          width: 29%;
+          width: 22%;
           height: 45%;
           top: 33%;
           right: 0;
@@ -148,7 +146,7 @@ body {
 
       #searchHeader {
         font-family: var(--fontFamilyHeaders);
-        font-weight: 700;
+        font-weight: var(--fontWeightBold);
         font-size: var(--fontBody);
         color: transparent;
         text-align: center;
@@ -203,7 +201,7 @@ body {
     }
     main {
       #formSection {
-        max-width: 450px;
+        max-width: var(--width2);
 
         .mini-nav {
           gap: var(--paddingMedium);
@@ -242,7 +240,7 @@ body {
       }
 
       #formSection {
-        max-width: 700px;
+        max-width: var(--width3);
       }
 
       #search {

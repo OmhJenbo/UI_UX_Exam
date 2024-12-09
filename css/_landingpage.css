@@ -5,7 +5,7 @@ body {
       position: relative;
 
       .backgroundImage {
-        height: 550px;
+        height: var(--imgHeight);
         width: 100%;
         object-fit: cover;
         left: 0;

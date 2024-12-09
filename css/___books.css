@@ -5,7 +5,7 @@ body {
       flex-wrap: wrap;
       justify-content: var(--alignCenter);
       padding: var(--paddingLarge);
-      gap: 30px;
+      gap: var(--largeGap);
 
       .bookCard {
         background-color: var(--white);

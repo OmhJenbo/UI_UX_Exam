@@ -14,7 +14,7 @@ body {
 
     #formSection {
       width: 100%;
-      max-width: 350px;
+      max-width: var(--width);
       justify-self: center;
       align-content: center;
 
@@ -62,7 +62,7 @@ body {
 
       img {
         display: block;
-        max-height: 1000px;
+        max-height: var(--width6);
         width: 100%;
         object-fit: cover;
         justify-self: start;
@@ -70,7 +70,7 @@ body {
 
       #formSection {
         padding: var(--paddingMedium);
-        max-width: 450px;
+        max-width: var(--width2);
       }
     }
   }

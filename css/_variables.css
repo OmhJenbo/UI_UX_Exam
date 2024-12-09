@@ -58,6 +58,7 @@
   --imgSmall: 250px;
   --imgMedium: 300px;
   --imgLarge: 350px;
+  --imgHeight: 550px;
 
   /* Aligns */
   --alignLeft: left;
@@ -86,6 +87,12 @@
   --widthLarge: 7rem;
   --cardWidth: 15.625rem;
   --burgerMenuWidth: 3.125rem;
+  --width: 21.875rem;
+  --width2: 28.125rem;
+  --width3: 43.75rem;
+  --width4: 40.625rem;
+  --width5: 50rem;
+  --width6: 62.5rem;
 
   /* Heights */
   --burgerMenuDivHeight: 0.188rem;

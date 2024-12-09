@@ -11,7 +11,7 @@
   border-bottom: 1px solid var(--secondaryColor);
   img {
     width: auto;
-    height: 40px;
+    height: var(--burgerMenuHeight);
   }
 
   .burger-menu {

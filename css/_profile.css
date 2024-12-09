@@ -10,7 +10,7 @@ body {
 
     #formSection {
       width: 100%;
-      max-width: 350px;
+      max-width: var(--width);
       justify-self: center;
       align-content: center;
 
@@ -61,7 +61,7 @@ body {
     main {
       #formSection {
         padding: var(--paddingMedium);
-        max-width: 450px;
+        max-width: var(--width2);
       }
     }
   }
