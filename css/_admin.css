@@ -1,41 +1,40 @@
-
 body {
   background-color: var(--backgroundColor);
-  
-  .container{
+
+  .container {
     margin: 0rem;
     position: relative;
     .backgroundImage {
-        height: 550px;
-        width: 100%; 
-        object-fit: cover;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
+      height: 550px;
+      width: 100%;
+      object-fit: cover;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
     }
     .image_overlay {
-        position: absolute;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0,0,0,0.5);
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
     }
     .text_overlay {
-        position: absolute;
-        display: flex;
-        top: 85%;
-        left: 35%;
-        h1 {
-          color: var(--secondaryColor);
-          margin-left: auto;
-          margin-right: auto;
-          text-align: center;
-          font-size: var(--fontLargeHeader);
-        }
+      position: absolute;
+      display: flex;
+      top: 85%;
+      left: 35%;
+      h1 {
+        color: var(--tertiaryColor);
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-size: var(--fontLargeHeader);
+      }
     }
-  } 
+  }
   main {
     margin-left: var(--marginMedium);
     margin-right: var(--marginMedium);
@@ -65,12 +64,13 @@ body {
 
         button {
           background-color: var(--tertiaryColor);
-          color: var(--backgroundColor);
+          color: var(--primaryColor);
           padding: var(--paddingSmall);
         }
 
         button.active {
           background-color: var(--secondaryColor);
+          color: var(--backgroundColor);
         }
       }
 
@@ -102,14 +102,15 @@ body {
             font-family: var(--fontFamilyBody);
             color: var(--primaryColor);
           }
-          input::placeholder, textarea::placeholder {
+          input::placeholder,
+          textarea::placeholder {
             color: var(--quaternaryColor);
           }
         }
 
         button {
           background-color: var(--tertiaryColor);
-          color: var(--backgroundColor);
+          color: var(--primaryColor);
           font-family: var(--fontFamilyHeaders);
           font-weight: 700;
           font-size: var(--fontSmallHeader);
@@ -172,10 +173,10 @@ body {
       }
       input::placeholder {
         color: var(--quaternaryColor);
-    }
+      }
       button {
         background-color: var(--tertiaryColor);
-        color: var(--backgroundColor);
+        color: var(--primaryColor);
         font-family: var(--fontFamilyHeaders);
         font-weight: 700;
         font-size: var(--fontSmallHeader);
@@ -222,14 +223,13 @@ body {
 @media (min-width: 600px) {
   body {
     margin: 0;
-    .container{
+    .container {
       .text_overlay {
         top: 85%;
         left: 5%;
       }
-    } 
+    }
     main {
-
       img {
         display: block;
         height: 100vh;
@@ -250,22 +250,22 @@ body {
           gap: var(--paddingMedium);
         }
         .book-info {
-        display: grid;
-        grid-template-columns: 300px 1fr; /* 300px for the image, remaining space for details */
-        gap: var(--paddingMedium); /* Space between image and text */
-        align-items: start; /* Align items to the top */
-        padding: var(--paddingSmall);
-        border: 2px solid var(--secondaryColor);
-        border-radius: var(--borderRadius);
-        background-color: var(--backgroundColor);
-        padding-top: var(--paddingMedium);
-        } 
+          display: grid;
+          grid-template-columns: 300px 1fr; /* 300px for the image, remaining space for details */
+          gap: var(--paddingMedium); /* Space between image and text */
+          align-items: start; /* Align items to the top */
+          padding: var(--paddingSmall);
+          border: 2px solid var(--secondaryColor);
+          border-radius: var(--borderRadius);
+          background-color: var(--backgroundColor);
+          padding-top: var(--paddingMedium);
+        }
         .book-info img {
-        width: 300px;
-        height: 450px;
-        object-fit: cover; /* Maintain aspect ratio */
-        border-radius: var(--borderRadius);
-        display: block;
+          width: 300px;
+          height: 450px;
+          object-fit: cover; /* Maintain aspect ratio */
+          border-radius: var(--borderRadius);
+          display: block;
         }
       }
     }
@@ -274,11 +274,11 @@ body {
 
 @media (min-width: 768px) {
   body {
-    .container{
+    .container {
       .text_overlay {
         top: 80%;
       }
-    } 
+    }
     main {
       img {
         display: block;

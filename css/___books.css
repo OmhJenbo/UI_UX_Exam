@@ -1,54 +1,54 @@
 body {
-    main {
-        section#bookList {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: var(--alignCenter);
-            padding: var(--paddingLarge);
-            gap: 30px;
-    
-            .bookCard {
-                background-color: var(--white);
-                border: var(--border);
-                border-radius: var(--borderRadius);
-                width: var(--cardWidth);
-                position: relative;
-                padding: var(--paddingMedium);
-                display: flex;
-                flex-direction: column;
-        
-                h2 {
-                    padding: var(--normalPadding);
-                    color: var(--secondaryColor);
-                    font-size: var(--fontSmallerMediumHeader);
-                }
-        
-                h3 {
-                    font-size: var(--fontSmallHeader);
-                    padding: var(--normalPadding);
-                    color: var(--tertiaryColor);
-                }
-        
-                p {
-                    line-height: 1.5;
-                    color: var(--quaternaryColor);
-            
-                    &:first-of-type {
-                        margin-top: var(--marginMedium);
-                    }
-            
-                    &:last-of-type {
-                        margin-bottom: var(--marginSmall);
-                    }
-                }
-        
-                button {
-                    background-color: var(--secondaryColor);
-                    color: var(--backgroundColor);
-                    padding: var(--paddingSmallerMedium) var(--paddingBiggerMedium);
-                    margin-top: auto;
-                }
-            }
+  main {
+    section#bookList {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: var(--alignCenter);
+      padding: var(--paddingLarge);
+      gap: 30px;
+
+      .bookCard {
+        background-color: var(--white);
+        border: var(--border);
+        border-radius: var(--borderRadius);
+        width: var(--cardWidth);
+        position: relative;
+        padding: var(--paddingMedium);
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+          padding: var(--normalPadding);
+          color: var(--secondaryColor);
+          font-size: var(--fontSmallerMediumHeader);
         }
+
+        h3 {
+          font-size: var(--fontSmallHeader);
+          padding: var(--normalPadding);
+          color: var(--buttonBlue);
+        }
+
+        p {
+          line-height: 1.5;
+          color: var(--primaryColor);
+
+          &:first-of-type {
+            margin-top: var(--marginMedium);
+          }
+
+          &:last-of-type {
+            margin-bottom: var(--marginSmall);
+          }
+        }
+
+        button {
+          background-color: var(--buttonBlue);
+          color: var(--backgroundColor);
+          padding: var(--paddingSmallerMedium) var(--paddingBiggerMedium);
+          margin-top: auto;
+        }
+      }
     }
+  }
 }

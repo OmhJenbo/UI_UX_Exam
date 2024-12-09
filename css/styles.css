@@ -34,17 +34,18 @@ body {
   h1 {
     font-family: var(--fontFamilyHeaders);
     font-weight: var(--fontWeightBold);
-    font-size: var(--fontMediumHeader);
+    font-size: var(--fontLargeHeader);
   }
   h2 {
     font-family: var(--fontFamilyHeaders);
     font-weight: var(--fontWeightSemiBold);
-    font-size: var(--fontMediumHeader );
+    font-size: var(--fontMediumHeader);
+    color: var(--primaryColor);
   }
   h3 {
     font-family: var(--fontFamilyHeaders);
     font-weight: var(--fontWeightSemiBold);
-    font-size: var(--fontSmallerMediumHeader); 
+    font-size: var(--fontSmallerMediumHeader);
   }
   h4 {
     font-family: var(--fontFamilyHeaders);
@@ -54,6 +55,11 @@ body {
   p {
     font-family: var(--fontFamilyBody);
     font-size: var(--fontBody);
+    font-weight: var(--fontWeightRegular);
+  }
+  li {
+    font-size: var(--fontBody);
+    font-family: var(--fontFamilyBody);
     font-weight: var(--fontWeightRegular);
   }
   a {
@@ -69,13 +75,16 @@ body {
     cursor: pointer;
     border: 0;
     border-radius: var(--borderRadius);
+    background-color: var(--button-blue);
   }
 }
 @media (min-width: 600px) {
-  h1 {
-    font-size: var(--fontLargeHeader);
-  }
-  h2 {
-    font-size: var(--fontMediumHeader);
+  body {
+    h1 {
+      font-size: var(--fontXlargeHeader);
+    }
+    h2 {
+      font-size: var(--fontMediumHeader);
+    }
   }
 }

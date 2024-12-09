@@ -1,154 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Borrow</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/ebook.svg">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/_landingpage.css">
-    <link rel="stylesheet" href="css/__navigation.css">
-    <link rel="stylesheet" href="css/__footer.css">
-    <script src="js/scripts.js" type="module"></script>
-    <script src="js/loggedin.js" type="module"></script>
-    <!-- <script src="js/logout.js" type="module"></script> -->
-  </head>
-  <body>
-    <a href="#main-content" class="skip-link">Skip navigation</a>
-    <header>
-        <nav id="navigation">
-            <a href="index.html" aria-label="Go to home page"><img src="assets/img/logo.svg" alt="" /></a> 
-            <button class="burger-menu" aria-label="Toggle navigation">
-                <div></div>
-                <div></div>
-                <div></div>
-            </button>
-            <div id="navlinks">
-                <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="templates/ebooks.html">E-books</a></li>
-                  <li id="admin" class="hidden"><a href="templates/admin.html">Admin</a></li>
-                  <li id="settings" class="hidden"><a href="templates/profile.html">Settings</a></li>
-                  <li id="signup" class="hidden bordertop"><a href="templates/signup.html">Signup</a></li>
-                  <li id="login" class="hidden"><a href="templates/login.html">Login</a></li>
-                  <li id="logout" class="hidden bordertop"><button>Logout</button></li>
-                </ul>
-            </div>
-        </nav>
-        <div class="container">
-            <img class="backgroundImage" src="assets/img/image_6.png" alt="A person reading a book">
-            <div class="image_overlay" aria-hidden="true"></div>
-            <div class="text_overlay">
-                <img src="assets/img/logo.svg" alt="E-Borrows logo">
-            </div>
-        </div>
-    </header>
-    <main id="main-content">
-      <section class="indexWhoAreWe">
-        <p>
-          At E-Borrow, we believe that stories are meant to be shared, not
-          shelved. That's why we've created a vibrant online community
-          where book lovers can borrow e-books effortlessly. No dusty shelves,
-          no waiting lists—just instant access to the stories you crave.
-        </p>
-      </section>
-      <section class="list_section">
-        <img src="assets/img/image_7.png" alt="decorative image of an e-book" loading="lazy">
-        <div>
-          <section class="list">
-            <header>
-              <h2>Why choose us?</h2>
-            </header>
-            <ul>
-              <li>
-                Unlimited Choices: From timeless classics to the latest releases,
-                find something for every mood.
-              </li>
-              <li>
-                Flexible Borrowing: Borrow books at your pace—no late fees, no
-                stress.
-              </li>
-              <li>
-                Community Vibes: Join a growing network of readers sharing
-                recommendations and reviews.
-              </li>
-              <li>
-                Eco-Friendly Reading: No paper, no waste—just pure storytelling.
-              </li>
-            </ul>
-          </section>
-          <section class="list">
-            <header>
-              <h2>How it works</h2>
-            </header>
-            <ol>
-              <li>Browse our extensive digital library for your next read.</li>
-              <li>Borrow your favorite e-books with one click.</li>
-              <li>Enjoy seamless reading on any device.</li>
-            </ol>
-            <p>
-              Join thousands of book lovers who've already discovered the joy
-              of sharing stories.
-            </p>
-            <p>
-              Sign up today and get your first borrow free! Let's turn the
-              page to a new way of reading—together.
-            </p>
-            <button>Sign up today!</button>
-          </section>
-        </div>
-      </section>
-      <section class="exploreFavourites">
-        <div>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Borrow</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/ebook.svg">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/_landingpage.css">
+  <link rel="stylesheet" href="css/__navigation.css">
+  <link rel="stylesheet" href="css/__footer.css">
+  <script src="js/scripts.js" type="module"></script>
+  <script src="js/loggedin.js" type="module"></script>
+  <!-- <script src="js/logout.js" type="module"></script> -->
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip navigation</a>
+  <header>
+    <nav id="navigation">
+      <a href="index.html" aria-label="Go to home page"><img src="assets/img/logo.svg" alt="" /></a>
+      <button class="burger-menu" aria-label="Toggle navigation">
+        <div></div>
+        <div></div>
+        <div></div>
+      </button>
+      <div id="navlinks">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="templates/ebooks.html">E-books</a></li>
+          <li id="admin" class="hidden"><a href="templates/admin.html">Admin</a></li>
+          <li id="settings" class="hidden"><a href="templates/profile.html">Settings</a></li>
+          <li id="signup" class="hidden bordertop"><a href="templates/signup.html">Signup</a></li>
+          <li id="login" class="hidden"><a href="templates/login.html">Login</a></li>
+          <li id="logout" class="hidden bordertop"><a href="templates/login.html">Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <img class="backgroundImage" src="assets/img/image_6.png" alt="A person reading a book">
+      <div class="image_overlay" aria-hidden="true"></div>
+      <div class="text_overlay">
+        <h1>Home</h1>
+      </div>
+    </div>
+  </header>
+  <main id="main-content">
+    <section class="indexWhoAreWe">
+      <p>
+        At E-Borrow, we believe that stories are meant to be shared, not
+        shelved. That's why we've created a vibrant online community
+        where book lovers can borrow e-books effortlessly. No dusty shelves,
+        no waiting lists—just instant access to the stories you crave.
+      </p>
+    </section>
+    <section class="list_section">
+      <img src="assets/img/image_7.png" alt="decorative image of an e-book" loading="lazy">
+      <div>
+        <section class="list">
           <header>
-            <h2>Explore your new favourites with E-Borrow!</h2>
+            <h2>Why choose us?</h2>
           </header>
+          <ul>
+            <li>
+              Unlimited Choices: From timeless classics to the latest releases,
+              find something for every mood.
+            </li>
+            <li>
+              Flexible Borrowing: Borrow books at your pace—no late fees, no
+              stress.
+            </li>
+            <li>
+              Community Vibes: Join a growing network of readers sharing
+              recommendations and reviews.
+            </li>
+            <li>
+              Eco-Friendly Reading: No paper, no waste—just pure storytelling.
+            </li>
+          </ul>
+        </section>
+        <section class="list">
+          <header>
+            <h2>How it works</h2>
+          </header>
+          <ol>
+            <li>Browse our extensive digital library for your next read.</li>
+            <li>Borrow your favorite e-books with one click.</li>
+            <li>Enjoy seamless reading on any device.</li>
+          </ol>
           <p>
-            Whether you're diving into a fantasy epic, exploring the depths of
-            non-fiction, or indulging in a quick weekend read, E-Borrow makes it
-            simple. Borrow the books you love, explore new favorites, and return
-            them when you're ready for your next adventure—all with just a few
-            clicks.
+            Join thousands of book lovers who've already discovered the joy
+            of sharing stories.
           </p>
-        </div>
-        <img src="assets/img/image_1.png" alt="" loading="lazy">
-      </section>
-      <section class="browseBooks">
+          <p>
+            Sign up today and get your first borrow free! Let's turn the
+            page to a new way of reading—together.
+          </p>
+          <button>Sign up today!</button>
+        </section>
+      </div>
+    </section>
+    <section class="exploreFavourites">
+      <div>
         <header>
-          <h2>Browse through some of the books</h2>
+          <h2>Explore your new favourites with E-Borrow!</h2>
         </header>
-          <section id="bookList"></section>
-      </section>
-    </main>
-    <footer>
-      <section class="socials">
-          <img src="assets/img/logo.svg" alt="E-Borrows logo">
-          <div>
-            <a href="index.html" class="socialsIcons" aria-label="Visit our Instagram profile"><img src="assets/img/instagram.svg" alt="" loading="lazy"></a>
-            <a href="index.html" class="socialsIcons" aria-label="Visit our Facebook profile"><img src="assets/img/facebook.svg" alt="" loading="lazy"></a>
-            <a href="index.html" class="socialsIcons" aria-label="Visit our LinkedIn profile"><img src="assets/img/linkedin.svg" alt="" loading="lazy"></a>
-          </div>
-      </section>
+        <p>
+          Whether you're diving into a fantasy epic, exploring the depths of
+          non-fiction, or indulging in a quick weekend read, E-Borrow makes it
+          simple. Borrow the books you love, explore new favorites, and return
+          them when you're ready for your next adventure—all with just a few
+          clicks.
+        </p>
+      </div>
+      <img src="assets/img/image_1.png" alt="" loading="lazy">
+    </section>
+    <section class="browseBooks">
+      <header>
+        <h2>Browse through some of the books</h2>
+      </header>
+      <section id="bookList"></section>
+    </section>
+  </main>
+  <footer>
+    <section class="socials">
+      <div>
+        <a href="index.html" class="socialsIcons" aria-label="Visit our Instagram profile"><img
+            src="assets/img/instagram.svg" alt="" loading="lazy"></a>
+        <a href="index.html" class="socialsIcons" aria-label="Visit our Facebook profile"><img
+            src="assets/img/facebook.svg" alt="" loading="lazy"></a>
+        <a href="index.html" class="socialsIcons" aria-label="Visit our LinkedIn profile"><img
+            src="assets/img/linkedin.svg" alt="" loading="lazy"></a>
+      </div>
+    </section>
 
-      <section class="contact">
-          <header>
-              <h4>Contact</h4>
-          </header>
-          <a href="mailto:eborrow@mail.com" aria-label="Send an email to eborrow@mail.com">eborrow@mail.com</a>
-          <a href="tel:+4530303030" aria-label="Call E-borrow">+4530303030</a>
-          <address><p>Jensens Vej 43, København K</p></address>
-      </section>
+    <section class="contact">
+      <header>
+        <h4>Contact</h4>
+      </header>
+      <a href="mailto:eborrow@mail.com" aria-label="Send an email to eborrow@mail.com">eborrow@mail.com</a>
+      <a href="tel:+4530303030" aria-label="Call E-borrow">+4530303030</a>
+      <address>
+        <p>Jensens Vej 43, København K</p>
+      </address>
+    </section>
 
-      <section class="content">
-          <header>
-              <h4>Content</h4>
-          </header>
-          <p>Texts generated by <a href="https://chatgpt.com/" title="ChatGPT" target="_blank">ChatGPT</a></p>
-          <p>Images generated by <a href="https://figma.com/" title="Figma" target="_blank">Figma</a></p>
-          <p>Books loaded from <a href="https://github.com/arturomorarioja/py_library_api_v2.git" title="Py library v2" target="_blank">Py library v2</a></p>
-      </section>
+    <section class="content">
+      <header>
+        <h4>Content</h4>
+      </header>
+      <p>Texts generated by <a href="https://chatgpt.com/" title="ChatGPT" target="_blank">ChatGPT</a></p>
+      <p>Images generated by <a href="https://figma.com/" title="Figma" target="_blank">Figma</a></p>
+      <p>Books loaded from <a href="https://github.com/arturomorarioja/py_library_api_v2.git" title="Py library v2"
+          target="_blank">Py library v2</a></p>
+    </section>
 
-      <p class="copyright">&copy; 2024 - This is a school project</p>
-    </footer>
-  </body>
+    <p class="copyright">&copy; 2024 - This is a school project</p>
+  </footer>
+</body>
+
 </html>

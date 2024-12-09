@@ -1,93 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="icon" type="image/x-icon" href="../assets/img/ebook.svg">
-    <link rel="stylesheet" href="../css/_login.css">
-    <link rel="stylesheet" href="../css/styles.css">
-    <script src="../js/login.js" type="module"></script>
-    <script src="../js/scripts.js" type="module"></script>
-  </head>
 
-  <body>
-    <a href="#loginContent" class="skip-link">Skip navigation</a>
-    <header>
-      <nav id="navigation">
-        <a href="../index.html" aria-label="Go to home page"><img src="../assets/img/logo.svg" alt="" loading="lazy"/> </a>
-  
-          <button class="burger-menu" aria-label="Toggle navigation">
-              <div></div>
-              <div></div>
-              <div></div>
-          </button>
-          <div id="navlinks">
-            <ul>
-              <li><a href="../index.html">Home</a></li>
-              <li><a href="../templates/ebooks.html">E-books</a></li>
-              <li id="admin" class="hidden"><a href="../templates/admin.html">Admin</a></li>
-              <li id="settings" class="hidden"><a href="../templates/profile.html">Settings</a></li>
-              <li id="signup" class="hidden bordertop"><a href="../templates/signup.html">Signup</a></li>
-              <li id="login" class="hidden"><a href="../templates/login.html">Login</a></li>
-              <li id="logout" class="hidden bordertop"><button>Logout</button></li>
-            </ul>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="icon" type="image/x-icon" href="../assets/img/ebook.svg">
+  <link rel="stylesheet" href="../css/_login.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/login.js" type="module"></script>
+  <script src="../js/scripts.js" type="module"></script>
+</head>
+
+<body>
+  <a href="#loginContent" class="skip-link">Skip navigation</a>
+  <header>
+    <nav id="navigation">
+      <a href="../index.html" aria-label="Go to home page"><img src="../assets/img/logo.svg" alt="" loading="lazy" />
+      </a>
+
+      <button class="burger-menu" aria-label="Toggle navigation">
+        <div></div>
+        <div></div>
+        <div></div>
+      </button>
+      <div id="navlinks">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../templates/ebooks.html">E-books</a></li>
+          <li id="admin" class="hidden"><a href="../templates/admin.html">Admin</a></li>
+          <li id="settings" class="hidden"><a href="../templates/profile.html">Settings</a></li>
+          <li id="signup" class="hidden bordertop"><a href="../templates/signup.html">Signup</a></li>
+          <li id="login" class="hidden"><a href="../templates/login.html">Login</a></li>
+          <li id="logout" class="hidden bordertop"><a href="../templates/login.html">Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main id="loginContent">
+    <img src="../assets/img/image_7.png" alt="Decorating image for the login page" id="loginPageImage" loading="lazy">
+    <section id="formSection">
+      <header>
+        <h1 id="loginHeader">Login here!</h1>
+      </header>
+      <form id="formLogin">
+        <div>
+          <label for="loginEmail">E-mail</label>
+          <input type="email" id="loginEmail" name="email" placeholder="example@email.com" required>
         </div>
-      </nav>
-    </header>
-    <main id="loginContent">
-      <img src="../assets/img/image_7.png" alt="Decorating image for the login page" id="loginPageImage" loading="lazy">
-      <section id="formSection">
-        <header>
-          <h1 id="loginHeader">Login here!</h1>
-        </header>
-        <form id="formLogin">
-          <div>
-            <label for="loginEmail">E-mail</label>
-            <input type="email" id="loginEmail" name="email" placeholder="example@email.com" required>
-          </div>
-          <div>
-            <label for="loginPassword">Password</label>
-            <input type="password" 
-              id="loginPassword" 
-              name="password" 
-              placeholder="Password"
-              required>
-          </div>
-          <button type="submit">Login</button>
-        </form>
-      </section>
-    </main>
+        <div>
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" name="password" placeholder="Password" required>
+        </div>
+        <button type="submit">Login</button>
+      </form>
+    </section>
+  </main>
 
-    <footer>
-      <section class="socials">
-          <img src="../assets/img/logo.svg" alt="E-Borrows logo">
-          <div>
-            <a href="../index.html" class="socialsIcons" aria-label="Visit our Instagram profile"><img src="../assets/img/instagram.svg" alt="" loading="lazy"></a>
-            <a href="../index.html" class="socialsIcons" aria-label="Visit our Facebook profile"><img src="../assets/img/facebook.svg" alt="" loading="lazy"></a>
-            <a href="../index.html" class="socialsIcons" aria-label="Visit our LinkedIn profile"><img src="../assets/img/linkedin.svg" alt="" loading="lazy"></a>
-          </div>
-      </section>
+  <footer>
+    <section class="socials">
+      <div>
+        <a href="../index.html" class="socialsIcons" aria-label="Visit our Instagram profile"><img
+            src="../assets/img/instagram.svg" alt="" loading="lazy"></a>
+        <a href="../index.html" class="socialsIcons" aria-label="Visit our Facebook profile"><img
+            src="../assets/img/facebook.svg" alt="" loading="lazy"></a>
+        <a href="../index.html" class="socialsIcons" aria-label="Visit our LinkedIn profile"><img
+            src="../assets/img/linkedin.svg" alt="" loading="lazy"></a>
+      </div>
+    </section>
 
-      <section class="contact">
-          <header>
-              <h4>Contact</h4>
-          </header>
-          <a href="mailto:eborrow@mail.com" aria-label="Send an email to eborrow@mail.com">eborrow@mail.com</a>
-          <a href="tel:+4530303030" aria-label="Call E-borrow">+4530303030</a>
-          <address><p>Jensens Vej 43, København K</p></address>
-      </section>
+    <section class="contact">
+      <header>
+        <h4>Contact</h4>
+      </header>
+      <a href="mailto:eborrow@mail.com" aria-label="Send an email to eborrow@mail.com">eborrow@mail.com</a>
+      <a href="tel:+4530303030" aria-label="Call E-borrow">+4530303030</a>
+      <address>
+        <p>Jensens Vej 43, København K</p>
+      </address>
+    </section>
 
-      <section class="content">
-          <header>
-              <h4>Content</h4>
-          </header>
-          <p>Texts generated by <a href="https://chatgpt.com/" title="ChatGPT" target="_blank">ChatGPT</a></p>
-          <p>Images generated by <a href="https://figma.com/" title="Figma" target="_blank">Figma</a></p>
-          <p>Books loaded from <a href="https://github.com/arturomorarioja/py_library_api_v2.git" title="Py library v2" target="_blank">Py library v2</a></p>
-      </section>
+    <section class="content">
+      <header>
+        <h4>Content</h4>
+      </header>
+      <p>Texts generated by <a href="https://chatgpt.com/" title="ChatGPT" target="_blank">ChatGPT</a></p>
+      <p>Images generated by <a href="https://figma.com/" title="Figma" target="_blank">Figma</a></p>
+      <p>Books loaded from <a href="https://github.com/arturomorarioja/py_library_api_v2.git" title="Py library v2"
+          target="_blank">Py library v2</a></p>
+    </section>
 
-      <p class="copyright">&copy; 2024 - This is a school project</p>
-    </footer>
-  </body>
+    <p class="copyright">&copy; 2024 - This is a school project</p>
+  </footer>
+</body>
+
 </html>

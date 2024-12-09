@@ -1,85 +1,85 @@
 body {
-    background-color: var(--backgroundColor);
-    main {
-        margin-left: var(--marginMedium);
-        margin-right: var(--marginMedium);
-        margin-bottom: var(--marginXlarge);
-        display: grid;
-        grid-template-columns: 1fr;
-        #formSection {
-            width: 100%;
-            max-width: 350px;
-            justify-self: center;
-            align-content: center;
-            h1 {
-                font-family: var(--fontFamilyHeaders);
-                font-weight: 700;
-                font-size: var(--fontMediumHeader);
-                color: var(--primaryColor);
-                padding-bottom: var(--paddingLarge);
-                margin-top: var(--marginXlarge);
-                text-align: center;
-            }
-            #formProfile {
-                div {
-                    display: flex;
-                    flex-direction: column;
-                    padding-bottom: var(--paddingMedium);
-                    label {
-                        font-family: var(--fontFamilyBody);
-                        color: var(--primaryColor);
-                        padding-bottom: var(--paddingSmall);
-                        font-size: var(--fontBody);
-                    }
-                    input {
-                        border: 2px solid var(--secondaryColor);
-                        border-radius: var(--borderRadius);
-                        background-color: var(--backgroundColor);
-                        padding: var(--paddingSmall);
-                        font-family: var(--fontFamilyBody);
-                        color: var(--primaryColor);
-                    }
-                    input::placeholder {
-                        color: var(--quaternaryColor);
-                    }
-                }
-                #updateButton {
-                    background-color: var(--secondaryColor);
-                    color: var(--backgroundColor);
-                    padding: var(--paddingSmall);
-                    width: 100%;
-                    margin-bottom: var(--marginMedium);
-                    margin-top: var(--marginMedium);
-                }
-                #deleteButton {
-                    background-color: var(--tertiaryColor);
-                    color: var(--backgroundColor);
-                    padding: var(--paddingSmall);
-                    width: 100%;
-                }
-            }
+  background-color: var(--backgroundColor);
+  main {
+    margin-left: var(--marginMedium);
+    margin-right: var(--marginMedium);
+    margin-bottom: var(--marginXlarge);
+    display: grid;
+    grid-template-columns: 1fr;
+    #formSection {
+      width: 100%;
+      max-width: 350px;
+      justify-self: center;
+      align-content: center;
+      h1 {
+        font-family: var(--fontFamilyHeaders);
+        font-weight: 700;
+        font-size: var(--fontMediumHeader);
+        color: var(--primaryColor);
+        padding-bottom: var(--paddingLarge);
+        margin-top: var(--marginXlarge);
+        text-align: center;
+      }
+      #formProfile {
+        div {
+          display: flex;
+          flex-direction: column;
+          padding-bottom: var(--paddingMedium);
+          label {
+            font-family: var(--fontFamilyBody);
+            color: var(--primaryColor);
+            padding-bottom: var(--paddingSmall);
+            font-size: var(--fontBody);
+          }
+          input {
+            border: 2px solid var(--secondaryColor);
+            border-radius: var(--borderRadius);
+            background-color: var(--backgroundColor);
+            padding: var(--paddingSmall);
+            font-family: var(--fontFamilyBody);
+            color: var(--primaryColor);
+          }
+          input::placeholder {
+            color: var(--quaternaryColor);
+          }
         }
+        #updateButton {
+          background-color: var(--secondaryColor);
+          color: var(--backgroundColor);
+          padding: var(--paddingSmall);
+          width: 100%;
+          margin-bottom: var(--marginMedium);
+          margin-top: var(--marginMedium);
+        }
+        #deleteButton {
+          background-color: var(--tertiaryColor);
+          color: var(--primaryColor);
+          padding: var(--paddingSmall);
+          width: 100%;
+        }
+      }
     }
+  }
 }
 @media (min-width: 600px) {
-    body {
-        main {
-            #formSection {
-                padding: var(--paddingMedium);
-                max-width: 450px;
-            }
-        }
+  body {
+    main {
+      #formSection {
+        padding: var(--paddingMedium);
+        max-width: 450px;
+      }
     }
+  }
 }
 @media (min-width: 768px) {
-    body {
-        main {
-            #formSection {
-                padding: var(--paddingMedium);
-                h1 {
-                    font-size: var(--fontLargeHeader);
-                }
-            }
+  body {
+    main {
+      #formSection {
+        padding: var(--paddingMedium);
+        h1 {
+          font-size: var(--fontLargeHeader);
         }
+      }
     }
+  }
 }

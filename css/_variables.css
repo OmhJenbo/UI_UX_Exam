@@ -1,5 +1,5 @@
 /* Import of fonts from google */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Raleway&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Raleway&display=swap");
 /* Font classes
     .raleway-<uniquifier> {
     font-family: "Raleway", sans-serif;
@@ -20,82 +20,83 @@
     }
 */
 :root {
-    /* Fonts */
-    --fontFamilyHeaders: "Poppins", sans-serif;
-    --fontFamilyBody: "Raleway", sans-serif;
+  /* Fonts */
+  --fontFamilyHeaders: "Poppins", sans-serif;
+  --fontFamilyBody: "Raleway", sans-serif;
 
-    --fontBody: 1rem;
-    --fontSmallerMediumHeader: 1.25rem;
-    --fontMediumHeader: 1.5rem;
-    --fontLargeHeader: 2.5rem;
-    --fontXlargeHeader: 5rem;
+  --fontBody: 1rem;
+  --fontSmallerMediumHeader: 1.25rem;
+  --fontMediumHeader: 1.5rem;
+  --fontLargeHeader: 2.5rem;
+  --fontXlargeHeader: 5rem;
 
-    /* Colors */
-    --primaryColor: #2A2929;
-    --secondaryColor: #323DD2;
-    --tertiaryColor: #738DFF;
-    --quaternaryColor: #959595;
-    --backgroundColor: #F6F5EE;
+  /* Colors */
+  --primaryColor: #3d3d3d;
+  --secondaryColor: #041e8f;
+  --tertiaryColor: #ccd5ff;
+  --quaternaryColor: #959595;
+  --backgroundColor: #f6f5ee;
+  --buttonBlue: #2449e5;
 
-    /* Margins */
-    --marginSmall: 0.5rem;
-    --marginMedium: 1rem;
-    --marginLarge: 1.5rem;
-    --marginLarger: 4rem;
-    --marginXlarge: 7rem;
+  /* Margins */
+  --marginSmall: 0.5rem;
+  --marginMedium: 1rem;
+  --marginLarge: 1.5rem;
+  --marginLarger: 4rem;
+  --marginXlarge: 7rem;
 
-    /* Paddings */
-    --paddingSmall: 0.5rem;
-    --paddingSmallerMedium: 0.75rem;
-    --paddingMedium: 1rem;
-    --paddingBiggerMedium: 1.25rem;
-    --paddingLarge: 1.5rem; 
-    --paddingXlarge: 3rem;
+  /* Paddings */
+  --paddingSmall: 0.5rem;
+  --paddingSmallerMedium: 0.75rem;
+  --paddingMedium: 1rem;
+  --paddingBiggerMedium: 1.25rem;
+  --paddingLarge: 1.5rem;
+  --paddingXlarge: 3rem;
 
-    /* Image sizes???? */
-    --imgXsmall: 150px;
-    --imgSmall: 250px;
-    --imgMedium: 300px;
-    --imgLarge: 350px;
+  /* Image sizes???? */
+  --imgXsmall: 150px;
+  --imgSmall: 250px;
+  --imgMedium: 300px;
+  --imgLarge: 350px;
 
-    /* Aligns */
-    --alignLeft: left;
-    --alignCenter: center;
-    --alignRight: right;
+  /* Aligns */
+  --alignLeft: left;
+  --alignCenter: center;
+  --alignRight: right;
 
-    /* Border radius */
-    --borderRadius: 0.5rem;
+  /* Border radius */
+  --borderRadius: 0.5rem;
 
-    /* Standard border */
-    --border: 1px solid #2A2929;
+  /* Standard border */
+  --border: 1px solid #2a2929;
 
-    /* Border bottom */
-    --border-bottom: 2px solid #000;
+  /* Border bottom */
+  --border-bottom: 2px solid #000;
 
-    /* Font weights */
-    --fontWeightRegular: 400;
-    --fontWeightSemiBold: 600;
-    --fontWeightBold: 700;
+  /* Font weights */
+  --fontWeightRegular: 400;
+  --fontWeightSemiBold: 600;
+  --fontWeightBold: 700;
 
-    /* Hover */
-    --transition: transform 0.3s ease, box-shadow 0.3s ease;
-    --transform: translateY(-0.5rem);
+  /* Hover */
+  --transition: transform 0.3s ease, box-shadow 0.3s ease;
+  --transform: translateY(-0.5rem);
 
-    /* Widths */
-    --widthLarge: 7rem;
-    --cardWidth: 15.625rem;
-    --burgerMenuWidth: 40px;
+  /* Widths */
+  --widthLarge: 7rem;
+  --cardWidth: 15.625rem;
+  --burgerMenuWidth: 40px;
 
-    /* Heights */
-    --burgerMenuDivHeight: 3px;
-    --burgerMenuHeight: 25px;
+  /* Heights */
+  --burgerMenuDivHeight: 3px;
+  --burgerMenuHeight: 25px;
 
-    /* Box shadows */
-    --boxShadow: 0 0.45rem 0.9rem #2A2929;
+  /* Box shadows */
+  --boxShadow: 0 0.45rem 0.9rem #2a2929;
 
-    /* Gap */
-    --smallGap: 0.5rem;
-    --mediumGap: 1rem;
-    --largeGap: 2rem;
-    --negativeGap: -3rem;
+  /* Gap */
+  --smallGap: 0.5rem;
+  --mediumGap: 1rem;
+  --largeGap: 2rem;
+  --negativeGap: -3rem;
 }
