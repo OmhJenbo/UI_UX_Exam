@@ -1,4 +1,4 @@
-import {baseUrl} from './scripts.js'; // The base URL for the API
+import {baseUrl, handleAPIError} from './utils.js'; // The base URL for the API
 
 // Add an event listener to the search form, so when it's submitted,
 // we'll execute the `performSearch` function.
@@ -25,19 +25,7 @@ function performSearch(event) {
 // It sends a GET request to the endpoint, checks for errors, and processes the response.
 function fetchBookById(book_Id) {
   fetch(`${baseUrl}/admin/books/${book_Id}`)
-    .then((response) => {
-      // If the response is not OK (e.g., 404 not found, 500 server error), handle accordingly
-      if (!response.ok) {
-        if (response.status === 404) {
-          // If the book doesn't exist, throw a specific error
-          throw new Error("Book not found.");
-        }
-        // Otherwise, throw a generic HTTP error
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      // If successful, parse the response body as JSON and return it
-      return response.json();
-    })
+    .then(handleAPIError) // Use the reusable error handler
     .then((book) => {
       // Once the book is fetched and parsed, display it on the page
       displayBook(book);
