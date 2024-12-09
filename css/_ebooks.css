@@ -16,7 +16,7 @@ body {
       h1 {
         top: 65%;
         font-size: var(--fontLargeHeader);
-        color: var(--secondaryColor);
+        color: var(--tertiaryColor);
         width: 80%;
         margin-left: auto;
         margin-right: auto;
@@ -71,7 +71,7 @@ body {
         height: 75%;
         top: -3%;
         right: 0;
-        background-color: var(--tertiaryColor);
+        /* background-color: var(--tertiaryColor); */
         color: var(--backgroundColor);
         padding: var(--paddingSmall);
       }
@@ -105,7 +105,7 @@ body {
           /* top: 40%; */
           margin-left: var(--marginMedium);
           /* padding: var(--paddingSmall) var(--paddingMedium); */
-          color: var(--secondaryColor);
+          /* color: var(--secondaryColor); */
           font-weight: var(--fontWeightBold);
           font-family: var(--fontFamilyHeaders);
           font-size: var(--fontLargeHeader);

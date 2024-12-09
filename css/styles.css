@@ -39,12 +39,12 @@ body {
   h2 {
     font-family: var(--fontFamilyHeaders);
     font-weight: var(--fontWeightSemiBold);
-    font-size: var(--fontMediumHeader );
+    font-size: var(--fontMediumHeader);
   }
   h3 {
     font-family: var(--fontFamilyHeaders);
     font-weight: var(--fontWeightSemiBold);
-    font-size: var(--fontSmallerMediumHeader); 
+    font-size: var(--fontSmallerMediumHeader);
   }
   h4 {
     font-family: var(--fontFamilyHeaders);
@@ -69,6 +69,7 @@ body {
     cursor: pointer;
     border: 0;
     border-radius: var(--borderRadius);
+    background-color: var(--button-blue);
   }
 }
 @media (min-width: 600px) {

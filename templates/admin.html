@@ -1,211 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="../assets/img/ebook.svg">
-    <link rel="stylesheet" href="../css/_admin.css">
-    <link rel="stylesheet" href="../css/styles.css">
-    <script src="../js/admin.js" type="module"></script>
-    <script src="../js/admin_nav.js"></script>
-    <script src="../js/admin_search.js" defer></script>
-    <script src="../js/scripts.js" type="module"></script>
-    <title>Admin</title>
-  </head>
-  <body>
-    <a href="#main-content" class="skip-link">Skip navigation</a>
-    <header>
-      <nav id="navigation">
-          <a href="../../index.html" aria-label="Go to home page"><img src="../assets/img/logo.svg" alt="" /> </a>
-          
-          <button class="burger-menu" aria-label="Toggle navigation">
-              <div></div>
-              <div></div>
-              <div></div>
-          </button>
-          <div id="navlinks">
-            <ul>
-              <li><a href="../index.html">Home</a></li>
-              <li><a href="../templates/ebooks.html">E-books</a></li>
-              <li><a id="admin" href="../templates/admin.html" class="hidden">Admin</a></li>
-              <li><a id="settings" class="hidden" href="../templates/profile.html">Settings</a></li>
-              <li><a id="signup" class="hidden" href="../templates/signup.html">Signup</a></li>
-              <li><a id="login" class="hidden" href="../templates/login.html">Login</a></li>
-              <li><button id="logout" class="hidden">Logout</button></li>
-            </ul>
-          </div>
-      </nav>
-      <div class="container">
-        <img class="backgroundImage" src="../assets/img/image_1.png" alt="A person reading a book">
-        <div class="image_overlay" aria-hidden="true"></div>
-        <div class="text_overlay">
-          <h1>ADMIN</h1>
-        </div>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="../assets/img/ebook.svg">
+  <link rel="stylesheet" href="../css/_admin.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/admin.js" type="module"></script>
+  <script src="../js/admin_nav.js"></script>
+  <script src="../js/admin_search.js" defer></script>
+  <script src="../js/scripts.js" type="module"></script>
+  <title>Admin</title>
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip navigation</a>
+  <header>
+    <nav id="navigation">
+      <a href="../../index.html" aria-label="Go to home page"><img src="../assets/img/logo.svg" alt="" /> </a>
+
+      <button class="burger-menu" aria-label="Toggle navigation">
+        <div></div>
+        <div></div>
+        <div></div>
+      </button>
+      <div id="navlinks">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../templates/ebooks.html">E-books</a></li>
+          <li><a id="admin" href="../templates/admin.html" class="hidden">Admin</a></li>
+          <li><a id="settings" class="hidden" href="../templates/profile.html">Settings</a></li>
+          <li><a id="signup" class="hidden" href="../templates/signup.html">Signup</a></li>
+          <li><a id="login" class="hidden" href="../templates/login.html">Login</a></li>
+          <li><button id="logout" class="hidden">Logout</button></li>
+        </ul>
       </div>
-    </header>
-    <main id="main-content">
-      <section id="formSection">
-        <section>
-          <nav class="mini-nav">
-            <button id="nav-add-book" class="active">Add a Book</button>
-            <button id="nav-add-author">Add an Author</button>
-            <button id="nav-add-publisher">Add a Publisher</button>
-          </nav>
-        </section>
-        <header>
-          <h2 id="loginHeader">Manage Library</h2>
-        </header>
+    </nav>
+    <div class="container">
+      <img class="backgroundImage" src="../assets/img/image_1.png" alt="A person reading a book">
+      <div class="image_overlay" aria-hidden="true"></div>
+      <div class="text_overlay">
+        <h1>ADMIN</h1>
+      </div>
+    </div>
+  </header>
+  <main id="main-content">
+    <section id="formSection">
+      <section>
+        <nav class="mini-nav">
+          <button id="nav-add-book" class="active">Add a Book</button>
+          <button id="nav-add-author">Add an Author</button>
+          <button id="nav-add-publisher">Add a Publisher</button>
+        </nav>
+      </section>
+      <header>
+        <h2 id="loginHeader">Manage Library</h2>
+      </header>
 
-        <!-- Add Book Form -->
-        <section id="form-add-book" class="form-container active">
-          <h3>Add a Book</h3>
-          <form>
-            <div>
-              <label for="bookTitle">Book title</label>
-              <input 
-                type="text" 
-                id="bookTitle" 
-                name="bookTitle" 
-                placeholder="Kvinden i buret" 
-                title="Please add the title of the book" 
-                required>
-            </div>
-            <div>
-              <label for="addAuthor">Author by id</label>
-              <input 
-                type="text" 
-                id="addAuthor" 
-                name="addAuthor" 
-                placeholder="example: 100" 
-                pattern="\d+" 
-                title="Only numeric values allowed" 
-                required>
-            </div>
-            <div>
-              <label for="addPublisher">Publisher by id</label>
-              <input 
-                type="text" 
-                id="addPublisher" 
-                name="addPublisher" 
-                placeholder="example: 200" 
-                pattern="\d+" 
-                title="Only numeric values allowed" 
-                required>
-            </div>
-            <div>
-              <label for="addPublishingYear">Publishing Year</label>
-              <input 
-                type="text" 
-                id="addPublishingYear" 
-                name="addPublishingYear" 
-                placeholder="2007"
-                pattern="^(18|19|20)\d{2}$" 
-                title="Only years from 1800 onward are accepted" 
-                required>
-            </div>
-            <button type="submit">Add Book</button>
-          </form>
-        </section>
-        
-        <!-- Add Author Form -->
-        <section id="form-add-author" class="form-container">
-          <h3>Add an Author</h3>
-          <form>
-            <div>
-              <label for="authorName">Name</label>
-              <input 
-                type="text" 
-                id="authorName" 
-                name="authorName" 
-                placeholder="Author's Name" 
-                pattern="^[a-zA-Z\s]+$" 
-                title="Please enter a valid name (letters and spaces only)" 
-                required>
-            </div>
-            <div>
-              <label for="authorLastName">Last Name</label>
-              <input 
-                type="text" 
-                id="authorLastName" 
-                name="authorLastName" 
-                placeholder="Author's Last Name" 
-                pattern="^[a-zA-Z\s]+$" 
-                title="Please enter a valid last name (letters and spaces only)" 
-                required>
-            </div>
-            <button type="submit">Add Author</button>
-          </form>
-        </section>
-        
-        <!-- Add Publisher Form -->
-        <section id="form-add-publisher" class="form-container">
-          <h3>Add a Publisher</h3>
-          <form>
-            <div>
-              <label for="publisherName">Publisher Name</label>
-              <input 
-                type="text" 
-                id="publisherName" 
-                name="publisherName" 
-                placeholder="Publisher's Name" 
-                pattern="^[a-zA-Z\s]+$" 
-                title="Please enter a valid publisher name (letters and spaces only)" 
-                required>
-            </div>
-            <button type="submit">Add Publisher</button>
-          </form>
-        </section>
-        
-        <section id="search">
-          <h3 id="searchHeader">Search for books by their id</h3>
-          <form id="searchForm">
-            <div>
-              <label for="searchInput">Search for an E-book by their ID:</label>
-              <input 
-                type="text" 
-                id="searchInput" 
-                name="search" 
-                placeholder="example: 1251" 
-                pattern="\d+" 
-                title="Only numeric values allowed" 
-                required>
-            </div>
-            <button type="submit">Search</button>
-            <a class="nextButton" href="../templates/lookup_ids.html" target="_blank">Go to the full list of IDs</a>
-          </form>
-          <div id="searchResult"></div>
-        </section>
-        
-    </main>
-    <footer>
-      <section class="socials">
-          <img src="../assets/img/logo.svg" alt="E-Borrows logo">
+      <!-- Add Book Form -->
+      <section id="form-add-book" class="form-container active">
+        <h3>Add a Book</h3>
+        <form>
           <div>
-            <a href="../../index.html" class="socialsIcons" aria-label="Visit our Instagram profile"><img src="../assets/img/instagram.svg" alt=""></a>
-            <a href="../../index.html" class="socialsIcons" aria-label="Visit our Facebook profile"><img src="../assets/img/facebook.svg" alt=""></a>
-            <a href="../../index.html" class="socialsIcons" aria-label="Visit our LinkedIn profile"><img src="../assets/img/linkedin.svg" alt=""></a>
+            <label for="bookTitle">Book title</label>
+            <input type="text" id="bookTitle" name="bookTitle" placeholder="Kvinden i buret"
+              title="Please add the title of the book" required>
           </div>
+          <div>
+            <label for="addAuthor">Author by id</label>
+            <input type="text" id="addAuthor" name="addAuthor" placeholder="example: 100" pattern="\d+"
+              title="Only numeric values allowed" required>
+          </div>
+          <div>
+            <label for="addPublisher">Publisher by id</label>
+            <input type="text" id="addPublisher" name="addPublisher" placeholder="example: 200" pattern="\d+"
+              title="Only numeric values allowed" required>
+          </div>
+          <div>
+            <label for="addPublishingYear">Publishing Year</label>
+            <input type="text" id="addPublishingYear" name="addPublishingYear" placeholder="2007"
+              pattern="^(18|19|20)\d{2}$" title="Only years from 1800 onward are accepted" required>
+          </div>
+          <button type="submit">Add Book</button>
+        </form>
       </section>
 
-      <section class="contact">
-          <header>
-              <h4>Contact</h4>
-          </header>
-          <a href="mailto:eborrow@mail.com" aria-label="Send an email to eborrow@mail.com">eborrow@mail.com</a>
-          <a href="tel:+4530303030" aria-label="Call E-borrow">+4530303030</a>
-          <address><p>Jensens Vej 43, København K</p></address>
+      <!-- Add Author Form -->
+      <section id="form-add-author" class="form-container">
+        <h3>Add an Author</h3>
+        <form>
+          <div>
+            <label for="authorName">Name</label>
+            <input type="text" id="authorName" name="authorName" placeholder="Author's Name" pattern="^[a-zA-Z\s]+$"
+              title="Please enter a valid name (letters and spaces only)" required>
+          </div>
+          <div>
+            <label for="authorLastName">Last Name</label>
+            <input type="text" id="authorLastName" name="authorLastName" placeholder="Author's Last Name"
+              pattern="^[a-zA-Z\s]+$" title="Please enter a valid last name (letters and spaces only)" required>
+          </div>
+          <button type="submit">Add Author</button>
+        </form>
       </section>
 
-      <section class="content">
-          <header>
-              <h4>Content</h4>
-          </header>
-          <p>Texts generated by <a href="https://chatgpt.com/" title="ChatGPT" target="_blank">ChatGPT</a></p>
-          <p>Images generated by <a href="https://figma.com/" title="Figma" target="_blank">Figma</a></p>
-          <p>Books loaded from <a href="https://github.com/arturomorarioja/py_library_api_v2.git" title="Py library v2" target="_blank">Py library v2</a></p>
+      <!-- Add Publisher Form -->
+      <section id="form-add-publisher" class="form-container">
+        <h3>Add a Publisher</h3>
+        <form>
+          <div>
+            <label for="publisherName">Publisher Name</label>
+            <input type="text" id="publisherName" name="publisherName" placeholder="Publisher's Name"
+              pattern="^[a-zA-Z\s]+$" title="Please enter a valid publisher name (letters and spaces only)" required>
+          </div>
+          <button type="submit">Add Publisher</button>
+        </form>
       </section>
 
-      <p class="copyright">&copy; 2024 - This is a school project</p>
+      <section id="search">
+        <h3 id="searchHeader">Search for books by their id</h3>
+        <form id="searchForm">
+          <div>
+            <label for="searchInput">Search for an E-book by their ID:</label>
+            <input type="text" id="searchInput" name="search" placeholder="example: 1251" pattern="\d+"
+              title="Only numeric values allowed" required>
+          </div>
+          <button type="submit">Search</button>
+          <a class="nextButton" href="../templates/lookup_ids.html" target="_blank">Go to the full list of IDs</a>
+        </form>
+        <div id="searchResult"></div>
+      </section>
+
+  </main>
+  <footer>
+    <section class="socials">
+      <div>
+        <a href="../../index.html" class="socialsIcons" aria-label="Visit our Instagram profile"><img
+            src="../assets/img/instagram.svg" alt=""></a>
+        <a href="../../index.html" class="socialsIcons" aria-label="Visit our Facebook profile"><img
+            src="../assets/img/facebook.svg" alt=""></a>
+        <a href="../../index.html" class="socialsIcons" aria-label="Visit our LinkedIn profile"><img
+            src="../assets/img/linkedin.svg" alt=""></a>
+      </div>
+    </section>
+
+    <section class="contact">
+      <header>
+        <h4>Contact</h4>
+      </header>
+      <a href="mailto:eborrow@mail.com" aria-label="Send an email to eborrow@mail.com">eborrow@mail.com</a>
+      <a href="tel:+4530303030" aria-label="Call E-borrow">+4530303030</a>
+      <address>
+        <p>Jensens Vej 43, København K</p>
+      </address>
+    </section>
+
+    <section class="content">
+      <header>
+        <h4>Content</h4>
+      </header>
+      <p>Texts generated by <a href="https://chatgpt.com/" title="ChatGPT" target="_blank">ChatGPT</a></p>
+      <p>Images generated by <a href="https://figma.com/" title="Figma" target="_blank">Figma</a></p>
+      <p>Books loaded from <a href="https://github.com/arturomorarioja/py_library_api_v2.git" title="Py library v2"
+          target="_blank">Py library v2</a></p>
+    </section>
+
+    <p class="copyright">&copy; 2024 - This is a school project</p>
   </footer>
-  </body>
+</body>
+
 </html>

@@ -33,9 +33,10 @@
   /* Colors */
   --primaryColor: #3d3d3d;
   --secondaryColor: #041e8f;
-  --tertiaryColor: #738dff;
+  --tertiaryColor: #ccd5ff;
   --quaternaryColor: #3d3d3d;
   --backgroundColor: #f6f5ee;
+  --button-blue: #0a2cc2;
 
   /* Margins */
   --marginSmall: 0.5rem;
