@@ -10,7 +10,7 @@
   <script src="../js/admin.js" type="module"></script>
   <script src="../js/admin_nav.js"></script>
   <script src="../js/admin_search.js" defer></script>
-  <script src="../js/scripts.js" type="module"></script>
+  <script src="../js/scripts.js" defer></script>
   <title>Admin</title>
 </head>
 
@@ -18,8 +18,7 @@
   <a href="#main-content" class="skip-link">Skip navigation</a>
   <header>
     <nav id="navigation">
-      <a href="../../index.html" aria-label="Go to home page"><img src="../assets/img/logo.svg" alt="" loading="lazy">
-      </a>
+      <a href="../index.html" aria-label="Go to home page"><img src="../assets/img/logo.svg" alt=""></a>
 
       <button class="burger-menu" aria-label="Toggle navigation">
         <div></div>
@@ -38,15 +37,11 @@
         </ul>
       </div>
     </nav>
-    <div class="container">
-      <img class="backgroundImage" src="../assets/img/image_1.png" alt="A person reading a book" loading="lazy">
-      <div class="image_overlay" aria-hidden="true"></div>
-      <div class="text_overlay">
-        <h1>ADMIN</h1>
-      </div>
-    </div>
   </header>
   <main id="main-content">
+    <header>
+      <h1>Manage Library</h1>
+    </header>
     <section id="formSection">
       <section>
         <nav class="mini-nav">
@@ -55,13 +50,12 @@
           <button id="nav-add-publisher">Add Publisher</button>
         </nav>
       </section>
-      <header>
-        <h2 id="loginHeader">Manage Library</h2>
-      </header>
 
       <!-- Add Book Form -->
       <section id="form-add-book" class="form-container active">
-        <h3>Add a Book</h3>
+        <header>
+          <h3>Add a Book</h3>
+        </header>
         <form>
           <div>
             <label for="bookTitle">Book title</label>
@@ -90,7 +84,9 @@
 
       <!-- Add Author Form -->
       <section id="form-add-author" class="form-container">
-        <h3>Add an Author</h3>
+        <header>
+          <h3>Add an Author</h3>
+        </header>
         <form>
           <div>
             <label for="authorName">Name</label>
@@ -109,7 +105,9 @@
 
       <!-- Add Publisher Form -->
       <section id="form-add-publisher" class="form-container">
-        <h3>Add a Publisher</h3>
+        <header>
+          <h3>Add a Publisher</h3>
+        </header>
         <form>
           <div>
             <label for="publisherName">Publisher Name</label>
@@ -122,7 +120,9 @@
       </section>
 
       <section id="search">
-        <h3 id="searchHeader">Search for books by their id</h3>
+        <header>
+          <h3 id="searchHeader">Search for books by their id</h3>
+        </header>
         <form id="searchForm">
           <div>
             <label for="searchInput">Search for an E-book by their ID:</label>
