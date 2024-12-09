@@ -86,6 +86,7 @@
         border-top: 2px solid var(--secondaryColor);
       }
     }
+
     li {
       width: 100%;
       text-align: center;
@@ -178,6 +179,7 @@
 .hidden {
   display: none !important;
 }
+
 .borderTop {
   padding-top: var(--paddingSmall);
   border-top: 2px solid var(--secondaryColor);
