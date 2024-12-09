@@ -80,6 +80,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     formProfile.addEventListener("submit", async (event) => {
         event.preventDefault(); // Prevent default form submission behavior
 
+        
         // Collect the form data and check if any fields have been changed
         const { formData, hasChanges } = collectFormData();
         

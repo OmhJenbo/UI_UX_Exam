@@ -46,11 +46,11 @@
       <form id="formSignup">
         <div>
           <label for="signupName">Name</label>
-          <input type="text" id="signupName" name="name" pattern="[A-Za-z]{2,50}" placeholder="Jens" required>
+          <input type="text" id="signupName" name="name" pattern="[A-Za-z]{2,50}" title="A name with a length of 2-50 letters is required." placeholder="Jens" required>
         </div>
         <div>
           <label for="signupLastName">Last Name</label>
-          <input type="text" id="signupLastName" name="lastname" pattern="[A-Za-z]{2,50}" placeholder="Jensen" required>
+          <input type="text" id="signupLastName" name="lastname" pattern="[A-Za-z]{2,50}" title="A last name with a length of 2-50 letters is required." placeholder="Jensen" required>
         </div>
         <div>
           <label for="signupEmail">E-mail</label>
@@ -58,11 +58,11 @@
         </div>
         <div>
           <label for="signupAddress">Address</label>
-          <input id="signupAddress" type="text" name="address" pattern="[A-Za-z0-9\s,.-]{5,100}" placeholder="Jensens vej 43" required>
+          <input id="signupAddress" type="text" name="address" pattern="[A-Za-z0-9 ,.\-]{5,100}" title="An address with a length of 5-100 letters and/or numbers is required." placeholder="Jensens vej 43" required>
         </div>
         <div>
           <label for="signupTel">Phone number</label>
-          <input id="signupTel" type="tel" name="phone" pattern="\d{7,12}" placeholder="40404040" required>
+          <input id="signupTel" type="tel" name="phone" pattern="\d{7,12}" title="A phone number with 7-12 digits is required." placeholder="40404040" required>
         </div>
         <div>
           <label for="signupDOB">Date of birth</label>

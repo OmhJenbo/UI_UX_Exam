@@ -43,11 +43,11 @@
             <form id="formProfile">
                 <div>
                     <label for="profileName">Name</label>
-                    <input id="profileName" name="first_name" type="text" pattern="[A-Za-z]{2,50}" placeholder="Enter your new first name.." required>
+                    <input id="profileName" name="first_name" type="text" pattern="[A-Za-z]{2,50}" title="A name is required with a length of 2-50 letters"  placeholder="Enter your new first name.." required>
                 </div>
                 <div>
                     <label for="profileLastName">Last Name</label>
-                    <input id="profileLastName" name="last_name" pattern="[A-Za-z]{2,50}" type="text" placeholder="Enter your new last name.." required>
+                    <input id="profileLastName" name="last_name" pattern="[A-Za-z]{2,50}" title="A last name is required with a length of 2-50 letters" type="text" placeholder="Enter your new last name.." required>
                 </div>
                 <div>
                     <label for="profileEmail">E-mail</label>
@@ -55,11 +55,12 @@
                 </div>
                 <div>
                     <label for="profileAddress">Address</label>
-                    <input id="profileAddress" name="address" type="text" pattern="[A-Za-z0-9\s,.-]{5,100}" placeholder="Enter your new address.." required>
+                    <input id="profileAddress" name="address" type="text" pattern="[A-Za-z0-9 ,.\-]{5,100}" title="An address is required with a length of 5-100 characters"
+                    placeholder="Enter your new address.." required>
                 </div>
                 <div>
                     <label for="profileTel">Phone number</label>
-                    <input id="profileTel" name="phone_number" type="tel" pattern="\d{7,12}" placeholder="Enter your new phone number.." required>
+                    <input id="profileTel" name="phone_number" type="tel" pattern="\d{7,12}" placeholder="Enter your new phone number.." title="A phone number with a length of 7-12 digits is required" required>
                 </div>
                 <div>
                     <label for="profileDob">Date of birth</label>
