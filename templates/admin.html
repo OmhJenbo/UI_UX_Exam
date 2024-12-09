@@ -1,63 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="../assets/img/ebook.svg">
-  <link rel="stylesheet" href="../css/_admin.css">
-  <link rel="stylesheet" href="../css/styles.css">
-  <script src="../js/admin.js" type="module"></script>
-  <script src="../js/admin_nav.js"></script>
-  <script src="../js/admin_search.js" defer></script>
-  <script src="../js/scripts.js" type="module"></script>
-  <title>Admin</title>
-</head>
-
-<body>
-  <a href="#main-content" class="skip-link">Skip navigation</a>
-  <header>
-    <nav id="navigation">
-      <a href="../../index.html" aria-label="Go to home page"><img src="../assets/img/logo.svg" alt="" loading="lazy">
-      </a>
-
-      <button class="burger-menu" aria-label="Toggle navigation">
-        <div></div>
-        <div></div>
-        <div></div>
-      </button>
-      <div id="navlinks">
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../templates/ebooks.html">E-books</a></li>
-          <li id="admin" class="hidden"><a href="../templates/admin.html">Admin</a></li>
-          <li id="settings" class="hidden"><a href="../templates/profile.html">Settings</a></li>
-          <li id="signup" class="hidden bordertop"><a href="../templates/signup.html">Signup</a></li>
-          <li id="login" class="hidden"><a href="../templates/login.html">Login</a></li>
-          <li id="logout" class="hidden bordertop"><a href="../templates/login.html">Logout</a></li>
-        </ul>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../assets/img/ebook.svg">
+    <link rel="stylesheet" href="../css/_admin.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/admin.js" type="module"></script>
+    <script src="../js/admin_nav.js" defer></script>
+    <script src="../js/admin_search.js" type="module"></script>
+    <script src="../js/scripts.js" type="module"></script>
+    <title>Admin</title>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip navigation</a>
+    <header>
+      <nav id="navigation">
+          <a href="../../index.html" aria-label="Go to home page"><img src="../assets/img/logo.svg" alt="" loading="lazy"> </a>
+          
+          <button class="burger-menu" aria-label="Toggle navigation">
+              <div></div>
+              <div></div>
+              <div></div>
+          </button>
+          <div id="navlinks">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../templates/ebooks.html">E-books</a></li>
+                <li id="admin" class="hidden"><a href="../templates/admin.html">Admin</a></li>
+                <li id="settings" class="hidden"><a href="../templates/profile.html">Settings</a></li>
+                <li id="signup" class="hidden bordertop"><a href="../templates/signup.html">Signup</a></li>
+                <li id="login" class="hidden"><a href="../templates/login.html">Login</a></li>
+                <li id="logout" class="hidden bordertop"><button>Logout</button></li>
+            </ul>
+        </div>
+      </nav>
+      <div class="container">
+        <img class="backgroundImage" src="../assets/img/image_1.png" alt="A person reading a book" loading="lazy">
+        <div class="image_overlay" aria-hidden="true"></div>
+        <div class="text_overlay">
+          <h1>ADMIN</h1>
+        </div>
       </div>
-    </nav>
-    <div class="container">
-      <img class="backgroundImage" src="../assets/img/image_1.png" alt="A person reading a book" loading="lazy">
-      <div class="image_overlay" aria-hidden="true"></div>
-      <div class="text_overlay">
-        <h1>ADMIN</h1>
-      </div>
-    </div>
-  </header>
-  <main id="main-content">
-    <section id="formSection">
-      <section>
-        <nav class="mini-nav">
-          <button id="nav-add-book" class="active">Add Book</button>
-          <button id="nav-add-author">Add Author</button>
-          <button id="nav-add-publisher">Add Publisher</button>
-        </nav>
-      </section>
-      <header>
-        <h2 id="loginHeader">Manage Library</h2>
-      </header>
+    </header>
+    <main id="main-content">
+      <section id="formSection">
+        <section>
+          <nav class="mini-nav">
+            <button id="nav-add-book" class="active">Add a Book</button>
+            <button id="nav-add-author">Add an Author</button>
+            <button id="nav-add-publisher">Add a Publisher</button>
+          </nav>
+        </section>
+        <header>
+          <h2 id="loginHeader">Manage Library</h2>
+        </header>
 
       <!-- Add Book Form -->
       <section id="form-add-book" class="form-container active">

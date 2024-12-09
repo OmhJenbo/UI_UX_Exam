@@ -1,5 +1,4 @@
-// Base URL for the API
-const baseUrl = "http://localhost:8080";
+import { baseUrl, handleAPIError } from "./utils.js";
 
 // Wait for the page to fully load before running the script
 document.addEventListener("DOMContentLoaded", () => {
@@ -16,13 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Function to fetch books from the API and display them
 function fetchBooks(url) {
   fetch(url) // send a GET request to the API
-    .then((response) => {
-      if (!response.ok) {
-        // if the response is not successful, throw an error
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      return response.json(); // change the response to JSON
-    })
+    .then(handleAPIError) // Use handleAPIError for cleaner response handling
     .then((books) => {
       displayBooks(books); // call the function to display books on the page
       // this calls the function that will render all the books on the page
@@ -92,15 +85,7 @@ function handleLoanClick(e) {
 
   const loanUrl = `${baseUrl}/users/${userId}/books/${bookId}`;
   fetch(loanUrl, { method: "POST" })
-    .then((response) => {
-      if (!response.ok) {
-        // make the error json
-        return response.json().then((error) => {
-          throw new Error(error.error || "Failed to loan the book");
-        });
-      }
-      return response.json();
-    })
+    .then(handleAPIError) // Use handleAPIError to handle response validation
     .then(() => {
       console.log(`user_id: ${userId} successfully loaned book_id: ${bookId}`); // to see which userid loaned which bookid in console
 
@@ -110,7 +95,7 @@ function handleLoanClick(e) {
     .catch((error) => {
       console.error(error.message);
 
-      // changes teh error from postman to one that fits the user otherwise shows a generic message for other errors
+      // changes the error from Postman to one that fits the user otherwise shows a generic message for other errors
       if (error.message === "This user has still this book on loan") {
         alert("You already have this book on loan.");
       } else {
