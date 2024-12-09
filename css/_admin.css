@@ -65,7 +65,6 @@ body {
         button {
           background-color: var(--tertiaryColor);
           color: var(--primaryColor);
-          padding: var(--paddingSmall);
         }
 
         button.active {

@@ -29,7 +29,6 @@ body {
         transform: translate(-50%, -50%);
         h1 {
           top: 65%;
-          color: var(--tertiaryColor);
           width: 80%;
           margin-left: auto;
           margin-right: auto;
@@ -67,9 +66,6 @@ body {
           margin-bottom: var(--marginMedium);
         }
         button {
-          background-color: var(--secondaryColor);
-          color: var(--backgroundColor);
-          padding: var(--paddingMedium);
           width: 100%;
           margin-bottom: var(--marginLarger);
           margin-top: var(--marginMedium);

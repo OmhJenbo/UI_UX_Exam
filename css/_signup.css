@@ -32,20 +32,13 @@ body {
           }
           input {
             border: 2px solid var(--tertiaryColor);
-            border-radius: var(--borderRadius);
             background-color: var(--primaryColor);
-            padding: var(--paddingSmall);
-            font-family: var(--fontFamilyBody);
             color: var(--backgroundColor);
-          }
-          input::placeholder {
-            color: var(--quaternaryColor);
           }
         }
         button {
           background-color: var(--tertiaryColor);
           color: var(--primaryColor);
-          padding: var(--paddingSmall);
           width: 100%;
         }
       }

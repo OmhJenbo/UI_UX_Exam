@@ -31,12 +31,13 @@
   --fontXlargeHeader: 5rem;
 
   /* Colors */
-  --primaryColor: #3d3d3d;
+  --primaryColor: #2a2929;
   --secondaryColor: #041e8f;
   --tertiaryColor: #ccd5ff;
   --quaternaryColor: #959595;
   --backgroundColor: #f6f5ee;
   --buttonBlue: #2449e5;
+  --focusOutline: #f59a08;
 
   /* Margins */
   --marginSmall: 0.5rem;

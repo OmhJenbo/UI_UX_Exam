@@ -29,7 +29,7 @@
     div {
       width: 100%;
       height: var(--burgerMenuDivHeight);
-      background: var(--tertiaryColor);
+      background: var(--buttonBlue);
       border-radius: var(--borderRadius);
       transition: var(--transition);
       position: relative;

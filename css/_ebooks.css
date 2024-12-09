@@ -70,9 +70,6 @@ body {
         height: 75%;
         top: -3%;
         right: 0;
-        /* background-color: var(--tertiaryColor); */
-        color: var(--backgroundColor);
-        padding: var(--paddingSmall);
       }
     }
     #searchHeader {
@@ -99,11 +96,6 @@ body {
       margin: var(--marginLarge) 0;
       li {
         list-style: none;
-        button {
-          background-color: var(--tertiaryColor);
-          color: var(--backgroundColor);
-          padding: var(--paddingSmall);
-        }
       }
     }
     #authorSection {

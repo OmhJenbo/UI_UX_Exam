@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: 3px solid var(--focusOutline);
+}
+
 body {
   .skip-link {
     position: absolute;
@@ -35,6 +39,7 @@ body {
     font-family: var(--fontFamilyHeaders);
     font-weight: var(--fontWeightBold);
     font-size: var(--fontLargeHeader);
+    color: var(--tertiaryColor);
   }
   h2 {
     font-family: var(--fontFamilyHeaders);
@@ -69,13 +74,20 @@ body {
   }
   button {
     font-family: var(--fontFamilyHeaders);
-    font-size: var(--fontSmallHeader);
+    font-size: var(--fontBody);
     font-weight: var(--fontWeightBold);
     text-align: var(--alignCenter);
     cursor: pointer;
     border: 0;
     border-radius: var(--borderRadius);
-    background-color: var(--button-blue);
+    background-color: var(--secondaryColor);
+    color: var(--backgroundColor);
+    padding: var(--paddingSmall);
+  }
+  input {
+    border-radius: var(--borderRadius);
+    padding: var(--paddingSmall);
+    font-family: var(--fontFamilyBody);
   }
 }
 @media (min-width: 600px) {
