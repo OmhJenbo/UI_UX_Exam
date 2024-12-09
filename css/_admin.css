@@ -118,6 +118,22 @@ body {
           padding: var(--paddingSmall);
           width: 100%;
           cursor: pointer;
+          margin-bottom: var(--marginSmall);
+        }
+        .nextButton {
+          background-color: var(--secondaryColor);
+          color: var(--backgroundColor);
+          font-family: var(--fontFamilyHeaders);
+          font-weight: 700;
+          font-size: var(--fontSmallHeader);
+          border: 0;
+          border-radius: var(--borderRadius);
+          padding: var(--paddingSmall);
+          width: 100%;
+          cursor: pointer;
+          text-decoration: none;
+          display: block;
+          text-align: center;
         }
       }
     }
@@ -168,23 +184,8 @@ body {
         padding: var(--paddingSmall);
         width: 100%;
         cursor: pointer;
-        margin-bottom: var(--marginMedium);
       }
-      .nextButton {
-        background-color: var(--secondaryColor);
-        color: var(--backgroundColor);
-        font-family: var(--fontFamilyHeaders);
-        font-weight: 700;
-        font-size: var(--fontSmallHeader);
-        border: 0;
-        border-radius: var(--borderRadius);
-        padding: var(--paddingSmall);
-        width: 100%;
-        cursor: pointer;
-        text-decoration: none;
-        display: block;
-        text-align: center;
-      }
+
       #searchResults {
         display: flex;
         flex-direction: column; /* Ensure multiple books stack vertically */
