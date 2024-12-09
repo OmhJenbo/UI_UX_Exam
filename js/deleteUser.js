@@ -1,12 +1,12 @@
-import { baseUrl } from './scripts.js';
+import { baseUrl, handleAPIError, checkLoginStatus } from './utils.js';
 
 const userId = sessionStorage.getItem('userId');
 const userEmail = sessionStorage.getItem('userEmail');
 
-function checkLoginStatus() {
+// Use the checkLoginStatus utility
+function checkLoginStatusWrapper() {
   if (!userEmail) {
-    alert('You must be logged in to access this page.');
-    window.location.replace('../templates/login.html');
+    checkLoginStatus(userId, '../templates/login.html');
   }
 }
 
@@ -26,24 +26,21 @@ async function deleteUser() {
       },
     });
 
-    if (!response.ok) {
-      throw new Error(`Failed to delete profile. Status: ${response.status}`);
-    }
+    // Use handleAPIError for error handling
+    await handleAPIError(response);
 
     alert('Your profile has been successfully deleted.');
     sessionStorage.removeItem('userId');
     sessionStorage.removeItem('userEmail');
-    // replace() replaces the current page with the home page, this will keep the user from being able to press back button 
-    // and access the profile page again
     window.location.replace('../index.html');
   } catch (error) {
     console.error('Error deleting profile:', error);
-    alert('An error occurred while trying to delete your profile.');
+    alert(error.message);
   }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  checkLoginStatus();
+  checkLoginStatusWrapper();
   const deleteButton = document.getElementById('deleteButton');
   if (deleteButton) {
     deleteButton.addEventListener('click', async () => {

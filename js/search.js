@@ -1,6 +1,6 @@
-// The search function is partially made with ChatGPT and knowlegde from classes
+import { baseUrl, handleAPIError } from "./utils.js";
 
-const baseUrl = "http://localhost:8080"; // The base URL for your API
+// The search function is partially made with ChatGPT and knowledge from classes
 
 // Add event listener to the form
 document.getElementById("searchForm").addEventListener("submit", performSearch);
@@ -19,14 +19,7 @@ function performSearch(event) {
 // Function to fetch books from API based on search query
 function fetchBooksFromApi(query) {
   fetch(`${baseUrl}/books?s=${query}`)
-    .then((response) => {
-      // Check if the response is OK (status code in the range 200-299)
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      // Parse the response JSON and return it
-      return response.json();
-    })
+    .then(handleAPIError) // Use reusable error handling function
     .then((data) => {
       // Handle the data (display books)
       console.log("Fetched books:", data);
@@ -38,6 +31,7 @@ function fetchBooksFromApi(query) {
     });
 }
 
+// Function to display books in the results area
 function displayBooks(data) {
   const resultsDiv = document.getElementById("searchResults");
   resultsDiv.innerHTML = ""; // Clear previous results
