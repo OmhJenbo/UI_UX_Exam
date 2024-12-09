@@ -64,12 +64,13 @@ body {
 
         button {
           background-color: var(--tertiaryColor);
-          color: var(--backgroundColor);
+          color: var(--primaryColor);
           padding: var(--paddingSmall);
         }
 
         button.active {
           background-color: var(--secondaryColor);
+          color: var(--backgroundColor);
         }
       }
 
@@ -109,7 +110,7 @@ body {
 
         button {
           background-color: var(--tertiaryColor);
-          color: var(--backgroundColor);
+          color: var(--primaryColor);
           font-family: var(--fontFamilyHeaders);
           font-weight: 700;
           font-size: var(--fontSmallHeader);
@@ -175,7 +176,7 @@ body {
       }
       button {
         background-color: var(--tertiaryColor);
-        color: var(--backgroundColor);
+        color: var(--primaryColor);
         font-family: var(--fontFamilyHeaders);
         font-weight: 700;
         font-size: var(--fontSmallHeader);

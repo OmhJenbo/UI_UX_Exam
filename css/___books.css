@@ -26,12 +26,12 @@ body {
         h3 {
           font-size: var(--fontSmallHeader);
           padding: var(--normalPadding);
-          color: var(--secondaryColor);
+          color: var(--buttonBlue);
         }
 
         p {
           line-height: 1.5;
-          color: var(--quaternaryColor);
+          color: var(--primaryColor);
 
           &:first-of-type {
             margin-top: var(--marginMedium);
@@ -43,7 +43,7 @@ body {
         }
 
         button {
-          background-color: var(--button-blue);
+          background-color: var(--buttonBlue);
           color: var(--backgroundColor);
           padding: var(--paddingSmallerMedium) var(--paddingBiggerMedium);
           margin-top: auto;

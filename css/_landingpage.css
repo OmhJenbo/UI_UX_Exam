@@ -29,7 +29,6 @@ body {
         transform: translate(-50%, -50%);
         h1 {
           top: 65%;
-          font-size: var(--fontLargeHeader);
           color: var(--tertiaryColor);
           width: 80%;
           margin-left: auto;
@@ -61,8 +60,6 @@ body {
         ol {
           padding: var(--paddingMedium);
           li {
-            font-family: var(--fontFamilyBody);
-            font-size: var(--fontBody);
             margin-bottom: var(--marginMedium);
           }
         }
@@ -155,25 +152,11 @@ body {
       margin: var(--marginXlarge);
       .list_section {
         gap: var(--largeGap);
-        .list {
-          ul,
-          ol {
-            li {
-              font-size: var(--fontSmallerMediumHeader);
-            }
-          }
-          p {
-            font-size: var(--fontSmallerMediumHeader);
-          }
-        }
       }
       .exploreFavourites {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: var(--mediumGap);
-        p {
-          font-size: var(--fontSmallerMediumHeader);
-        }
       }
     }
   }
