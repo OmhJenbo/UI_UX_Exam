@@ -1,4 +1,5 @@
-import {baseUrl} from './scripts.js';
+import { baseUrl, handleAPIError } from './utils.js';
+
 document.addEventListener("DOMContentLoaded", async () => {
     // Base URL for the user API
     const API_BASE_URL = `${baseUrl}/users`;
@@ -11,7 +12,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // If no user ID is found, we stop and alert the user
     if (!userId) {
-        alert("User ID not found in session storage.");
+        alert("User not found, try logging in again");
         return;
     }
 
@@ -31,12 +32,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Fetches user data from the server using the stored userId
     async function fetchUserData() {
         const response = await fetch(`${API_BASE_URL}/${userId}`);
-        if (!response.ok) {
-            // If the response is not OK, throw an error to be caught later
-            throw new Error(`Failed to load user data: ${response.status} ${response.statusText}`);
-        }
-        // Parse and return the JSON response (user profile data)
-        return response.json();
+        return handleAPIError(response); // Use handleAPIError for cleaner error handling
     }
 
     // Fills the form fields with the data received from the server
@@ -97,13 +93,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 body: formData,
             });
 
-            if (!response.ok) {
-                // If update fails, parse the error response and alert the user
-                const errorData = await response.json();
-                console.error("Update error:", errorData);
-                alert(`Failed to update profile: ${errorData.error || response.statusText}`);
-                return;
-            }
+            await handleAPIError(response); // Use handleAPIError to handle PUT response errors
 
             // If update succeeds, let the user know
             alert("Profile updated successfully!");
@@ -115,7 +105,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         } catch (error) {
             // If something unexpected goes wrong, log it and alert the user
             console.error("Error updating profile:", error);
-            alert("An error occurred while updating the profile. Please try again.");
+            alert(error.message || "An error occurred while updating the profile. Please try again.");
         }
     });
 });

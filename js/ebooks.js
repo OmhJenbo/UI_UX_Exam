@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:8080";
+import { baseUrl, handleAPIError } from "./utils.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const numberOfBooks = 8;
@@ -33,15 +33,7 @@ function handleLoanClick(e) {
 
   const loanUrl = `${baseUrl}/users/${userId}/books/${bookId}`;
   fetch(loanUrl, { method: "POST" })
-    .then((response) => {
-      if (!response.ok) {
-        // make the error json
-        return response.json().then((error) => {
-          throw new Error(error.error || "Failed to loan the book");
-        });
-      }
-      return response.json();
-    })
+    .then(handleAPIError) // Use utility to handle response errors
     .then(() => {
       console.log(`user_id: ${userId} successfully loaned book_id: ${bookId}`); // to see which userid loaned which bookid in console
 
@@ -51,7 +43,7 @@ function handleLoanClick(e) {
     .catch((error) => {
       console.error(error.message);
 
-      // changes teh error from postman to one that fits the user otherwise shows a generic message for other errors
+      // changes the error from Postman to one that fits the user otherwise shows a generic message for other errors
       if (error.message === "This user has still this book on loan") {
         alert("You already have this book on loan.");
       } else {
@@ -62,7 +54,7 @@ function handleLoanClick(e) {
 
 function fetchBooks(url) {
   fetch(url)
-    .then(handleResponse)
+    .then(handleAPIError) // Use utility to handle response errors
     .then((books) => {
       renderBooks(books);
     })
@@ -78,7 +70,6 @@ function renderBooks(books) {
   const fragment = document.createDocumentFragment(); // create a document fragment
 
   books.forEach((book) => {
-
     const bookCard = document.createElement("div");
     bookCard.classList.add("bookCard");
     bookCard.setAttribute("data-book-id", book.book_id);
@@ -98,18 +89,6 @@ function renderBooks(books) {
   // append the entire fragment to the DOM in one manipulation
   bookList.appendChild(fragment);
 }
-
-// error from api
-function handleResponse(response) {
-  if (!response.ok) {
-    return response.text().then((text) => {
-      throw new Error(text || "An error occurred.");
-    });
-  }
-  return response.json();
-}
-
-// ######################################---Search function---#######################################
 
 // Add event listener to the form
 document.getElementById("searchForm").addEventListener("submit", performSearch);
@@ -132,12 +111,7 @@ function performSearch(event) {
 // Function to fetch books from API based on search query
 function fetchBooksFromApi(query) {
   fetch(`${baseUrl}/books?s=${query}`)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      return response.json();
-    })
+    .then(handleAPIError) // Use utility to handle response errors
     .then((data) => {
       console.log("Fetched books:", data); // Log fetched books
       displayBooks(data); // Display the books fetched from API

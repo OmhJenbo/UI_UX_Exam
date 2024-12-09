@@ -1,172 +1,163 @@
 body {
-    background-color: var(--backgroundColor);
-    header {
-        .container{
-            position: relative;
-            .backgroundImage {
-                height: 550px;
-                width: 100%; 
-                object-fit: cover;
-                left: 0;
-                top: 0;
-                right: 0;
-                bottom: 0;
-            }
-            .image_overlay {
-                position: absolute;
-                left: 0;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                background: rgba(0,0,0,0.5);
-            }
-            .text_overlay {
-                position: absolute;
-                display: flex;
-                align-items: var(--alignCenter);
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                img {
-                    width: 100%;
-                }
-            }
+  background-color: var(--backgroundColor);
+  header {
+    .container {
+      position: relative;
+      .backgroundImage {
+        height: 550px;
+        width: 100%;
+        object-fit: cover;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+      }
+      .image_overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+      }
+      .text_overlay {
+        position: absolute;
+        display: flex;
+        align-items: var(--alignCenter);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        h1 {
+          top: 65%;
+          color: var(--tertiaryColor);
+          width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
         }
+      }
     }
-    main {
-        margin: var(--marginMedium);
-        .indexWhoAreWe p{
-            font-family: var(--fontFamilyHeaders);
-            font-weight: var(--fontWeightSemiBold);
-            font-size: var(--fontSmallHeader);
-            color: var(--secondaryColor);
-            text-align: var(--alignCenter);
-            margin-bottom: var(--marginLarger);
-        }
-        .list_section {
-            img {
-                height: max-content;
-                max-width: 100%;
-                object-fit: cover;
-            }
-            .list {
-                margin-top: var(--marginMedium);
-                ul, ol {
-                    padding: var(--paddingMedium);
-                    li {
-                        font-family: var(--fontFamilyBody);
-                        font-size: var(--fontBody);
-                        margin-bottom: var(--marginMedium);
-                    }
-                }
-                p {
-                    margin-bottom: var(--marginMedium);
-                }
-                button {
-                    background-color: var(--secondaryColor);
-                    color: var(--backgroundColor);
-                    padding: var(--paddingMedium);
-                    width: 100%;
-                    margin-bottom: var(--marginLarger);
-                    margin-top: var(--marginMedium);
-                }
-            }
-        }
-        .exploreFavourites {
-            h2 {
-                margin-bottom: var(--marginMedium);
-            }
-            img {
-                margin-top: var(--marginMedium);
-                margin-bottom: var(--marginLarger);
-            }
-        }
-        .browseBooks {
-            h3 {
-                margin-bottom: var(--marginMedium);
-            }
-        }
+  }
+  main {
+    margin: var(--marginMedium);
+    .indexWhoAreWe p {
+      font-family: var(--fontFamilyHeaders);
+      font-weight: var(--fontWeightSemiBold);
+      font-size: var(--fontSmallHeader);
+      color: var(--secondaryColor);
+      text-align: var(--alignCenter);
+      margin-bottom: var(--marginLarger);
     }
+    .list_section {
+      img {
+        height: max-content;
+        max-width: 100%;
+        object-fit: cover;
+      }
+      .list {
+        margin-top: var(--marginMedium);
+        ul,
+        ol {
+          padding: var(--paddingMedium);
+          li {
+            margin-bottom: var(--marginMedium);
+          }
+        }
+        p {
+          margin-bottom: var(--marginMedium);
+        }
+        button {
+          background-color: var(--secondaryColor);
+          color: var(--backgroundColor);
+          padding: var(--paddingMedium);
+          width: 100%;
+          margin-bottom: var(--marginLarger);
+          margin-top: var(--marginMedium);
+        }
+      }
+    }
+    .exploreFavourites {
+      h2 {
+        margin-bottom: var(--marginMedium);
+      }
+      img {
+        margin-top: var(--marginMedium);
+        margin-bottom: var(--marginLarger);
+      }
+    }
+    .browseBooks {
+      h3 {
+        margin-bottom: var(--marginMedium);
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) {
-    body {
-        header {
-            .container {
-                .text_overlay {
-                    img {
-                        width: var(--imgMedium);
-                    }
-                }
-            }
+  body {
+    header {
+      .container {
+        .text_overlay {
+          img {
+            width: var(--imgMedium);
+          }
         }
-        main {
-            margin: var(--marginLarger);
-            .indexWhoAreWe p{
-                font-size: var(--fontMediumHeader);
-            }
-            .list_section {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: var(--mediumGap);
-                margin-bottom: var(--marginLarger);
-                img {
-                    height: max-content;
-                    max-width: 100%;
-                    object-fit: cover;
-                }
-            }
-            .exploreFavourites {
-                display: grid;
-                grid-template-columns: 1fr minmax(300px, 450px);
-                gap: var(--mediumGap);
-                margin-bottom: var(--marginLarger);
-            }
-            .browseBooks {
-                header {
-                    h2 {
-                        text-align: var(--alignCenter);
-                    }
-                }
-            }
-        }
+      }
     }
+    main {
+      margin: var(--marginLarger);
+      .indexWhoAreWe p {
+        font-size: var(--fontMediumHeader);
+      }
+      .list_section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--mediumGap);
+        margin-bottom: var(--marginLarger);
+        img {
+          height: max-content;
+          max-width: 100%;
+          object-fit: cover;
+        }
+      }
+      .exploreFavourites {
+        display: grid;
+        grid-template-columns: 1fr minmax(300px, 450px);
+        gap: var(--mediumGap);
+        margin-bottom: var(--marginLarger);
+      }
+      .browseBooks {
+        header {
+          h2 {
+            text-align: var(--alignCenter);
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 1080px) {
-    body {
-        header {
-            .container {
-                .text_overlay {
-                    img {
-                        width: var(--imgLarge);
-                    }
-                }
-            }
+  body {
+    header {
+      .container {
+        .text_overlay {
+          img {
+            width: var(--imgLarge);
+          }
         }
-        main {
-            margin: var(--marginXlarge);
-            .list_section {
-                gap: var(--largeGap);
-                .list {
-                    ul, ol {
-                        li {
-                            font-size: var(--fontSmallerMediumHeader);
-                        }
-                    }
-                    p {
-                        font-size: var(--fontSmallerMediumHeader);
-                    }
-                }
-            }
-            .exploreFavourites {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: var(--mediumGap);
-                p {
-                    font-size: var(--fontSmallerMediumHeader);
-                }
-            }
-        }
+      }
     }
+    main {
+      margin: var(--marginXlarge);
+      .list_section {
+        gap: var(--largeGap);
+      }
+      .exploreFavourites {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--mediumGap);
+      }
+    }
+  }
 }

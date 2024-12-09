@@ -87,25 +87,20 @@
       }
     }
     li {
-      width: 100%; 
+      width: 100%;
       text-align: center;
       margin-top: var(--marginMedium);
-      
+
       a {
         text-decoration: none;
         font-size: var(--fontBody);
         font-family: var(--fontFamilyHeaders);
         font-weight: var(--fontWeightSemiBold);
-        color: var(--tertiaryColor);
+        color: var(--secondaryColor);
         padding: var(--paddingSmall);
         transition: var(--transition);
-        width: 100%; 
-        text-align: center; 
-
-        &:hover {
-          border-bottom: solid 2px var(--secondaryColor);
-          color: var(--secondaryColor);
-        }
+        width: 100%;
+        text-align: center;
       }
 
       button {
@@ -115,7 +110,7 @@
         color: var(--tertiaryColor);
         padding: var(--paddingSmall);
         transition: var(--transition);
-        width: 100%; 
+        width: 100%;
         border-radius: 0;
       }
     }
@@ -134,12 +129,12 @@
       justify-content: flex-end;
       background: none;
       padding: 0;
-      gap: var(--smallGap); 
+      gap: var(--smallGap);
       border-bottom: none;
       ul {
-        display: flex; 
-        flex-direction: row; 
-        justify-content: flex-end; 
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
         padding: 0;
         margin: 0;
         list-style: none;
@@ -148,12 +143,15 @@
       li {
         width: auto;
         margin-top: 0;
+        a:hover {
+          border-bottom: 2px solid var(--secondaryColor);
+        }
 
         &:nth-child(5) a,
         &:nth-child(6) a,
-        button {
+        &:nth-child(7) a {
           background-color: var(--tertiaryColor);
-          color: var(--backgroundColor);
+          color: var(--primaryColor);
           padding: var(--paddingSmall) var(--paddingMedium);
           text-decoration: none;
           font-family: var(--fontFamilyHeaders);
@@ -162,13 +160,11 @@
           text-align: center;
           border-radius: var(--borderRadius);
           width: auto;
-
-          &:hover {
-            background-color: var(--secondaryColor);
-          }
+          border-bottom: none;
         }
         &:nth-child(5) a {
           background-color: var(--secondaryColor);
+          color: var(--backgroundColor);
         }
       }
     }

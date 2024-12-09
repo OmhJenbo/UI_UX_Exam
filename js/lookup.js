@@ -1,10 +1,10 @@
-document.addEventListener("DOMContentLoaded", async () => {
-    const BASE_URL = "http://localhost:8080";
+import { baseUrl, handleAPIError } from "./utils.js";
 
+document.addEventListener("DOMContentLoaded", async () => {
     const endpoints = {
-        books: `${BASE_URL}/books?n=5000`,
-        authors: `${BASE_URL}/authors`,
-        publishers: `${BASE_URL}/publishers`,
+        books: `${baseUrl}/books?n=5000`,
+        authors: `${baseUrl}/authors`,
+        publishers: `${baseUrl}/publishers`,
     };
 
     const containers = {
@@ -16,15 +16,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     const fetchAndDisplay = async (url, container, idKey, labelKey) => {
         try {
             const response = await fetch(url);
-            if (!response.ok) throw new Error(`Error fetching data: ${response.statusText}`);
-            const data = await response.json();
+            const data = await handleAPIError(response); // Use handleAPIError for cleaner response handling
 
             // sort the lists by the ID number
             data.sort((a, b) => a[idKey] - b[idKey]);
             // create the fragment so we can end up appending only once
             const fragment = document.createDocumentFragment();
-            //push the data to the fragment
-            data.forEach(item => {
+            // push the data to the fragment
+            data.forEach((item) => {
                 const div = document.createElement("div");
                 div.className = "item";
                 div.textContent = `ID: ${item[idKey]} - ${labelKey}: ${item[labelKey]}`;
@@ -45,4 +44,4 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 // Check login status when the page loads
-document.addEventListener('DOMContentLoaded', checkLoginStatus);
+document.addEventListener("DOMContentLoaded", checkLoginStatus);
