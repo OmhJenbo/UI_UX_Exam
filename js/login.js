@@ -1,4 +1,5 @@
-import { baseUrl } from "./scripts.js";
+import { baseUrl } from "./utils.js";
+import { handleAPIError } from "./utils.js";
 
 // Function to check if the user is logged in
 function checkLoginStatus() {
@@ -8,17 +9,6 @@ function checkLoginStatus() {
         window.location.href = '../templates/ebooks.html'; // Redirect to ebooks
     }
 }
-
-// reusable function to handle API responses
-const handleAPIError = (response) => {
-    if (response.ok) {
-        return response.json();
-    }
-    // gets teh error message from the API response and throws it
-    return response.json().then((data) => {
-        throw new Error(data.error || "An unknown error occurred");
-    });
-};
 
 document.querySelector("#formLogin").addEventListener("submit", (e) => {
     e.preventDefault(); // prevent the form from refreshing the page (default)
