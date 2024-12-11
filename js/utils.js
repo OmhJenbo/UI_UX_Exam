@@ -1,21 +1,15 @@
 export const baseUrl = "http://localhost:8080";
 
-
 export const handleAPIError = (response) => {
-    if (response.ok) {
+    if (response.ok) { // if everything goes perfectly display the message we get from the api (can see it in postman)
         return response.json();
     }
 
-    // Attempt to parse the response JSON for an error message
     return response.json().then((data) => {
-        const errorMessage = data.error || `HTTP error! Status: ${response.status}`;
-        // Throw specific errors based on status codes
-        if (response.status === 404) {
-            throw new Error("Resource not found."); // Specific for 404
-        }
-        throw new Error(errorMessage); // Generic error
-    });
+        throw new Error(data.error || `There was an error try again in a moment`); // otherwise display the response from the api, since the error messages already describe what happens well.
+    }); // if we can't for any reason get that data we have our own defined error message
 };
+
 
 export function checkLoginStatus(expectedUserId, redirectPage) {
     const userId = sessionStorage.getItem("userId");
