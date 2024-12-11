@@ -70,7 +70,7 @@ function renderBooks(books) {
   const fragment = document.createDocumentFragment(); // create a document fragment
 
   books.forEach((book) => {
-    const bookCard = document.createElement("div");
+    const bookCard = document.createElement("article");
     bookCard.classList.add("bookCard");
     bookCard.setAttribute("data-book-id", book.book_id);
 

@@ -43,7 +43,7 @@ function displayBooks(books) {
 
     const bookId = book.id || book.book_id; // use the correct id property
 
-    const bookCard = document.createElement("div"); // create a new div for each book
+    const bookCard = document.createElement("article"); // create a new article for each book
     bookCard.classList.add("bookCard"); // add a class for the cards
     bookCard.setAttribute("data-book-id", bookId); // add the book's id to the card
 
