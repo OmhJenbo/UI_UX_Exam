@@ -33,6 +33,10 @@ function fetchBookById(book_Id) {
     .catch((error) => {
       // If any errors occur (network issues, server errors),
       // display the error message to the user
+      if (error.message === "Book not found") {
+        displayError("Book not found. Please enter a valid book ID.");
+        return;
+      }
       displayError(error.message);
     });
 }
