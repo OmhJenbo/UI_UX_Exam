@@ -77,10 +77,22 @@ body {
           margin-bottom: var(--marginMedium);
         }
 
-        button {
+        #signup_button {
           width: 100%;
           margin-bottom: var(--marginLarger);
-          margin-top: var(--marginMedium);
+          margin-top: var(--marginLarge);
+          display: grid;
+          font-family: var(--fontFamilyHeaders);
+          font-size: var(--fontBody);
+          font-weight: var(--fontWeightBold);
+          text-align: var(--alignCenter);
+          cursor: pointer;
+          border: 0;
+          border-radius: var(--borderRadius);
+          background-color: var(--secondaryColor);
+          color: var(--backgroundColor);
+          padding: var(--paddingSmall);
+          text-decoration: none;
         }
       }
     }
